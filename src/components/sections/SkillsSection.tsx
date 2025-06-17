@@ -12,7 +12,9 @@ import {
   FaCss3Alt,
   FaGitAlt,
   FaFigma,
-  FaDocker
+  FaDocker,
+  FaPython,
+  FaJava
 } from "react-icons/fa";
 import {
   SiNextdotjs,
@@ -43,7 +45,9 @@ const skillCategories = [
     title: "Backend & Database",
     skills: [
       { name: "Node.js", icon: <FaNodeJs className="h-8 w-8 text-[#339933]" /> },
-      { name: "Express.js", icon: <SiExpress className="h-8 w-8 text-black" /> },
+      { name: "Express.js", icon: <SiExpress className="h-8 w-8 text-slate-200" /> },
+      { name: "Python", icon: <FaPython className="h-8 w-8 text-[#3776AB]" /> },
+      { name: "Java", icon: <FaJava className="h-8 w-8 text-[#f89820]" /> },
       { name: "MongoDB", icon: <SiMongodb className="h-8 w-8 text-[#47A248]" /> },
       { name: "Prisma", icon: <SiPrisma className="h-8 w-8 text-teal-200" /> },
       { name: "MariaDB", icon: <SiMariadb className="h-10 w-10 text-cyan-200" /> },
@@ -87,7 +91,7 @@ const itemVariants = {
 export default function SkillsSection() {
   return (
     <section id="skills" className="py-24 sm:py-32 relative bg-gray-950 overflow-hidden">
-      {/* Background elements */ }
+      {/* Background */ }
       <div className="absolute inset-0 z-0 opacity-70 sm:opacity-100">
         <div className="absolute top-1/4 left-1/4 w-72 h-72 sm:w-96 sm:h-96 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full mix-blend-screen filter blur-3xl opacity-20 sm:opacity-25 animate-blob"></div>
         <div className="absolute bottom-1/4 right-1/4 w-72 h-72 sm:w-96 sm:h-96 bg-gradient-to-r from-teal-500 to-pink-500 rounded-full mix-blend-screen filter blur-3xl opacity-20 sm:opacity-25 animate-blob animation-delay-2000"></div>
