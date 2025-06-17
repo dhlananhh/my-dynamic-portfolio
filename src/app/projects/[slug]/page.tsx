@@ -1,4 +1,5 @@
-"use client";
+"use client";;
+import { use } from "react";
 
 import { projectsData, Project } from "@/lib/data";
 import { notFound } from "next/navigation";
@@ -48,7 +49,8 @@ const ContentSection = ({ title, icon: Icon, children }: { title: string; icon: 
   </motion.div>
 );
 
-export default function ProjectDetailPage({ params }: { params: { slug: string } }) {
+export default function ProjectDetailPage(props: { params: Promise<{ slug: string }> }) {
+  const params = use(props.params);
   const { slug } = params;
   const project = getProjectBySlug(slug);
 
