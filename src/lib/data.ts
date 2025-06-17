@@ -169,16 +169,44 @@ export const projectsData: Project[] = [
 export const testimonialsData: Testimonial[] = [
   {
     id: "1",
-    quote: "Lan Anh's coding ability and meticulousness have been a great help to our dev team. The quality exceeded expectations!",
+    quote: "Lan Anh's coding ability and meticulousness have been a great help to our dev team. The quality of her work consistently exceeded our expectations, and she was a pleasure to collaborate with.",
     author: "Jane Doe",
-    company: "Senior Engineer, Big Game Studio",
-    avatarUrl: "/images/jane-doe.png",
+    company: "Senior Engineer, InnovateTech",
+    avatarUrl: "/images/avatars/jane-doe.png",
   },
   {
     id: "2",
-    quote: "Working with Lan Anh was very professional and efficient. She not only has good technical skills but also has the ability to work in a team, and adapt to new environments wonderfully.",
+    quote: "Working with Lan Anh was very professional and efficient. She not only has excellent technical skills but also a remarkable ability to work in a team and adapt to new challenges wonderfully.",
     author: "John Smith",
-    company: "Head of IT of ABC company",
-    avatarUrl: "/images/john-smith.png",
+    company: "Head of IT, Digital Solutions Co.",
+    avatarUrl: "/images/avatars/john-smith.png",
   },
+  {
+    id: "3",
+    quote: "As a Project Manager, I valued Lan Anh's clear communication and commitment to deadlines. She's a reliable developer who truly understands the project's vision and delivers accordingly.",
+    author: "Michael Chen",
+    company: "Project Manager, Agile Creators",
+    avatarUrl: "/images/avatars/michael-chen.png",
+  },
+  {
+    id: "4",
+    quote: "It's rare to find a developer who has such a keen eye for design. Lan Anh brought our Figma designs to life with pixel-perfect accuracy and added insightful animations that enhanced the user experience.",
+    author: "Sophia Rodriguez",
+    company: "Lead UI/UX Designer, Creative Minds Agency",
+    avatarUrl: "/images/avatars/sophia-rodriguez.png",
+  },
+  {
+    id: "5",
+    quote: "Pair-programming with Lan Anh was always a learning experience. She's a quick problem-solver and is always open to discussing new approaches. Her proficiency in React and Next.js is top-notch.",
+    author: "David Lee",
+    company: "Backend Developer, Synergy Systems",
+    avatarUrl: "/images/avatars/david-lee.png",
+  },
+  {
+    id: "6",
+    quote: "Lan Anh consistently delivered high-quality, clean code that was easy to review and maintain. Her attention to detail and proactive approach made a significant impact on our product's stability.",
+    author: "Emily White",
+    company: "Tech Lead, QuantumLeap Software",
+    avatarUrl: "/images/avatars/emily-white.png",
+  }
 ];
