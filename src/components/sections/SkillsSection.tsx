@@ -91,7 +91,6 @@ const itemVariants = {
 export default function SkillsSection() {
   return (
     <section id="skills" className="py-24 sm:py-32 relative bg-gray-950 overflow-hidden">
-      {/* Background */ }
       <div className="absolute inset-0 z-0 opacity-70 sm:opacity-100">
         <div className="absolute top-1/4 left-1/4 w-72 h-72 sm:w-96 sm:h-96 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full mix-blend-screen filter blur-3xl opacity-20 sm:opacity-25 animate-blob"></div>
         <div className="absolute bottom-1/4 right-1/4 w-72 h-72 sm:w-96 sm:h-96 bg-gradient-to-r from-teal-500 to-pink-500 rounded-full mix-blend-screen filter blur-3xl opacity-20 sm:opacity-25 animate-blob animation-delay-2000"></div>
