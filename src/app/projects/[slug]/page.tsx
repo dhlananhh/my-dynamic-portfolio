@@ -1,6 +1,6 @@
-"use client";;
-import { use } from "react";
+"use client";
 
+import { use } from "react";
 import { projectsData, Project } from "@/lib/data";
 import { notFound } from "next/navigation";
 import Image from "next/image";
