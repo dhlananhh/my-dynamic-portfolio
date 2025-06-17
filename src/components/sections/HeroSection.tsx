@@ -41,16 +41,19 @@ export default function HeroSection() {
     >
       <div className="relative z-10 flex flex-col items-center text-center">
         <h1 className="max-w-4xl text-4xl sm:text-5xl md:text-7xl font-extrabold mb-4 tracking-tight leading-tight">
-          <span className="bg-gradient-to-r from-green-400 via-teal-500 to-blue-600 bg-clip-text text-transparent block">
-            Hello, I'm Lan Anh
+          <span className="block text-2xl sm:text-3xl md:text-4xl font-medium text-teal-400/90 mb-4">
+            Hi, I'm Lan Anh.
           </span>
-          <span className="block text-teal-400 mt-2">
-            Frontend Developer
+          <span className="block bg-gradient-to-r from-green-300 via-teal-400 to-blue-500 bg-clip-text text-transparent">
+            I Build Modern & Intuitive
+          </span>
+          <span className="block bg-gradient-to-r from-green-300 via-teal-400 to-blue-500 bg-clip-text text-transparent">
+            Web Experiences.
           </span>
         </h1>
 
-        <p className="my-6 max-w-xl text-center text-base leading-relaxed md:text-lg md:leading-relaxed text-muted-foreground text-white">
-          Passionate about creating dynamic websites and applications with modern frontend technology.
+        <p className="my-6 max-w-xl text-center text-base leading-relaxed md:text-lg md:leading-relaxed text-slate-300">
+          A passionate <strong className="font-semibold text-white">Web Developer</strong> based in Ho Chi Minh City, dedicated to turning innovative ideas into beautiful, high-performance digital solutions.
         </p>
 
         <motion.div
@@ -101,9 +104,9 @@ export default function HeroSection() {
             <Button
               variant="ghost"
               size="icon"
-              className="p-2.5 sm:p-3 rounded-full shadow-lg bg-gray-200 hover:bg-blue-300 transition-colors"
+              className="p-2.5 sm:p-3 rounded-full shadow-lg bg-gray-200/90 hover:bg-gray-100 transition-colors"
             >
-              <Github className="h-5 w-5 sm:h-6 sm:w-6" />
+              <Github className="h-5 w-5 sm:h-6 sm:w-6 text-gray-800" />
               <span className="sr-only">GitHub</span>
             </Button>
           </Link>
@@ -116,9 +119,9 @@ export default function HeroSection() {
             <Button
               variant="ghost"
               size="icon"
-              className="p-2.5 sm:p-3 rounded-full shadow-lg bg-gray-200 hover:bg-blue-300 transition-colors"
+              className="p-2.5 sm:p-3 rounded-full shadow-lg bg-gray-200/90 hover:bg-gray-100 transition-colors"
             >
-              <Linkedin className="h-5 w-5 sm:h-6 sm:w-6" />
+              <Linkedin className="h-5 w-5 sm:h-6 sm:w-6 text-gray-800" />
               <span className="sr-only">LinkedIn</span>
             </Button>
           </Link>
@@ -130,9 +133,9 @@ export default function HeroSection() {
             <Button
               variant="ghost"
               size="icon"
-              className="p-2.5 sm:p-3 rounded-full shadow-lg bg-gray-200 hover:bg-blue-300 transition-colors"
+              className="p-2.5 sm:p-3 rounded-full shadow-lg bg-gray-200/90 hover:bg-gray-100 transition-colors"
             >
-              <Mail className="h-5 w-5 sm:h-6 sm:w-6" />
+              <Mail className="h-5 w-5 sm:h-6 sm-w-6 text-gray-800" />
               <span className="sr-only">Email</span>
             </Button>
           </Link>
