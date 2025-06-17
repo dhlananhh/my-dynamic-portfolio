@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { Testimonial } from "@/lib/data";
-import { motion } from "framer-motion";
 import { Quote } from "lucide-react";
 
 interface TestimonialCardProps {
@@ -11,34 +10,31 @@ interface TestimonialCardProps {
 
 export default function TestimonialCard({ testimonial }: TestimonialCardProps) {
   return (
-    <motion.div
-      className="bg-gray-800 p-6 sm:p-8 rounded-lg shadow-lg h-full flex flex-col"
-      whileHover={ { y: -5, boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -2px rgba(0, 0, 0, 0.1)" } }
-      transition={ { type: "spring", stiffness: 200, damping: 15 } }
-    >
-      <Quote className="text-teal-500 w-8 h-8 sm:w-10 sm:h-10 mb-4 opacity-50" />
-      <p className="text-gray-300 italic mb-6 flex-grow">
-        &quot;
-        { testimonial.quote }
-        &quot;
-      </p>
-      <div className="flex items-center mt-auto">
-        { testimonial.avatarUrl && (
-          <div className="flex-shrink-0 mr-4">
-            <Image
-              src={ testimonial.avatarUrl }
-              alt={ testimonial.author }
-              width={ 50 }
-              height={ 50 }
-              className="rounded-full object-cover"
-            />
+    <figure className="relative w-full h-full cursor-pointer overflow-hidden rounded-2xl p-6
+    border border-slate-700/80 bg-slate-800/60 backdrop-blur-lg shadow-lg">
+      <div className="flex flex-col h-full gap-y-4">
+        <Quote className="h-8 w-8 text-teal-500/80" />
+        <blockquote className="text-slate-200 text-lg leading-relaxed italic flex-grow">
+          "{ testimonial.quote }"
+        </blockquote>
+        <figcaption className="mt-4 flex items-center gap-4">
+          <Image
+            src={ testimonial.avatarUrl || "/images/avatars/default-avatar.png" }
+            alt={ testimonial.author }
+            width={ 48 }
+            height={ 48 }
+            className="h-12 w-12 rounded-full object-cover border-2 border-slate-600"
+          />
+          <div className="flex flex-col">
+            <cite className="font-semibold not-italic text-teal-400">
+              { testimonial.author }
+            </cite>
+            <cite className="text-sm not-italic text-slate-400">
+              { testimonial.company }
+            </cite>
           </div>
-        ) }
-        <div>
-          <p className="font-semibold text-teal-400">{ testimonial.author }</p>
-          { testimonial.company && <p className="text-sm text-gray-500">{ testimonial.company }</p> }
-        </div>
+        </figcaption>
       </div>
-    </motion.div>
+    </figure>
   );
 }
