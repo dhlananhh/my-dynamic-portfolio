@@ -40,6 +40,20 @@ export const projectsData: Project[] = [
   },
   {
     id: "2",
+    title: "Green Grocery Full-stack Website",
+    slug: "green-grocery-website",
+    shortDescription: "Online green grocery website.",
+    description: "This project serves as one of my personal projects.",
+    imageUrl: "",
+    githubUrl: "https://github.com/dhlananhh/green_grocery/",
+    tools: [ "Next.js", "TailwindCSS", "Clerk", "MongoDB", "Node.js" ],
+    category: "Projects",
+    projectStartDate: new Date("2025-05-27"),
+    projectStatus: "In Progress",
+    liveDemoUrl: "https://greencart-gs.vercel.app"
+  },
+  {
+    id: "3",
     title: "Online Bookstore Frontend Project",
     slug: "online-bookstore-project",
     shortDescription: "Online bookstore system, with chatbot integration.",
@@ -53,7 +67,7 @@ export const projectsData: Project[] = [
     liveDemoUrl: "https://bookstore-frontend-nextjs.vercel.app/"
   },
   {
-    id: "3",
+    id: "4",
     title: "Online Bookstore Backend Project",
     slug: "online-bookstore-project",
     shortDescription: "Online bookstore system, with chatbot integration.",
@@ -66,7 +80,20 @@ export const projectsData: Project[] = [
     projectStatus: "Completed",
   },
   {
-    id: "4",
+    id: "5",
+    title: "Bookstore Chatbot",
+    slug: "bookstore-chatbot",
+    shortDescription: "",
+    description: "This project serves as a final report exam on software architecture. I am a member of this project, as a frontend coder, building and integrating chatbot into the bookstore system.",
+    imageUrl: "/images/bookstore-project.png",
+    githubUrl: "https://github.com/dhlananhh/bookstore_chatbot",
+    tools: [ "Python", "HTML", "CSS", "JavaScript", "MariaDB" ],
+    category: "Projects",
+    projectStartDate: new Date("2025-01-11"),
+    projectStatus: "Completed",
+  },
+  {
+    id: "6",
     title: "Portfolio Website Project",
     slug: "portfolio-website-project",
     shortDescription: "My Portfolio Website",
@@ -80,7 +107,7 @@ export const projectsData: Project[] = [
     liveDemoUrl: "https://my-3d-portfolio-wine.vercel.app/"
   },
   {
-    id: "5",
+    id: "7",
     title: "RAG System with Gemini and MongoDB Atlas",
     slug: "rag-system-with-gemini-and-mongodb-atlas",
     shortDescription: "RAG (Retrieval-Augmented Generation) system using Google's Gemini for embeddings and text generation, with MongoDB Atlas serving as the vector database for efficient information storage and retrieval.",
@@ -93,7 +120,7 @@ export const projectsData: Project[] = [
     projectStatus: "Completed",
   },
   {
-    id: "6",
+    id: "8",
     title: "RAG System with Gemini and ChromaDB",
     slug: "rag-system-with-gemini-and-mongodb-atlas",
     shortDescription: "RAG (Retrieval-Augmented Generation) system using Google's Gemini Flash model and the ChromaDB vector database to answer questions based on the content of a PDF document.",
@@ -105,20 +132,19 @@ export const projectsData: Project[] = [
     projectStartDate: new Date("2025-01-11"),
     projectStatus: "Completed",
   },
-  // {
-  //   id: "4",
-  //   title: "DeepSeek Clone Full-stack Website Project",
-  //   slug: "deepseek-clone",
-  //   shortDescription: "DeepSeek clone website",
-  //   description: "This project serves as one of my personal projects.",
-  //   imageUrl: "/images/deepseek-clone-project.png",
-  //   githubUrl: "https://github.com/dhlananhh/deepseek-clone",
-  //   tools: [ "Next.js", "TailwindCSS", "TypeScript" ],
-  //   category: "Projects",
-  //   projectStartDate: new Date("2025-01-11"),
-  //   projectStatus: "In Progress",
-  //   liveDemoUrl: "https://deepseek-clone-gold.vercel.app/"
-  // },
+  {
+    id: "9",
+    title: "Educational App",
+    slug: "educational-app",
+    shortDescription: "Educational Mobile App",
+    description: "This project serves as one of my personal projects.",
+    imageUrl: "",
+    githubUrl: "https://github.com/dhlananhh/Educational-App",
+    tools: [ "Next.js", "TailwindCSS", "TypeScript" ],
+    category: "Projects",
+    projectStartDate: new Date("2024-11-01"),
+    projectStatus: "Completed",
+  },
 ];
 
 export const testimonialsData: Testimonial[] = [
