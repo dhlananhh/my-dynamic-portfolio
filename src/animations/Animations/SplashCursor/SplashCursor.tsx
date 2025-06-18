@@ -1,5 +1,5 @@
 /*
-	Installed from https://reactbits.dev/ts/tailwind/
+  Installed from https://reactbits.dev/ts/tailwind/
 */
 
 "use client";
@@ -78,7 +78,7 @@ export default function SplashCursor({
     const canvas = canvasRef.current;
     if (!canvas) return;
 
-    let pointers: Pointer[] = [pointerPrototype()];
+    let pointers: Pointer[] = [ pointerPrototype() ];
 
     let config = {
       SIM_RESOLUTION: SIM_RESOLUTION!,
@@ -317,7 +317,7 @@ export default function SplashCursor({
       for (let i = 0; i < uniformCount; i++) {
         const uniformInfo = gl.getActiveUniform(program, i);
         if (uniformInfo) {
-          uniforms[uniformInfo.name] = gl.getUniformLocation(
+          uniforms[ uniformInfo.name ] = gl.getUniformLocation(
             program,
             uniformInfo.name,
           );
@@ -330,7 +330,7 @@ export default function SplashCursor({
       program: WebGLProgram | null;
       uniforms: Record<string, WebGLUniformLocation | null>;
 
-      constructor(
+      constructor (
         vertexShader: WebGLShader | null,
         fragmentShader: WebGLShader | null,
       ) {
@@ -350,7 +350,7 @@ export default function SplashCursor({
       activeProgram: WebGLProgram | null;
       uniforms: Record<string, WebGLUniformLocation | null>;
 
-      constructor(
+      constructor (
         vertexShader: WebGLShader | null,
         fragmentShaderSource: string,
       ) {
@@ -366,7 +366,7 @@ export default function SplashCursor({
         for (const kw of keywords) {
           hash += hashCode(kw);
         }
-        let program = this.programs[hash];
+        let program = this.programs[ hash ];
         if (program == null) {
           const fragmentShader = compileShader(
             gl.FRAGMENT_SHADER,
@@ -374,7 +374,7 @@ export default function SplashCursor({
             keywords,
           );
           program = createProgram(this.vertexShader, fragmentShader);
-          this.programs[hash] = program;
+          this.programs[ hash ] = program;
         }
         if (program === this.activeProgram) return;
         if (program) {
@@ -543,7 +543,7 @@ export default function SplashCursor({
           gl_FragColor = result / decay;
       }
     `,
-      ext.supportLinearFiltering ? null : ["MANUAL_FILTERING"],
+      ext.supportLinearFiltering ? null : [ "MANUAL_FILTERING" ],
     );
 
     const divergenceShader = compileShader(
@@ -690,14 +690,14 @@ export default function SplashCursor({
       gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
       gl.bufferData(
         gl.ARRAY_BUFFER,
-        new Float32Array([-1, -1, -1, 1, 1, 1, 1, -1]),
+        new Float32Array([ -1, -1, -1, 1, 1, 1, 1, -1 ]),
         gl.STATIC_DRAW,
       );
       const elemBuffer = gl.createBuffer()!;
       gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, elemBuffer);
       gl.bufferData(
         gl.ELEMENT_ARRAY_BUFFER,
-        new Uint16Array([0, 1, 2, 0, 2, 3]),
+        new Uint16Array([ 0, 1, 2, 0, 2, 3 ]),
         gl.STATIC_DRAW,
       );
       gl.vertexAttribPointer(0, 2, gl.FLOAT, false, 0, 0);
@@ -1422,7 +1422,7 @@ export default function SplashCursor({
     }
 
     window.addEventListener("mousedown", (e) => {
-      const pointer = pointers[0];
+      const pointer = pointers[ 0 ];
       const posX = scaleByPixelRatio(e.clientX);
       const posY = scaleByPixelRatio(e.clientY);
       updatePointerDownData(pointer, -1, posX, posY);
@@ -1430,7 +1430,7 @@ export default function SplashCursor({
     });
 
     function handleFirstMouseMove(e: MouseEvent) {
-      const pointer = pointers[0];
+      const pointer = pointers[ 0 ];
       const posX = scaleByPixelRatio(e.clientX);
       const posY = scaleByPixelRatio(e.clientY);
       const color = generateColor();
@@ -1441,7 +1441,7 @@ export default function SplashCursor({
     document.body.addEventListener("mousemove", handleFirstMouseMove);
 
     window.addEventListener("mousemove", (e) => {
-      const pointer = pointers[0];
+      const pointer = pointers[ 0 ];
       const posX = scaleByPixelRatio(e.clientX);
       const posY = scaleByPixelRatio(e.clientY);
       const color = pointer.color;
@@ -1450,12 +1450,12 @@ export default function SplashCursor({
 
     function handleFirstTouchStart(e: TouchEvent) {
       const touches = e.targetTouches;
-      const pointer = pointers[0];
+      const pointer = pointers[ 0 ];
       for (let i = 0; i < touches.length; i++) {
-        const posX = scaleByPixelRatio(touches[i].clientX);
-        const posY = scaleByPixelRatio(touches[i].clientY);
+        const posX = scaleByPixelRatio(touches[ i ].clientX);
+        const posY = scaleByPixelRatio(touches[ i ].clientY);
         updateFrame();
-        updatePointerDownData(pointer, touches[i].identifier, posX, posY);
+        updatePointerDownData(pointer, touches[ i ].identifier, posX, posY);
       }
       document.body.removeEventListener("touchstart", handleFirstTouchStart);
     }
@@ -1465,11 +1465,11 @@ export default function SplashCursor({
       "touchstart",
       (e) => {
         const touches = e.targetTouches;
-        const pointer = pointers[0];
+        const pointer = pointers[ 0 ];
         for (let i = 0; i < touches.length; i++) {
-          const posX = scaleByPixelRatio(touches[i].clientX);
-          const posY = scaleByPixelRatio(touches[i].clientY);
-          updatePointerDownData(pointer, touches[i].identifier, posX, posY);
+          const posX = scaleByPixelRatio(touches[ i ].clientX);
+          const posY = scaleByPixelRatio(touches[ i ].clientY);
+          updatePointerDownData(pointer, touches[ i ].identifier, posX, posY);
         }
       },
       false,
@@ -1479,10 +1479,10 @@ export default function SplashCursor({
       "touchmove",
       (e) => {
         const touches = e.targetTouches;
-        const pointer = pointers[0];
+        const pointer = pointers[ 0 ];
         for (let i = 0; i < touches.length; i++) {
-          const posX = scaleByPixelRatio(touches[i].clientX);
-          const posY = scaleByPixelRatio(touches[i].clientY);
+          const posX = scaleByPixelRatio(touches[ i ].clientX);
+          const posY = scaleByPixelRatio(touches[ i ].clientY);
           updatePointerMoveData(pointer, posX, posY, pointer.color);
         }
       },
@@ -1491,7 +1491,7 @@ export default function SplashCursor({
 
     window.addEventListener("touchend", (e) => {
       const touches = e.changedTouches;
-      const pointer = pointers[0];
+      const pointer = pointers[ 0 ];
       for (let i = 0; i < touches.length; i++) {
         updatePointerUpData(pointer);
       }
@@ -1516,7 +1516,7 @@ export default function SplashCursor({
   return (
     <div className="fixed top-0 left-0 z-50 pointer-events-none w-full h-full">
       <canvas
-        ref={canvasRef}
+        ref={ canvasRef }
         id="fluid"
         className="w-screen h-screen block"
       ></canvas>
