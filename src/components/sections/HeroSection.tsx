@@ -13,7 +13,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Github, Linkedin, Mail } from "lucide-react";
 import { useTheme } from "next-themes";
-import GradientText from "@/animations/TextAnimations/GradientText/GradientText";
+import GradientText from "@/blocks/TextAnimations/GradientText/GradientText";
 
 const COLORS_TOP = [ "#13FFAA", "#1E67C6", "#CE84CF", "#DD335C" ];
 
