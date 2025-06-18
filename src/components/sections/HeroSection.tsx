@@ -13,6 +13,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Github, Linkedin, Mail } from "lucide-react";
 import { useTheme } from "next-themes";
+import GradientText from "@/animations/TextAnimations/GradientText/GradientText";
 
 const COLORS_TOP = [ "#13FFAA", "#1E67C6", "#CE84CF", "#DD335C" ];
 
@@ -40,17 +41,21 @@ export default function HeroSection() {
       className="relative grid min-h-screen place-content-center overflow-hidden px-4 py-24 text-foreground"
     >
       <div className="relative z-10 flex flex-col items-center text-center">
-        <h1 className="max-w-4xl text-4xl sm:text-5xl md:text-7xl font-extrabold mb-4 tracking-tight leading-tight">
-          <span className="block text-2xl sm:text-3xl md:text-4xl font-medium text-teal-400/90 mb-4">
-            Hi, I'm Lan Anh.
+
+        <GradientText
+          className="max-w-4xl text-4xl sm:text-5xl md:text-7xl font-extrabold mb-4 tracking-tight leading-tight"
+          colors={ [ "#86EFAC", "#2DD4BF", "#3B82F6", "#86EFAC" ] }
+        >
+          <span className="block">
+            Hi, I'm Lan Anh!
           </span>
-          <span className="block bg-gradient-to-r from-green-300 via-teal-400 to-blue-500 bg-clip-text text-transparent">
+          <span className="block mt-10 font-bold">
             I Build Modern & Intuitive
           </span>
-          <span className="block bg-gradient-to-r from-green-300 via-teal-400 to-blue-500 bg-clip-text text-transparent">
+          <span className="block font-bold">
             Web Experiences.
           </span>
-        </h1>
+        </GradientText>
 
         <p className="my-6 max-w-xl text-center text-base leading-relaxed md:text-lg md:leading-relaxed text-slate-300">
           A passionate <strong className="font-semibold text-white">Web Developer</strong> based in Ho Chi Minh City, dedicated to turning innovative ideas into beautiful, high-performance digital solutions.
