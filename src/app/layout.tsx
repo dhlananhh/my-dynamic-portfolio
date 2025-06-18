@@ -5,15 +5,16 @@ import "./globals.css"
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { Toaster as RadixToaster } from "@/components/ui/toaster";
+import SplashCursor from "@/animations/Animations/SplashCursor/SplashCursor";
 
 const inter = Inter({ subsets: [ "latin" ] });
 
 export const metadata: Metadata = {
-  title: "3D Animation Portfolio - Lan Anh",
-  description: "Welcome to my 3D Animation portfolio.",
+  title: "Lan Anh | Web Developer Portfolio",
+  description: "A personal portfolio to showcase my skills and projects",
   openGraph: {
-    title: "Portfolio - Lan Anh",
-    description: "Frontend Developer Portfolio of Lan Anh.",
+    title: "Lan Anh | Web Developer Portfolio",
+    description: "A personal portfolio to showcase my skills and projects",
     locale: "en_US",
     type: "website",
   },
@@ -29,6 +30,7 @@ export default function RootLayout({
       <body
         className={ `${inter.className} antialiased flex flex-col min-h-screen` }
       >
+        <SplashCursor />
         <Navbar />
         <main className="flex-grow">
           { children }
