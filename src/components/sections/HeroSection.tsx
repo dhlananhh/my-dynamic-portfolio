@@ -14,6 +14,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Github, Linkedin, Mail } from "lucide-react";
 import { useTheme } from "next-themes";
 import GradientText from "@/components/blocks/TextAnimations/GradientText/GradientText";
+import { RippleButton } from "@/components/magicui/ripple-button";
 
 const COLORS_TOP = [ "#13FFAA", "#1E67C6", "#CE84CF", "#DD335C" ];
 
@@ -76,11 +77,14 @@ export default function HeroSection() {
               View Projects <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
           </Button>
+
           <Button
             asChild
             variant="outline"
             size="lg"
-            className="font-medium rounded-lg text-lg px-6 py-3 text-center hover:scale-105"
+            className="bg-transparent hover:bg-transparent text-slate-100 hover:text-white
+            font-medium rounded-lg text-lg px-6 py-3 text-center transition-transform
+            hover:scale-105 border-2 border-slate-600 hover:border-slate-300"
             onClick={ (e) => {
               e.preventDefault();
               const contactSection = document.querySelector("#contact");
@@ -91,6 +95,7 @@ export default function HeroSection() {
           >
             <Link href="#contact">Contact me</Link>
           </Button>
+
         </motion.div>
 
         <motion.div
