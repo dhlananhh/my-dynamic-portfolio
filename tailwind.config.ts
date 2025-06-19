@@ -103,12 +103,22 @@ const config: Config = {
             "backgroundPosition": "-200% 0",
           },
         },
+        "rippling": {
+          "0%": {
+            opacity: "1",
+          },
+          "100%": {
+            transform: "scale(2)",
+            opacity: "0",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "gradient": "gradient 8s linear infinite",
         "shine": "shine 8s linear infinite",
+        "rippling": "rippling 600ms ease-out",
       }
     }
   },
