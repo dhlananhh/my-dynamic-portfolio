@@ -15,7 +15,7 @@ export default function TestimonialCard({ testimonial }: TestimonialCardProps) {
       <div className="flex flex-col h-full gap-y-4">
         <Quote className="h-8 w-8 text-teal-500/80" />
         <blockquote className="text-slate-200 text-lg leading-relaxed italic flex-grow">
-          "{ testimonial.quote }"
+          &quot;{ testimonial.quote }&quot;
         </blockquote>
         <figcaption className="mt-4 flex items-center gap-4">
           <Image

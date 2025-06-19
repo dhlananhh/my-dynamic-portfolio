@@ -12,14 +12,12 @@ import {
 } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Github, Linkedin, Mail } from "lucide-react";
-import { useTheme } from "next-themes";
 import GradientText from "@/components/blocks/TextAnimations/GradientText/GradientText";
 
 const COLORS_TOP = [ "#13FFAA", "#1E67C6", "#CE84CF", "#DD335C" ];
 
 export default function HeroSection() {
   const color = useMotionValue(COLORS_TOP[ 0 ]);
-  const { theme } = useTheme();
 
   useEffect(() => {
     animate(color, COLORS_TOP, {
@@ -47,7 +45,7 @@ export default function HeroSection() {
           colors={ [ "#86EFAC", "#2DD4BF", "#3B82F6", "#86EFAC" ] }
         >
           <span className="block text-5xl">
-            Hi, I'm Lan Anh!
+            Hi, I&apos;m Lan Anh!
           </span>
           <span className="block mt-10 font-bold">
             I Build Modern & Intuitive

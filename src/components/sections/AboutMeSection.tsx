@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, circOut } from "framer-motion";
 import { GlassmorphicCard } from "@/components/custom-ui/GlassmorphicCard";
 import Link from "next/link";
 import { SectionHeading } from "@/components/SectionHeading";
@@ -11,7 +11,7 @@ const AboutMeSection = () => {
 
   const imageContainerVariants = {
     hidden: { opacity: 0, x: -50 },
-    visible: { opacity: 1, x: 0, transition: { duration: 0.7, ease: "circOut", delay: 0.3 } },
+    visible: { opacity: 1, x: 0, transition: { duration: 0.7, ease: circOut, delay: 0.3 } },
   };
 
   return (
@@ -55,13 +55,13 @@ const AboutMeSection = () => {
           <div className="space-y-6">
             <GlassmorphicCard>
               <p className="text-lg text-zinc-300 leading-relaxed lg:text-justify">
-                Hello! I'm <strong className="text-teal-400">Dương Hoàng Lan Anh</strong>, a final-year Software Engineering student at the Industrial University of Ho Chi Minh City. My academic journey has been a deep dive into technology, but my true passion sparked in the world of web development. I am driven by the challenge of transforming creative ideas into interactive, beautiful, and user-centric digital experiences.
+                Hello! I&apos;m <strong className="text-teal-400">Dương Hoàng Lan Anh</strong>, a final-year Software Engineering student at the Industrial University of Ho Chi Minh City. My academic journey has been a deep dive into technology, but my true passion sparked in the world of web development. I am driven by the challenge of transforming creative ideas into interactive, beautiful, and user-centric digital experiences.
               </p>
               <p className="text-lg text-zinc-300 mt-4 leading-relaxed lg:text-justify">
-                My core strength lies in frontend development, with a strong focus on modern JavaScript, particularly <strong className="font-semibold text-white">React</strong> and <strong className="font-semibold text-white">Next.js</strong>. I don't just write code; I strive to build high-performance, responsive, and accessible interfaces. For me, a successful project is one where clean code and thoughtful design converge to create an intuitive and seamless journey for the end-user.
+                My core strength lies in frontend development, with a strong focus on modern JavaScript, particularly <strong className="font-semibold text-white">React</strong> and <strong className="font-semibold text-white">Next.js</strong>. I don&apos;t just write code; I strive to build high-performance, responsive, and accessible interfaces. For me, a successful project is one where clean code and thoughtful design converge to create an intuitive and seamless journey for the end-user.
               </p>
               <p className="text-lg text-zinc-300 mt-4 leading-relaxed lg:text-justify">
-                As I approach graduation, I'm eager to apply my academic knowledge and creative energy to real-world challenges. I am a firm believer in lifelong learning and thrive in collaborative environments where I can contribute to a team's success while continuously growing my own skills. My goal is to craft web experiences that are not only functional but also leave a lasting positive impression.
+                As I approach graduation, I&apos;m eager to apply my academic knowledge and creative energy to real-world challenges. I am a firm believer in lifelong learning and thrive in collaborative environments where I can contribute to a team&apos;s success while continuously growing my own skills. My goal is to craft web experiences that are not only functional but also leave a lasting positive impression.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4 mt-8 pt-6 border-t border-zinc-700/50">
