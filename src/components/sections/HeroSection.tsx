@@ -13,7 +13,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Github, Linkedin, Mail } from "lucide-react";
 import { useTheme } from "next-themes";
-import GradientText from "@/blocks/TextAnimations/GradientText/GradientText";
+import GradientText from "@/components/blocks/TextAnimations/GradientText/GradientText";
 
 const COLORS_TOP = [ "#13FFAA", "#1E67C6", "#CE84CF", "#DD335C" ];
 
@@ -46,7 +46,7 @@ export default function HeroSection() {
           className="max-w-4xl text-4xl sm:text-5xl md:text-7xl font-extrabold mb-4 tracking-tight leading-tight"
           colors={ [ "#86EFAC", "#2DD4BF", "#3B82F6", "#86EFAC" ] }
         >
-          <span className="block">
+          <span className="block text-5xl">
             Hi, I'm Lan Anh!
           </span>
           <span className="block mt-10 font-bold">

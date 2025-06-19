@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { SectionHeading } from "@/components/SectionHeading";
 import { Rocket, BarChartBig, Target } from "lucide-react";
-import SpotlightCard from "@/blocks/Components/SpotlightCard/SpotlightCard";
+import SpotlightCard from "@/components/blocks/Components/SpotlightCard/SpotlightCard";
 
 const goals = [
   {

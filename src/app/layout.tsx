@@ -5,7 +5,7 @@ import "./globals.css"
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { Toaster as RadixToaster } from "@/components/ui/toaster";
-import SplashCursor from "@/blocks/Animations/SplashCursor/SplashCursor";
+import SplashCursor from "@/components/blocks/Animations/SplashCursor/SplashCursor";
 
 const inter = Inter({ subsets: [ "latin" ] });
 
