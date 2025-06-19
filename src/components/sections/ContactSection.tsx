@@ -2,7 +2,7 @@
 
 import ContactForm from "@/components/custom-ui/ContactForm";
 import { SectionHeading } from "@/components/SectionHeading";
-import { motion } from "framer-motion";
+import { motion, easeInOut } from "framer-motion";
 import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
 import Link from "next/link";
 
@@ -30,9 +30,10 @@ const contactDetails = [
 const currentStatus = "Available for freelance work and full-time opportunities";
 
 export default function ContactSection() {
+
   const cardVariants = {
     hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeInOut" } },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: easeInOut } },
   };
 
   return (
