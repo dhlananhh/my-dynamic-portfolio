@@ -9,6 +9,6 @@
   "formatter": "prettier",
   "configFiles": {},
   "paths": {
-    "*": "./src/blocks"
+    "*": "./src/components/blocks"
   }
 }
