@@ -14,7 +14,6 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Github, Linkedin, Mail } from "lucide-react";
 import { useTheme } from "next-themes";
 import GradientText from "@/components/blocks/TextAnimations/GradientText/GradientText";
-import { RippleButton } from "@/components/magicui/ripple-button";
 
 const COLORS_TOP = [ "#13FFAA", "#1E67C6", "#CE84CF", "#DD335C" ];
 
