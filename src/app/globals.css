@@ -108,6 +108,7 @@ body {
   }
   .theme {
     --animate-shine: shine var(--duration) infinite linear;
+    --animate-rippling: rippling var(--duration) ease-out;
   }
 }
 
@@ -157,6 +158,15 @@ body {
     }
     to {
       background-position: 0% 0%;
+    }
+  }
+  @keyframes rippling {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      transform: scale(2);
+      opacity: 0;
     }
   }
 }
