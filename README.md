@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# My 3D Portfolio Website
 
-## Getting Started
+[![Portfolio](https://img.shields.io/badge/Live-Demo-brightgreen?style=for-the-badge&logo=vercel)](https://my-3d-portfolio-wine.vercel.app/)
+&nbsp;
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-dhlananh-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/dhlananh/)
+&nbsp;
+[![GitHub](https://img.shields.io/badge/GitHub-dhlananhh-green?style=for-the-badge&logo=github)](https://github.com/dhlananhh)
 
-First, run the development server:
+## 1. Project Overview
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+This repository contains the source code for my personal 3D portfolio website. Designed to be an interactive and engaging experience, this portfolio showcases my projects, skills, and professional background in a unique, three-dimensional web environment. The goal was to move beyond traditional portfolio layouts and demonstrate my ability to work with modern web technologies like Three.js and React.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 2. Key Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Interactive 3D Models**: Engaging, interactive 3D elements created with Three.js.
+- **Smooth Animations & Transitions**: Seamless user experience powered by Framer Motion.
+- **Responsive Design**: Fully optimized for a consistent and accessible experience across all devices—desktops, tablets, and mobile phones.
+- **Modern UI/UX**: A clean, intuitive, and visually appealing user interface built with reusable React components.
+- **Contact Form Integration**: A functional contact form using EmailJS for easy communication.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 3. Technologies & Tools
 
-## Learn More
+This project was built using a modern tech stack, including:
 
-To learn more about Next.js, take a look at the following resources:
+| Category               | Technology                                    |
+| :--------------------- | :-------------------------------------------- |
+| **Frontend Framework** | Next.js                                       |
+| **3D Graphics**        | Three.js, React Three Fiber, React Three Drei |
+| **Styling**            | Tailwind CSS                                  |
+| **Animation**          | Framer Motion                                 |
+| **Email Service**      | Web3Forms                                     |
+| **Deployment**         | Vercel                                        |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 4. Setup and Installation
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+To run this project locally, follow these simple steps:
 
-## Deploy on Vercel
+1.  **Clone the repository:**
+    ````sh
+    git clone https://github.com/dhlananhh/my-3d-portfolio.git
+    ```
+    ````
+2.  **Navigate to the project directory:**
+    ```sh
+    cd my-3d-portfolio
+    ```
+3.  **Install NPM packages:**
+    ```sh
+    npm install
+    ```
+4.  **Run the development server:**
+    ```sh
+    npm run dev
+    ```
+    Open [http://localhost:3000](http://localhost:3000) (or the port shown in your terminal) to view it in the browser.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 5. Contact
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+I'm currently seeking new opportunities as a Junior Developer. If you're interested in my work or have any questions, please feel free to connect with me!
+
+- **LinkedIn**: [Dương Hoàng Lan Anh](https://www.linkedin.com/in/dhlananh/)
+- **Email**: dhlananh2309@gmail.com
+
+Thank you for visiting my repository!
