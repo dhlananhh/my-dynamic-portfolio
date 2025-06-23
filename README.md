@@ -36,17 +36,23 @@ This project was built using a modern tech stack, including:
 To run this project locally, follow these simple steps:
 
 1. **Clone the repository:**
+
    ```sh
    git clone https://github.com/dhlananhh/my-3d-portfolio.git
    ```
+
 2. **Navigate to the project directory:**
+
    ```sh
    cd my-3d-portfolio
    ```
+
 3. **Install NPM packages:**
+
    ```sh
    npm install
    ```
+
 4. **Run the development server:**
 
    ```sh
@@ -55,7 +61,13 @@ To run this project locally, follow these simple steps:
 
    Open [http://localhost:3000](http://localhost:3000) (or the port shown in your terminal) to view it in the browser.
 
-## 5. Contact
+## 5. Screenshots
+
+![Screnshots](./public/screenshots/homepage.png)
+
+![Screnshots](./public/screenshots/career-goals.png)
+
+## 6. Contact
 
 I'm currently seeking new opportunities as a Junior Developer. If you're interested in my work or have any questions, please feel free to connect with me!
 
