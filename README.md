@@ -1,6 +1,6 @@
 # My 3D Portfolio Website
 
-[![Portfolio](https://img.shields.io/badge/Live-Demo-brightgreen?style=for-the-badge&logo=vercel)](https://my-3d-portfolio-wine.vercel.app/)
+[![Portfolio](https://img.shields.io/badge/Live-Demo-brightgreen?style=for-the-badge&logo=vercel)](https://dhlananh-dev-portfolio.vercel.app/)
 &nbsp;
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-dhlananh-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/dhlananh/)
 &nbsp;
