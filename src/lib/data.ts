@@ -115,12 +115,59 @@ export const projectsData: Project[] = [
     category: "Web",
     projectStartDate: new Date("2025-01-11"),
     projectStatus: "Completed",
-    liveDemoUrl: "https://my-3d-portfolio-wine.vercel.app/",
+    liveDemoUrl: "https://dhlananh-dev-portfolio.vercel.app/",
     keyFeatures: [ "Dynamic project filtering", "Smooth page transitions and animations", "Responsive design for all devices", "Built with modern, best-practice frontend technologies" ],
     galleryImages: [ "/images/projects/my-portfolio-website-project.png" ]
   },
   {
     id: "7",
+    title: "ChatHub-Web",
+    slug: "chathub-web",
+    shortDescription: "The very portfolio you are currently exploring!",
+    description: "The primary goal of this project was to create a personal space to showcase my skills, projects, and career journey. I chose modern technologies like Next.js for performance and SEO, and Framer Motion to create a dynamic, engaging user experience. It's a testament to my skills in frontend development and my attention to design details.",
+    imageUrl: "/images/projects/my-portfolio-website-project.png",
+    githubUrl: "https://github.com/dhlananhh/my-3d-portfolio",
+    tools: [ "Next.js", "TailwindCSS", "TypeScript", ],
+    category: "Web",
+    projectStartDate: new Date("2025-01-11"),
+    projectStatus: "Completed",
+    liveDemoUrl: "https://my-3d-portfolio-wine.vercel.app/",
+    keyFeatures: [ "Dynamic project filtering", "Smooth page transitions and animations", "Responsive design for all devices", "Built with modern, best-practice frontend technologies" ],
+    galleryImages: [ "/images/projects/my-portfolio-website-project.png" ]
+  },
+  {
+    id: "8",
+    title: "ForeverBuy Ecommerce Website",
+    slug: "foreverbuy-ecommerce-website ",
+    shortDescription: "The very portfolio you are currently exploring!",
+    description: "The primary goal of this project was to create a personal space to showcase my skills, projects, and career journey. I chose modern technologies like Next.js for performance and SEO, and Framer Motion to create a dynamic, engaging user experience. It's a testament to my skills in frontend development and my attention to design details.",
+    imageUrl: "/images/projects/my-portfolio-website-project.png",
+    githubUrl: "https://github.com/dhlananhh/ForeverBuy-Ecommerce",
+    tools: [ "Next.js", "TailwindCSS", "TypeScript", ],
+    category: "Web",
+    projectStartDate: new Date("2025-01-11"),
+    projectStatus: "Completed",
+    liveDemoUrl: "https://forever-frontend-hazel.vercel.app/",
+    keyFeatures: [ "Dynamic project filtering", "Smooth page transitions and animations", "Responsive design for all devices", "Built with modern, best-practice frontend technologies" ],
+    galleryImages: [ "/images/projects/my-portfolio-website-project.png" ]
+  },
+  {
+    id: "9",
+    title: "Chat with PDF",
+    slug: "chat-with-pdf",
+    shortDescription: "The very portfolio you are currently exploring!",
+    description: "The primary goal of this project was to create a personal space to showcase my skills, projects, and career journey. I chose modern technologies like Next.js for performance and SEO, and Framer Motion to create a dynamic, engaging user experience. It's a testament to my skills in frontend development and my attention to design details.",
+    imageUrl: "/images/projects/my-portfolio-website-project.png",
+    githubUrl: "https://github.com/dhlananhh/chat-with-pdf",
+    tools: [ "Next.js", "TailwindCSS", "TypeScript", ],
+    category: "Web",
+    projectStartDate: new Date("2025-01-11"),
+    projectStatus: "Completed",
+    keyFeatures: [ "Dynamic project filtering", "Smooth page transitions and animations", "Responsive design for all devices", "Built with modern, best-practice frontend technologies" ],
+    galleryImages: [ "/images/projects/my-portfolio-website-project.png" ]
+  },
+  {
+    id: "10",
     title: "RAG System with Gemini & MongoDB",
     slug: "rag-system-with-gemini-and-mongodb-atlas",
     shortDescription: "A Q&A system powered by Google's Gemini and a MongoDB vector database.",
@@ -135,7 +182,7 @@ export const projectsData: Project[] = [
     galleryImages: [ "/images/projects/rag_system.png" ]
   },
   {
-    id: "8",
+    id: "11",
     title: "RAG System with Gemini & ChromaDB",
     slug: "rag-system-with-gemini-and-chromadb",
     shortDescription: "An alternative RAG implementation using Gemini and the local vector store ChromaDB.",
@@ -150,7 +197,7 @@ export const projectsData: Project[] = [
     galleryImages: [ "/images/projects/rag_system.png" ]
   },
   {
-    id: "9",
+    id: "12",
     title: "Educational Mobile App",
     slug: "educational-app",
     shortDescription: "A cross-platform mobile application for interactive learning.",
