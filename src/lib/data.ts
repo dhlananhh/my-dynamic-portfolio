@@ -102,7 +102,7 @@ export const projectsData: Project[] = [
     slug: "foreverbuy-ecommerce-website",
     shortDescription: "A stylish and modern e-commerce storefront with a focus on seamless user experience.",
     description: "ForeverBuy is another take on a modern e-commerce platform, focusing on a minimalistic and clean UI/UX design. This project showcases the ability to build a visually appealing and highly performant online store, with smooth animations, fast page loads, and a checkout process designed to maximize conversion.",
-    imageUrl: "/images/projects/foreverbuy-ecommerce.png",
+    imageUrl: "/images/projects/foreverbuy-ecommerce-project-thumbnail.png",
     githubUrl: "https://github.com/dhlananhh/ForeverBuy-Ecommerce",
     tools: [ "Next.js", "TailwindCSS", "TypeScript" ],
     category: "Web",
@@ -110,7 +110,21 @@ export const projectsData: Project[] = [
     projectStatus: "Completed",
     liveDemoUrl: "https://forever-frontend-hazel.vercel.app/",
     keyFeatures: [ "Minimalistic and clean UI/UX design", "Fast page loads optimized with Next.js", "Smooth page animations and transitions", "A streamlined, multi-step checkout flow" ],
-    galleryImages: [ "/images/projects/foreverbuy-ecommerce.png" ]
+    galleryImages: [
+      "/images/projects/foreverbuy-ecommerce-project-thumbnail.png",
+      "/images/projects/foreverbuy-ecommerce-project-homepage-1.png",
+      "/images/projects/foreverbuy-ecommerce-project-homepage-2.png",
+      "/images/projects/foreverbuy-ecommerce-project-homepage-3.png",
+      "/images/projects/foreverbuy-ecommerce-project-homepage-4.png",
+      "/images/projects/foreverbuy-ecommerce-foreverbuy-ecommerce-project-collection-page-1.png",
+      "/images/projects/foreverbuy-ecommerce-foreverbuy-ecommerce-project-collection-page-2.png",
+      "/images/projects/foreverbuy-ecommerce-foreverbuy-ecommerce-project-collection-page-3.png",
+      "/images/projects/foreverbuy-ecommerce-foreverbuy-ecommerce-project-collection-page-4.png",
+      "/images/projects/foreverbuy-ecommerce-foreverbuy-ecommerce-project-collection-page-5.png",
+      "/images/projects/foreverbuy-ecommerce-project-login-page.png",
+      "/images/projects/foreverbuy-ecommerce-project-cart-page.png",
+      "/images/projects/foreverbuy-ecommerce-project-product-details-page.png",
+    ]
   },
   {
     id: "6",
