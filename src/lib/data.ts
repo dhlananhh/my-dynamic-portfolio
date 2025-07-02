@@ -40,7 +40,7 @@ export const projectsData: Project[] = [
     liveDemoUrl: "https://bookstore-frontend-nextjs.vercel.app/",
     keyFeatures: [ "Responsive and interactive UI", "Client-side data fetching and caching", "Integration with a Node.js backend", "Seamless chatbot widget integration" ],
     galleryImages: [
-      "/images/projects/bookstore-project.png",
+      "/images/projects/bookstore-project-thumbnail.png",
       "/images/projects/bookstore-project-homepage-1.png",
       "/images/projects/bookstore-project-homepage-2.png",
       "/images/projects/bookstore-project-homepage-3.png",
