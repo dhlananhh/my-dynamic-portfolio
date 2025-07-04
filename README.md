@@ -63,9 +63,21 @@ To run this project locally, follow these simple steps:
 
 ## 5. Screenshots
 
+### Homepage
+
 ![Screnshots](./public/screenshots/homepage.png)
 
+### Career Goals
+
 ![Screnshots](./public/screenshots/career-goals.png)
+
+### Project Details Page
+
+![Screnshots](./public/screenshots/project-details-page-1.png)
+
+![Screnshots](./public/screenshots/project-details-page-2.png)
+
+![Screnshots](./public/screenshots/project-details-page-3.png)
 
 ## 6. Contact
 
