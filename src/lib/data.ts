@@ -27,43 +27,11 @@ export interface Testimonial {
 export const projectsData: Project[] = [
   {
     id: "1",
-    title: "Ecommerce Full-stack Website",
-    slug: "ecommerce-website",
-    shortDescription: "A modern, full-featured e-commerce platform with real-time chatbot support.",
-    description: "The goal of this personal project was to build a complete, end-to-end e-commerce solution from scratch. It demonstrates proficiency in full-stack development, including user authentication, product management, shopping cart functionality, and integrating a third-party payment gateway.",
-    imageUrl: "/images/projects/ecommerce-project.png",
-    githubUrl: "https://github.com/dhlananhh/quickcart/",
-    tools: [ "Next.js", "TailwindCSS", "Clerk", "MongoDB", "Stripe" ],
-    category: "Web",
-    projectStartDate: new Date("2025-05-27"),
-    projectStatus: "In Progress",
-    liveDemoUrl: "https://quickcart-gs.vercel.app/",
-    keyFeatures: [ "Secure user authentication with Clerk", "Dynamic product catalog with search and filtering", "Fully functional shopping cart", "Stripe integration for payments (test mode)", "Integrated chatbot for customer support" ],
-    galleryImages: [ "/images/projects/ecommerce-project.png" ]
-  },
-  {
-    id: "2",
-    title: "Green Grocery Full-stack Website",
-    slug: "green-grocery-website",
-    shortDescription: "An online store specializing in fresh, organic groceries.",
-    description: "This project focuses on creating a clean and intuitive user experience for an online grocery store. It emphasizes features like quick-add-to-cart, responsive design for shopping on the go, and an admin dashboard for managing inventory and orders.",
-    imageUrl: "/images/projects/green-grocery-project.png",
-    githubUrl: "https://github.com/dhlananhh/green_grocery/",
-    tools: [ "Next.js", "TailwindCSS", "Clerk", "MongoDB", "Node.js" ],
-    category: "Web",
-    projectStartDate: new Date("2025-05-27"),
-    projectStatus: "In Progress",
-    liveDemoUrl: "https://greencart-gs.vercel.app",
-    keyFeatures: [ "User-friendly interface optimized for mobile", "Real-time inventory updates", "Admin dashboard for content management", "Fast and responsive user experience" ],
-    galleryImages: [ "/images/projects/green-grocery-project.png" ]
-  },
-  {
-    id: "3",
     title: "Online Bookstore Frontend",
     slug: "online-bookstore-project-frontend",
     shortDescription: "The client-side application for a collaborative online bookstore project.",
     description: "As part of my Software Architecture final exam, I took on the role of Frontend Developer. My responsibilities included building the entire user interface using Next.js and TailwindCSS, managing application state, fetching data from the backend API, and integrating a custom-built chatbot to enhance user engagement.",
-    imageUrl: "/images/projects/bookstore-project.png",
+    imageUrl: "/images/projects/bookstore-project-thumbnail.png",
     githubUrl: "https://github.com/minhlq2003/bookstore-frontend-nextjs",
     tools: [ "Next.js", "TailwindCSS", "TypeScript", "React Query" ],
     category: "Web",
@@ -71,10 +39,19 @@ export const projectsData: Project[] = [
     projectStatus: "Completed",
     liveDemoUrl: "https://bookstore-frontend-nextjs.vercel.app/",
     keyFeatures: [ "Responsive and interactive UI", "Client-side data fetching and caching", "Integration with a Node.js backend", "Seamless chatbot widget integration" ],
-    galleryImages: [ "/images/projects/bookstore-project.png" ]
+    galleryImages: [
+      "/images/projects/bookstore-project.png",
+      "/images/projects/bookstore-project-homepage-1.png",
+      "/images/projects/bookstore-project-homepage-2.png",
+      "/images/projects/bookstore-project-homepage-3.png",
+      "/images/projects/bookstore-project-category-astronaut-1.png",
+      "/images/projects/bookstore-project-category-astronaut-2.png",
+      "/images/projects/bookstore-project-category-astronaut-3.png",
+      "/images/projects/bookstore-project-category-astronaut-3.png",
+    ]
   },
   {
-    id: "4",
+    id: "2",
     title: "Online Bookstore Backend",
     slug: "online-bookstore-project-backend",
     shortDescription: "The server-side API for the collaborative online bookstore project.",
@@ -89,12 +66,12 @@ export const projectsData: Project[] = [
     galleryImages: [ "/images/projects/bookstore-project-backend.png" ]
   },
   {
-    id: "5",
+    id: "3",
     title: "Bookstore Chatbot",
     slug: "bookstore-chatbot",
     shortDescription: "A Python-based chatbot to assist users with book searches.",
     description: "This component of the bookstore project involved creating a chatbot from the ground up. The bot is designed to understand natural language queries, search the bookstore's database for relevant books, and provide helpful recommendations to users. This was my first foray into applying NLP techniques in a practical application.",
-    imageUrl: "/images/projects/bookstore-project-chatbot.png",
+    imageUrl: "/images/projects/bookstore-chatbot-project-thumbnail.png",
     githubUrl: "https://github.com/dhlananhh/bookstore_chatbot",
     tools: [ "Python", "Flask", "NLP", "JavaScript", "MariaDB" ],
     category: "AI",
@@ -104,7 +81,7 @@ export const projectsData: Project[] = [
     galleryImages: [ "/images/projects/bookstore-project-chatbot.png" ]
   },
   {
-    id: "7",
+    id: "4",
     title: "ChatHub-Web",
     slug: "chathub-web",
     shortDescription: "A real-time, web-based chat application for instant communication and collaboration.",
@@ -120,7 +97,7 @@ export const projectsData: Project[] = [
     galleryImages: [ "/images/projects/chathub-web.png" ]
   },
   {
-    id: "8",
+    id: "5",
     title: "ForeverBuy Ecommerce Website",
     slug: "foreverbuy-ecommerce-website",
     shortDescription: "A stylish and modern e-commerce storefront with a focus on seamless user experience.",
@@ -136,23 +113,7 @@ export const projectsData: Project[] = [
     galleryImages: [ "/images/projects/foreverbuy-ecommerce.png" ]
   },
   {
-    id: "9",
-    title: "Chat with PDF",
-    slug: "chat-with-pdf",
-    shortDescription: "An AI-powered application to interactively chat with your PDF documents.",
-    description: "This project provides a web interface for a powerful RAG (Retrieval-Augmented Generation) system. Users can upload a PDF document, and the application processes it to allow for natural language conversations about its content. It's a practical demonstration of combining modern frontend development with advanced AI capabilities to create a useful tool.",
-    imageUrl: "/images/projects/chat-with-pdf.png",
-    githubUrl: "https://github.com/dhlananhh/chat-with-pdf",
-    tools: [ "Next.js", "TailwindCSS", "TypeScript", "Vercel AI SDK" ],
-    category: "AI",
-    projectStartDate: new Date("2024-10-05"),
-    projectStatus: "Completed",
-    liveDemoUrl: "https://chat-with-pdf-seven-omega.vercel.app/",
-    keyFeatures: [ "PDF upload and processing functionality", "Interactive chat interface for Q&A", "Streaming responses for a real-time feel", "Integration with backend AI services" ],
-    galleryImages: [ "/images/projects/chat-with-pdf.png" ]
-  },
-  {
-    id: "10",
+    id: "6",
     title: "RAG System with Gemini & MongoDB",
     slug: "rag-system-with-gemini-and-mongodb-atlas",
     shortDescription: "A Q&A system powered by Google's Gemini and a MongoDB vector database.",
@@ -167,7 +128,7 @@ export const projectsData: Project[] = [
     galleryImages: [ "/images/projects/rag_system.png" ]
   },
   {
-    id: "11",
+    id: "7",
     title: "RAG System with Gemini & ChromaDB",
     slug: "rag-system-with-gemini-and-chromadb",
     shortDescription: "An alternative RAG implementation using Gemini and the local vector store ChromaDB.",
@@ -182,12 +143,12 @@ export const projectsData: Project[] = [
     galleryImages: [ "/images/projects/rag_system.png" ]
   },
   {
-    id: "12",
+    id: "8",
     title: "Educational Mobile App",
     slug: "educational-app",
     shortDescription: "A cross-platform mobile application for interactive learning.",
     description: "This personal project aimed to explore mobile development using React Native. The concept is an educational app that provides users with interactive quizzes and lessons. It focuses on creating a smooth, native-like user experience on both iOS and Android from a single codebase.",
-    imageUrl: "/images/projects/educational-app-project.png",
+    imageUrl: "/images/projects/educational-mobile-app-project.png",
     githubUrl: "https://github.com/dhlananhh/Educational-App",
     tools: [ "React Native", "TypeScript", "Expo" ],
     category: "Mobile",
