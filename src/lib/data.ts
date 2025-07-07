@@ -171,6 +171,36 @@ export const projectsData: Project[] = [
     keyFeatures: [ "Cross-platform compatibility (iOS & Android)", "Interactive quiz and lesson components", "State management for user progress", "Built using the Expo managed workflow for faster development" ],
     galleryImages: [ "/images/projects/educational-app-project.png" ]
   },
+  {
+    id: "9",
+    title: "My Personal Portfolio Website",
+    slug: "portfolio-website",
+    shortDescription: "The very portfolio you are currently exploring, designed to be a dynamic and interactive showcase of my journey as a developer.",
+    description: "The primary goal of this project was to create a personal, professional space to showcase my skills, projects, and career journey. I chose a modern tech stack, including Next.js for its performance and SEO capabilities, and Framer Motion to craft a dynamic, memorable user experience. This portfolio is not just a list of my work; it's a testament to my skills in frontend development, my attention to design detail, and my ability to build a complete application from the ground up.",
+    imageUrl: "/images/projects/portfolio-website-thumbnail.png",
+    githubUrl: "https://github.com/dhlananhh/my-3d-portfolio",
+    tools: [ "Next.js", "TailwindCSS", "TypeScript", "Framer Motion", "React Three Fiber", "Shadcn UI" ],
+    category: "Web",
+    projectStartDate: new Date("2024-07-20"),
+    projectStatus: "Completed",
+    liveDemoUrl: "https://dhlananh-dev-portfolio.vercel.app/",
+    keyFeatures: [
+      "Interactive Fluid Cursor & 3D Starfield",
+      "Dynamic Project Filtering by Category",
+      "Seamless Page Transitions with Framer Motion",
+      "Dedicated, Rich-Content Project Detail Pages",
+      "Live GitHub Contribution Graph Integration",
+      "Infinite Scrolling Testimonial Marquee",
+      "Fully Responsive Design for All Devices"
+    ],
+    galleryImages: [
+      "/images/projects/portfolio-website-thumbnail.png",
+      "/images/projects/portfolio-website-career-goals.png",
+      "/images/projects/portfolio-website-project-details-page-1.png",
+      "/images/projects/portfolio-website-project-details-page-2.png",
+      "/images/projects/portfolio-website-project-details-page-3.png",
+    ]
+  },
 ];
 
 export const testimonialsData: Testimonial[] = [
