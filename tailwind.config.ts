@@ -112,6 +112,10 @@ const config: Config = {
             opacity: "0",
           },
         },
+        "spin-slow": {
+          "0%": { transform: "rotate(0deg)" },
+          "100%": { transform: "rotate(360deg)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -119,10 +123,11 @@ const config: Config = {
         "gradient": "gradient 8s linear infinite",
         "shine": "shine 8s linear infinite",
         "rippling": "rippling 600ms ease-out",
+        "spin-slow": "spin-slow 6s linear infinite",
       }
     }
   },
-  plugins: [ tailwindcssAnimate, require("tailwindcss-animate") ],
+  plugins: [ tailwindcssAnimate ],
 };
 
 export default config;
