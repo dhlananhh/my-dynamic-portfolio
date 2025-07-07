@@ -196,6 +196,13 @@ export const projectsData: Project[] = [
     galleryImages: [
       "/images/projects/portfolio-website-thumbnail.png",
       "/images/projects/portfolio-website-career-goals.png",
+      "/images/projects/portfolio-website-projects-section.png",
+      "/images/projects/portfolio-website-skills-section.png",
+      "/images/projects/portfolio-website-contributions-section.png",
+      "/images/projects/portfolio-website-testimonials-section.png",
+      "/images/projects/portfolio-website-faq-section.png",
+      "/images/projects/portfolio-website-resume-section.png",
+      "/images/projects/portfolio-website-contact-section.png",
       "/images/projects/portfolio-website-project-details-page-1.png",
       "/images/projects/portfolio-website-project-details-page-2.png",
       "/images/projects/portfolio-website-project-details-page-3.png",
