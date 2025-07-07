@@ -16,6 +16,7 @@ const navItems: NavItem[] = [
   { href: "/#goals", label: "Goals" },
   { href: "/#projects", label: "Projects" },
   { href: "/#skills", label: "Skills" },
+  { href: "/#github-contributions", label: "Contributions" },
   { href: "/#testimonials", label: "Testimonials" },
   { href: "/#faq", label: "FAQ" },
   { href: "/#resume", label: "Resume" },
