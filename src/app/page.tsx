@@ -10,6 +10,7 @@ import TestimonialsSection from "@/components/sections/TestimonialsSection";
 import ResumeSection from "@/components/sections/ResumeSection";
 import ContactSection from "@/components/sections/ContactSection";
 import FAQSection from "@/components/sections/FAQSection";
+import GitHubContributionsSection from "@/components/sections/GitHubContributionsSection";
 
 export default function HomePage() {
   return (
@@ -20,6 +21,7 @@ export default function HomePage() {
       <CareerGoalsSection />
       <ProjectsSection />
       <SkillsSection />
+      <GitHubContributionsSection />
       <TestimonialsSection />
       <FAQSection />
       <ResumeSection />
