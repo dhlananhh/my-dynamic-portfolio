@@ -8,7 +8,7 @@ const portfolioDarkTheme = {
   dark: [ "#172A3A", "#0D505E", "#1D8383", "#39C1AD", "#4DFFE2" ],
 }
 
-export default function GitHubContributionsSection() {
+export default function GitHubContributions() {
   const username = "dhlananhh";
 
   return (
@@ -22,31 +22,44 @@ export default function GitHubContributionsSection() {
       <div className="container relative z-10 mx-auto px-4 text-center">
         <SectionHeading title="My GitHub Contributions" subtitle="A Timeline of My Dedication" />
 
-        <motion.div
-          className="mt-16 flex justify-center"
-          initial={ { opacity: 0, y: 20 } }
-          animate={ { opacity: 1, y: 0 } }
-          transition={ { duration: 0.5, delay: 0.2 } }
-        >
-          <div className="p-4 sm:p-6 rounded-2xl border border-slate-800 bg-slate-900/50 backdrop-blur-sm">
-            <GitHubCalendar
-              username={ username }
-              colorScheme="dark"
-              theme={ portfolioDarkTheme }
-              blockSize={ 14 }
-              blockMargin={ 5 }
-              fontSize={ 16 }
+        <div className="mt-16 flex justify-center">
+          <motion.div
+            className="group relative w-full max-w-max"
+            initial={ { opacity: 0, y: 20 } }
+            animate={ { opacity: 1, y: 0 } }
+            transition={ { duration: 0.5, delay: 0.2 } }
+          >
+            <div
+              className="absolute -inset-px rounded-2xl bg-gradient-to-r
+              from-teal-400 via-sky-400 to-purple-500
+              opacity-0 transition-opacity duration-500 group-hover:opacity-70"
             />
-          </div>
-        </motion.div>
+
+            <div className="relative p-4 sm:p-6 rounded-2xl border border-slate-800 bg-slate-900/60 backdrop-blur-sm">
+              <GitHubCalendar
+                username={ username }
+                colorScheme="dark"
+                theme={ portfolioDarkTheme }
+                blockSize={ 14 }
+                blockMargin={ 5 }
+                fontSize={ 16 }
+              />
+            </div>
+          </motion.div>
+        </div>
 
         <motion.div
           initial={ { opacity: 0 } }
           animate={ { opacity: 1 } }
           transition={ { duration: 0.5, delay: 0.4 } }
-          className="mt-6"
+          className="mt-8"
         >
-          <a href="https://github.com/dhlananhh" target="_blank" rel="noopener noreferrer" className="text-teal-400 hover:text-teal-300 transition-colors">
+          <a
+            href="https://github.com/dhlananhh"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-teal-400 hover:text-teal-300 transition-colors"
+          >
             View my full profile on GitHub
           </a>
         </motion.div>
