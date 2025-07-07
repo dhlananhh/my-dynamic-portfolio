@@ -63,13 +63,41 @@ To run this project locally, follow these simple steps:
 
 ## 5. Screenshots
 
-### Homepage
+### Hero Section
 
-![Screnshots](./public/screenshots/homepage.png)
+![Screnshots](./public/screenshots/hero-section.png)
 
-### Career Goals
+### About Me Section
+
+![Screnshots](./public/screenshots/hero-section.png)
+
+### Career Goals Section
 
 ![Screnshots](./public/screenshots/career-goals.png)
+
+### Projects Section
+
+![Screnshots](./public/screenshots/projects-section.png)
+
+### Skills Section
+
+![Screnshots](./public/screenshots/skills-section.png)
+
+### Testimonials Section
+
+![Screnshots](./public/screenshots/testimonials-section.png)
+
+### FAQ Section
+
+![Screnshots](./public/screenshots/faq-section.png)
+
+### Resume Section
+
+![Screnshots](./public/screenshots/resume-section.png)
+
+### Contact Section
+
+![Screnshots](./public/screenshots/contact-section.png)
 
 ### Project Details Page
 
