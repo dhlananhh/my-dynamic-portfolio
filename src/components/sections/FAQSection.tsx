@@ -70,40 +70,48 @@ export default function FAQSection() {
             <motion.div
               key={ index }
               variants={ itemVariants }
-              className="overflow-hidden rounded-xl border border-slate-800 bg-slate-900/50 backdrop-blur-sm"
+              className="group relative rounded-xl"
             >
-              <button
-                onClick={ () => handleToggle(index) }
-                className="flex w-full items-center justify-between p-6 text-left"
-              >
-                <span className="text-lg font-medium text-slate-100">{ faq.question }</span>
-                <ChevronDown
-                  className={ cn(
-                    "h-6 w-6 text-teal-400 transition-transform duration-300",
-                    openFaqIndex === index && "rotate-180"
-                  ) }
-                />
-              </button>
+              <div
+                className="absolute -inset-px rounded-xl bg-gradient-to-r
+              from-teal-400 via-sky-400 to-purple-500
+                opacity-0 transition-opacity duration-500 group-hover:opacity-70"
+              />
 
-              <AnimatePresence>
-                { openFaqIndex === index && (
-                  <motion.div
-                    initial="collapsed"
-                    animate="open"
-                    exit="collapsed"
-                    variants={ {
-                      open: { opacity: 1, height: "auto" },
-                      collapsed: { opacity: 0, height: 0 },
-                    } }
-                    transition={ { duration: 0.4, ease: [ 0.04, 0.62, 0.23, 0.98 ] } }
-                    className="overflow-hidden"
-                  >
-                    <div className="prose prose-invert max-w-none p-6 pt-0 text-slate-300">
-                      <p>{ faq.answer }</p>
-                    </div>
-                  </motion.div>
-                ) }
-              </AnimatePresence>
+              <div className="relative overflow-hidden rounded-xl border border-slate-800 bg-slate-900">
+                <button
+                  onClick={ () => handleToggle(index) }
+                  className="flex w-full items-center justify-between p-6 text-left"
+                >
+                  <span className="text-lg font-medium text-slate-100">{ faq.question }</span>
+                  <ChevronDown
+                    className={ cn(
+                      "h-6 w-6 flex-shrink-0 text-teal-400 transition-transform duration-300",
+                      openFaqIndex === index && "rotate-180"
+                    ) }
+                  />
+                </button>
+
+                <AnimatePresence>
+                  { openFaqIndex === index && (
+                    <motion.div
+                      initial="collapsed"
+                      animate="open"
+                      exit="collapsed"
+                      variants={ {
+                        open: { opacity: 1, height: "auto" },
+                        collapsed: { opacity: 0, height: 0 },
+                      } }
+                      transition={ { duration: 0.4, ease: [ 0.04, 0.62, 0.23, 0.98 ] } }
+                      className="overflow-hidden"
+                    >
+                      <div className="prose prose-invert max-w-none px-6 pb-6 text-slate-300">
+                        <p>{ faq.answer }</p>
+                      </div>
+                    </motion.div>
+                  ) }
+                </AnimatePresence>
+              </div>
             </motion.div>
           )) }
         </motion.div>
