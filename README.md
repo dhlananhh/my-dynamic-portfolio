@@ -255,6 +255,7 @@ Here's a visual tour of the portfolio, showcasing its key sections and clean, mo
 ![Screnshots](./public/screenshots/project-details-page-2.png)
 
 *Detailed breakdown of features and technologies used.*
+
 ![Screnshots](./public/screenshots/project-details-page-3.png)
 
 ---
@@ -287,5 +288,5 @@ Here's a visual tour of the portfolio, showcasing its key sections and clean, mo
 </div>
 
 <p>
-  Thank you for visiting my repository!
+  Thank you for taking the time to explore my portfolio and its source code. This project was a labor of love, and I hope it effectively showcases my skills and passion for modern web development. If you found it interesting or valuable, leaving a star on the repository would be much appreciated!
 </p>
