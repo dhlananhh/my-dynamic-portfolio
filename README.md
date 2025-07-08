@@ -28,7 +28,7 @@
     src="https://img.shields.io/github/last-commit/dhlananhh/my-3d-portfolio?style=for-the-badge&color=F59E0B"
     alt="Last Commit"
   />
-  <a href="https://github.com/dhlananhh/my-3d-portfolio/blob/main/LICENSE" target="_blank">
+  <a href="https://github.com/dhlananhh/my-3d-portfolio/blob/main/LICENSE.md" target="_blank">
     <img
       src="https://img.shields.io/github/license/dhlananhh/my-3d-portfolio?style=for-the-badge&color=EC4899"
       alt="License"
