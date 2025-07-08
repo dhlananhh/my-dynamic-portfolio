@@ -59,14 +59,15 @@ This portfolio is packed with features designed to provide a rich, interactive e
 
 This portfolio was built using a modern, scalable, and high-performance technology stack:
 
-| Category              | Technologies                                                                   |
-| :-------------------- | :----------------------------------------------------------------------------- |
-| **Core**        | `Next.js 14`, `React 18`, `TypeScript`                                   |
-| **Styling**     | `Tailwind CSS`, `Shadcn UI`                                                |
-| **Animation**   | `Framer Motion`, `React Three Fiber (@react-three/drei)`                   |
-| **APIs & Data** | `react-github-calendar` (for GitHub Graph), `Web3Forms` (for Contact Form) |
-| **Tooling**     | `ESLint`, `Prettier`, `pnpm`                                             |
-| **Deployment**  | `Vercel`                                                                     |
+| Category              | Technologies                                                                          |
+| :-------------------- | :-------------------------------------------------------------------------------------|
+| **Core**        | `Next.js 15`, `React 19`, `TypeScript`                                                      |
+| **Styling**     | `Tailwind CSS`, `Shadcn UI`, `Radix UI`                                                     |
+| **Icons**       | `Lucide React`, `React Icons`                                                               |
+| **Animation**   | `Framer Motion`, `React Three Fiber (@react-three/drei)`, `React Bits`                      |
+| **APIs & Data** | `react-github-calendar` (for GitHub Contribution Graph), `Web3Forms` (for Contact Form)                                                                                                           |
+| **Tooling**     | `ESLint`, `Prettier`, `pnpm`, `bun`                                                         |
+| **Deployment**  | `Vercel`                                                                                    |
 
 ---
 
@@ -90,7 +91,7 @@ Make sure you have Node.js (version 18.x or later) and a package manager (npm, y
    ```
 3. **Install dependencies:**
    ```bash
-   pnpm install
+   bun install
    # OR yarn install
    # OR npm install
    ```
@@ -103,7 +104,7 @@ Make sure you have Node.js (version 18.x or later) and a package manager (npm, y
    ```
 5. **Run the development server:**
    ```bash
-   pnpm dev
+   yarn dev
    ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
