@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin, Mail, Instagram } from "lucide-react";
 import { IoChevronUpCircleSharp } from "react-icons/io5";
 
 export default function Footer() {
@@ -39,9 +39,12 @@ export default function Footer() {
                 [
                   "Home",
                   "About",
+                  "Goals",
                   "Projects",
                   "Skills",
+                  "Contributions",
                   "Testimonials",
+                  "FAQ",
                   "Resume",
                   "Contact"
                 ]
@@ -89,6 +92,9 @@ export default function Footer() {
               </li>
               <li className="flex items-center text-gray-600 hover:text-blue-400 transition-colors">
                 <Linkedin className="h-4 w-4 mr-2" /> linkedin.com/in/dhlananh
+              </li>
+              <li className="flex items-center text-gray-600 hover:text-blue-400 transition-colors">
+                <Instagram className="h-4 w-4 mr-2" /> instagram.com/dhlananh
               </li>
             </ul>
           </div>
@@ -150,6 +156,15 @@ export default function Footer() {
           aria-label="Send Email"
         >
           <Mail className="h-5 w-5 text-gray-300" />
+        </a>
+        <a
+          href="https://www.instagram.com/dhlananh"
+          rel="noopener noreferrer"
+          target="_blank"
+          className="p-2 bg-gray-800 rounded-full shadow-lg hover:bg-cyan-500/30 transition-colors"
+          aria-label="Instagram"
+        >
+          <Instagram className="h-5 w-5 text-gray-300" />
         </a>
       </div>
 
