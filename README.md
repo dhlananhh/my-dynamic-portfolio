@@ -1,17 +1,38 @@
 <div align="center">
-  <img src="https://raw.githubusercontent.com/dhlananhh/my-3d-portfolio/main/public/images/projects/portfolio-website-thumbnail.png" alt="Project Banner" width="800"/>
-  <h1><b>✨ Lan Anh's 3D Developer Portfolio ✨</b></h1>
-  <p>A dynamic and interactive personal portfolio built with Next.js, Framer Motion, and Three.js, designed to showcase my journey and skills as a modern Web Developer.</p>
+  <!-- Introduction -->
+  <img
+    src="https://raw.githubusercontent.com/dhlananhh/my-3d-portfolio/main/public/images/projects/portfolio-website-thumbnail.png"
+    alt="Project Banner"
+    width="800"
+  />
+  <h1>
+    <b>✨ Lan Anh's 3D Developer Portfolio ✨</b>
+  </h1>
+  <p>
+    A dynamic and interactive personal portfolio built with Next.js, Framer Motion, and Three.js, designed to showcase my journey and skills as a modern Web Developer.
+  </p>
 
-<!-- Badges -->
+  <!-- Badges -->
 
-<a href="https://dhlananh-dev-portfolio.vercel.app/" target="_blank">
-    <img src="https://img.shields.io/website?label=Live%20Demo&style=for-the-badge&url=https%3A%2F%2Fdhlananh-dev-portfolio.vercel.app%2F&up_color=06B6D4" alt="Live Demo"/>
+  <a href="https://dhlananh-dev-portfolio.vercel.app/" target="_blank">
+    <img
+      src="https://img.shields.io/website?label=Live%20Demo&style=for-the-badge&url=https%3A%2F%2Fdhlananh-dev-portfolio.vercel.app%2F&up_color=06B6D4"
+      alt="Live Demo"
+    />
   </a>
-  <img src="https://img.shields.io/github/languages/code-size/dhlananhh/my-3d-portfolio?style=for-the-badge&color=8B5CF6" alt="Code Size"/>
-  <img src="https://img.shields.io/github/last-commit/dhlananhh/my-3d-portfolio?style=for-the-badge&color=F59E0B" alt="Last Commit"/>
+  <img
+    src="https://img.shields.io/github/languages/code-size/dhlananhh/my-3d-portfolio?style=for-the-badge&color=8B5CF6"
+    alt="Code Size"
+  />
+  <img
+    src="https://img.shields.io/github/last-commit/dhlananhh/my-3d-portfolio?style=for-the-badge&color=F59E0B"
+    alt="Last Commit"
+  />
   <a href="https://github.com/dhlananhh/my-3d-portfolio/blob/main/LICENSE" target="_blank">
-    <img src="https://img.shields.io/github/license/dhlananhh/my-3d-portfolio?style=for-the-badge&color=EC4899" alt="License"/>
+    <img
+      src="https://img.shields.io/github/license/dhlananhh/my-3d-portfolio?style=for-the-badge&color=EC4899"
+      alt="License"
+    />
   </a>
 </div>
 
