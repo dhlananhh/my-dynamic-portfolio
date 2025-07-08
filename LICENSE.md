@@ -2,7 +2,7 @@
 
 **Copyright © 2025 Duong Hoang Lan Anh**
 
-All Rights Reserved
+**All Rights Reserved**
 
 1. License Grant:
    This repository and its contents, including but not limited to source code, documentation, images, and other materials, are protected by copyright law. Unless otherwise stated in a separate license agreement, all intellectual property rights are owned by the author(s) of this repository.
