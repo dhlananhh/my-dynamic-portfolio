@@ -66,16 +66,22 @@ export default function Footer() {
               Services
             </h3>
             <ul className="space-y-2">
-              { [ "Web Development" ].map((item) => (
-                <li key={ item }>
-                  <Link
-                    href="#"
-                    className="text-gray-600 hover:text-blue-400 transition-colors"
-                  >
-                    { item }
-                  </Link>
-                </li>
-              )) }
+              {
+                [
+                  "Frontend Development",
+                  "Full-Stack Solutions",
+                  "AI & Chatbot Integration",
+                ].map((item) => (
+                  <li key={ item }>
+                    <Link
+                      href="#"
+                      className="text-gray-600 hover:text-blue-400 transition-colors"
+                    >
+                      { item }
+                    </Link>
+                  </li>
+                ))
+              }
             </ul>
           </div>
 
