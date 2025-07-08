@@ -11,7 +11,7 @@ import {
   animate,
 } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Github, Linkedin, Mail } from "lucide-react";
+import { ArrowRight, Github, Linkedin, Mail, Instagram } from "lucide-react";
 import GradientText from "@/components/blocks/TextAnimations/GradientText/GradientText";
 
 const COLORS_TOP = [ "#13FFAA", "#1E67C6", "#CE84CF", "#DD335C" ];
@@ -144,6 +144,20 @@ export default function HeroSection() {
             >
               <Mail className="h-5 w-5 sm:h-6 sm-w-6 text-gray-800" />
               <span className="sr-only">Email</span>
+            </Button>
+          </Link>
+          <Link
+            href="https://instagram.com/dhlananh"
+            passHref
+            aria-label="Instagram"
+          >
+            <Button
+              variant="ghost"
+              size="icon"
+              className="p-2.5 sm:p-3 rounded-full shadow-lg bg-gray-200/90 hover:bg-gray-100 transition-colors"
+            >
+              <Instagram className="h-5 w-5 sm:h-6 sm-w-6 text-gray-800" />
+              <span className="sr-only">Instagram</span>
             </Button>
           </Link>
         </motion.div>
