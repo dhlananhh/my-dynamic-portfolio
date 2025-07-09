@@ -146,7 +146,7 @@ export default function ContactForm() {
           value={ email }
           onChange={ (e) => setEmail(e.target.value) }
           className={ `${inputBaseClasses} ${inputBgFocusClasses}` }
-          placeholder="you@example.com"
+          placeholder="youremail@example.com"
         />
       </motion.div>
 
