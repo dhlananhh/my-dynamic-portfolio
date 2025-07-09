@@ -1,11 +1,11 @@
 "use client";
 
-import { use } from "react";
+import React, { use, useState } from "react";
 import { projectsData, Project } from "@/lib/data";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import {
   ExternalLink,
@@ -13,12 +13,14 @@ import {
   Calendar,
   Activity,
   ArrowLeft,
+  ArrowRight,
   CheckCircle,
   Target,
   Image as ImageIcon,
   Rocket,
   ChartColumnStacked
 } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 const getProjectBySlug = (slug: string): Project | undefined => {
   return projectsData.find((project) => project.slug === slug);
@@ -54,9 +56,23 @@ export default function ProjectDetailPage(props: { params: Promise<{ slug: strin
   const { slug } = params;
   const project = getProjectBySlug(slug);
 
-  if (!project) {
-    return notFound();
+  const [ activeIndex, setActiveIndex ] = useState(0);
+
+  if (!project || !project.galleryImages || project.galleryImages.length === 0) {
+    if (!project) return notFound();
   }
+
+  const handlePrev = () => {
+    setActiveIndex((prevIndex) =>
+      prevIndex === 0 ? project.galleryImages!.length - 1 : prevIndex - 1
+    );
+  };
+
+  const handleNext = () => {
+    setActiveIndex((prevIndex) =>
+      prevIndex === project.galleryImages!.length - 1 ? 0 : prevIndex + 1
+    );
+  };
 
   const formatDate = (date: Date): string => {
     return new Intl.DateTimeFormat("en-US", { month: "long", year: "numeric" }).format(date);
@@ -180,18 +196,82 @@ export default function ProjectDetailPage(props: { params: Promise<{ slug: strin
           {/* Image Gallery Section */ }
           { project.galleryImages && project.galleryImages.length > 0 && (
             <ContentSection title="Gallery" icon={ ImageIcon }>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                { project.galleryImages.map((img, idx) => (
-                  <motion.div key={ idx } whileHover={ { scale: 1.05 } } className="overflow-hidden rounded-lg border border-slate-700">
-                    <Image
-                      src={ img }
-                      alt={ `Gallery image ${idx + 1}` }
-                      width={ 800 }
-                      height={ 600 }
-                      className="object-cover"
-                    />
-                  </motion.div>
-                )) }
+              <div className="space-y-4 not-prose">
+
+                {/* Main Image View Wrapper */ }
+                <div className="group relative w-full aspect-video overflow-hidden rounded-xl border border-slate-700 bg-slate-900">
+                  <AnimatePresence mode="wait">
+                    <motion.div
+                      key={ activeIndex }
+                      className="absolute inset-0"
+                      initial={ { opacity: 0 } }
+                      animate={ { opacity: 1 } }
+                      exit={ { opacity: 0 } }
+                      transition={ { duration: 0.3, ease: 'easeInOut' } }
+                    >
+                      <Image
+                        src={ project.galleryImages[ activeIndex ] }
+                        alt={ `Project gallery image ${activeIndex + 1}` }
+                        layout="fill"
+                        objectFit="cover"
+                      />
+                    </motion.div>
+                  </AnimatePresence>
+
+                  {/* --- CONTROLS --- */ }
+                  <div className="absolute inset-0 flex items-center justify-between p-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                    {/* Previous Button */ }
+                    <motion.button
+                      onClick={ handlePrev }
+                      className="p-2 rounded-full bg-white/10 text-white backdrop-blur-sm transition-colors hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-white/50"
+                      whileHover={ { scale: 1.1 } }
+                      whileTap={ { scale: 0.95 } }
+                    >
+                      <ArrowLeft className="h-6 w-6" />
+                    </motion.button>
+                    {/* Next Button */ }
+                    <motion.button
+                      onClick={ handleNext }
+                      className="p-2 rounded-full bg-white/10 text-white backdrop-blur-sm transition-colors hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-white/50"
+                      whileHover={ { scale: 1.1 } }
+                      whileTap={ { scale: 0.95 } }
+                    >
+                      <ArrowRight className="h-6 w-6" />
+                    </motion.button>
+                  </div>
+
+                  {/* Image Counter */ }
+                  <div className="absolute bottom-4 right-4 rounded-full bg-black/40 px-3 py-1 text-xs text-white backdrop-blur-sm">
+                    { activeIndex + 1 } / { project.galleryImages.length }
+                  </div>
+                </div>
+
+                {/* Thumbnail Strip */ }
+                <div className="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-6 lg:grid-cols-7 gap-3 pt-2">
+                  { project.galleryImages.map((img, idx) => (
+                    <div
+                      key={ idx }
+                      onClick={ () => setActiveIndex(idx) }
+                      className="relative aspect-square cursor-pointer overflow-hidden rounded-md transition-all duration-300"
+                    >
+                      <Image
+                        src={ img }
+                        alt={ `Thumbnail ${idx + 1}` }
+                        layout="fill"
+                        objectFit="cover"
+                        className={ cn(
+                          "transition-all duration-300",
+                          activeIndex !== idx && "scale-100 opacity-50 hover:opacity-100",
+                          activeIndex === idx && "scale-110 opacity-100"
+                        ) }
+                      />
+                      {/* Active border */ }
+                      { activeIndex === idx && (
+                        <motion.div layoutId="active-thumbnail-border" className="absolute inset-0 border-2 border-teal-400 rounded-md" />
+                      ) }
+                    </div>
+                  )) }
+                </div>
               </div>
             </ContentSection>
           ) }
