@@ -3,7 +3,7 @@
 import ContactForm from "@/components/custom-ui/ContactForm";
 import { SectionHeading } from "@/components/SectionHeading";
 import { motion, easeInOut } from "framer-motion";
-import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaEnvelope, FaInstagram } from "react-icons/fa";
 import Link from "next/link";
 
 const contactDetails = [
@@ -24,6 +24,12 @@ const contactDetails = [
     value: "github.com/dhlananhh",
     href: "https://github.com/dhlananhh",
     icon: FaGithub,
+  },
+  {
+    name: "Instagram",
+    value: "instagram.com/dhlananh",
+    href: "https://instagram.com/dhlananh",
+    icon: FaInstagram,
   },
 ];
 
