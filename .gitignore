@@ -23,6 +23,7 @@ package-lock.json*
 /build
 /.gemini/
 /.github/
+/.idea/
 
 # misc
 .DS_Store
