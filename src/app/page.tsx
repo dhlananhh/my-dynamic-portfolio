@@ -4,6 +4,7 @@ import { ScrollProgress } from "@/components/ScrollProgress";
 import HeroSection from "@/components/sections/HeroSection";
 import AboutMeSection from "@/components/sections/AboutMeSection";
 import CareerGoalsSection from "@/components/sections/CareerGoalsSection";
+import WorkExperiencesSection from "@/components/sections/WorkExperiencesSection";
 import ProjectsSection from "@/components/sections/ProjectsSection";
 import SkillsSection from "@/components/sections/SkillsSection";
 import TestimonialsSection from "@/components/sections/TestimonialsSection";
@@ -19,6 +20,7 @@ export default function HomePage() {
       <HeroSection />
       <AboutMeSection />
       <CareerGoalsSection />
+      <WorkExperiencesSection />
       <ProjectsSection />
       <SkillsSection />
       <GitHubContributionsSection />

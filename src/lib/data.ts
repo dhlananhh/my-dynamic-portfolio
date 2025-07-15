@@ -24,6 +24,16 @@ export interface Testimonial {
   avatarUrl?: string;
 }
 
+export interface WorkExperience {
+  id: string;
+  company: string;
+  role: string;
+  startDate: string;
+  endDate: string;
+  description: string;
+  responsibilities: string[];
+}
+
 export const projectsData: Project[] = [
   {
     id: "1",
@@ -216,5 +226,50 @@ export const testimonialsData: Testimonial[] = [
     author: "Emily White",
     company: "Tech Lead, QuantumLeap Software",
     avatarUrl: "/images/avatars/emily-white.png",
+  }
+];
+
+export const workExperiencesData: WorkExperience[] = [
+  {
+    id: "3",
+    company: "QuantumLeap Software",
+    role: "Web Developer",
+    startDate: "Jan 2025",
+    endDate: "Present",
+    description: "As a key member of the product team, I contribute to the development of core features for our flagship SaaS platform, focusing on enhancing user experience and improving application performance.",
+    responsibilities: [
+      "Led the development of a new real-time analytics dashboard using Next.js and WebSockets.",
+      "Optimized application load times by 30% through code splitting, lazy loading, and image optimization.",
+      "Collaborated with UI/UX designers to translate complex Figma mockups into pixel-perfect, responsive components.",
+      "Mentored a junior developer, providing code reviews and guidance on best practices."
+    ],
+  },
+  {
+    id: "2",
+    company: "Digital Dreams Agency",
+    role: "Junior Frontend Developer",
+    startDate: "Jun 2024",
+    endDate: "Dec 2024",
+    description: "Developed and maintained responsive websites and web applications for a variety of clients, working within a fast-paced agency environment and collaborating closely with a team of developers and designers.",
+    responsibilities: [
+      "Successfully delivered 5+ client websites using React and Tailwind CSS.",
+      "Implemented complex UI animations and interactive features based on client specifications.",
+      "Integrated third-party APIs for services such as payments and content management systems (CMS).",
+      "Participated in agile ceremonies, including daily stand-ups, sprint planning, and retrospectives."
+    ],
+  },
+  {
+    id: "1",
+    company: "InnovateTech Solutions",
+    role: "Frontend Developer Intern",
+    startDate: "Jan 2024",
+    endDate: "May 2024",
+    description: "Gained valuable hands-on experience by assisting the senior development team with bug fixes, UI enhancements, and feature development for their primary web application.",
+    responsibilities: [
+      "Resolved over 50 front-end bugs, improving overall application stability.",
+      "Assisted in converting legacy components to a modern TypeScript-based component library.",
+      "Wrote and maintained technical documentation for newly developed features.",
+      "Learned about professional git workflows, CI/CD pipelines, and team collaboration tools."
+    ],
   }
 ];
