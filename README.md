@@ -12,9 +12,9 @@
     A dynamic and interactive personal portfolio built with Next.js, Framer Motion, and Three.js, designed to showcase my journey and skills as a modern Web Developer.
   </p>
 
-  <!-- Badges -->
+<!-- Badges -->
 
-  <a href="https://dhlananh-dev-portfolio.vercel.app/" target="_blank">
+<a href="https://dhlananh-dev-portfolio.vercel.app/" target="_blank">
     <img
       src="https://img.shields.io/website?label=Live%20Demo&style=for-the-badge&url=https%3A%2F%2Fdhlananh-dev-portfolio.vercel.app%2F&up_color=06B6D4"
       alt="Live Demo"
@@ -80,15 +80,15 @@ This portfolio is packed with features designed to provide a rich, interactive e
 
 This portfolio was built using a modern, scalable, and high-performance technology stack:
 
-| Category              | Technologies                                                                          |
-| :-------------------- | :-------------------------------------------------------------------------------------|
-| **Core**        | `Next.js 15`, `React 19`, `TypeScript`                                                      |
-| **Styling**     | `Tailwind CSS`, `Shadcn UI`, `Radix UI`                                                     |
-| **Icons**       | `Lucide React`, `React Icons`                                                               |
-| **Animation**   | `Framer Motion`, `React Three Fiber (@react-three/drei)`, `React Bits`                      |
-| **APIs & Data** | `react-github-calendar` (for GitHub Contributions Graph), `Web3Forms` (for Contact Form)                                                                                                           |
-| **Tooling**     | `ESLint`, `Prettier`, `pnpm`, `bun`                                                         |
-| **Deployment**  | `Vercel`                                                                                    |
+| Category              | Technologies                                                                                 |
+| :-------------------- | :------------------------------------------------------------------------------------------- |
+| **Core**        | `Next.js 15`, `React 19`, `TypeScript`                                                 |
+| **Styling**     | `Tailwind CSS`, `Shadcn UI`, `Radix UI`                                                |
+| **Icons**       | `Lucide React`, `React Icons`                                                            |
+| **Animation**   | `Framer Motion`, `React Three Fiber (@react-three/drei)`, `React Bits`                 |
+| **APIs & Data** | `react-github-calendar` (for GitHub Contributions Graph), `Web3Forms` (for Contact Form) |
+| **Tooling**     | `ESLint`, `Prettier`, `pnpm`, `bun`                                                  |
+| **Deployment**  | `Vercel`                                                                                   |
 
 ---
 
@@ -103,20 +103,24 @@ Make sure you have Node.js (version 18.x or later) and a package manager (npm, y
 ### Installation
 
 1. **Clone the repository:**
+
    ```bash
    git clone https://github.com/dhlananhh/my-3d-portfolio.git
    ```
 2. **Navigate to the project directory:**
+
    ```bash
    cd my-3d-portfolio
    ```
 3. **Install dependencies:**
+
    ```bash
    bun install
    # OR yarn install
    # OR npm install
    ```
 4. **Set up environment variables:**
+
    - Create a new file named `.env.local` in the root of the project.
    - Add your Web3Forms Access Key to this file. This is needed for the contact form to work.
 
@@ -124,6 +128,7 @@ Make sure you have Node.js (version 18.x or later) and a package manager (npm, y
    NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY=YOUR_WEB3FORMS_ACCESS_KEY_HERE
    ```
 5. **Run the development server:**
+
    ```bash
    yarn dev
    ```
@@ -169,94 +174,90 @@ This portfolio is deployed on **Vercel**, the creators of Next.js. The deploymen
 Here's a visual tour of the portfolio, showcasing its key sections and clean, modern design. Each screenshot highlights a different part of the user experience, from the interactive hero section to the detailed project pages.
 
 ### Hero Section
-*A captivating first impression with an animated 3D starfield and dynamic gradient text.*
 
+*A captivating first impression with an animated 3D starfield and dynamic gradient text.*
 ![Screnshots](./public/screenshots/hero-section.png)
 
-***
+---
 
 ### About Me Section
+
 *A personal introduction presented in a professional and visually appealing layout.*
+![Screnshots](./public/screenshots/about-me-section.png)
 
-![Screnshots](./public/screenshots/hero-section.png)
-
-***
+---
 
 ### Career Goals Section
 
 *Clearly defined short, mid, and long-term career ambitions.*
-
 ![Screnshots](./public/screenshots/career-goals.png)
 
-***
+---
 
 ### Projects Section
 
 *An interactive grid showcasing my work, with dynamic filtering by category.*
-
 ![Screnshots](./public/screenshots/projects-section.png)
 
-***
+---
 
 ### Skills Section
 
 *A structured overview of my technical abilities, grouped by expertise.*
-
 ![Screnshots](./public/screenshots/skills-section.png)
 
-***
+---
 
 ### GitHub Contributions
 
 *A live, interactive graph of my dedication and coding consistency.*
-
 ![Screnshots](./public/screenshots/github-contributions-section.png)
 
-***
+---
 
 ### Testimonials Section
 
 *An infinite scrolling marquee of praise from collaborators and colleagues.*
-
 ![Screnshots](./public/screenshots/testimonials-section.png)
 
-***
+---
 
 ### FAQ Section
 
 *An interactive accordion to answer common questions with a glow-on-hover effect.*
-
 ![Screnshots](./public/screenshots/faq-section.png)
 
-***
+---
 
 ### Resume Section
 
+*A dedicated space for my professional resume, allowing for easy viewing and downloading.*
 ![Screnshots](./public/screenshots/resume-section.png)
 
-***
+---
 
 ### Contact Section
 
-*A functional contact form with toast notifications for seamless communication.*
-
+*A functional contact form with client-side validation and seamless toast notifications for status feedback.*
 ![Screnshots](./public/screenshots/contact-section.png)
 
-***
+---
 
 ### Project Details Page
 
 *A deep dive into each project, featuring a rich, case-study-style layout.*
-
 ![Screnshots](./public/screenshots/project-details-page-1.png)
-
-*Visual gallery to showcase more of the project's interface.*
-
+*Visual gallery with interactive controls to showcase more of the project's interface.*
 ![Screnshots](./public/screenshots/project-details-page-2.png)
-
 *Detailed breakdown of features and technologies used.*
-
 ![Screnshots](./public/screenshots/project-details-page-3.png)
+
+---
+
+### Email Notification System
+
+*Proof of the fully functional contact system: a real email received from the portfolio via the Web3Forms service.*
+![Screnshots](./public/screenshots/receive-email-from-portfolio.png)
 
 ---
 
