@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { SectionHeading } from "@/components/SectionHeading";
+import SkillIcon3D from "@/components/custom-ui/SkillIcon3D";
 
 import { TbApi } from "react-icons/tb";
 import { MdOutlineImportantDevices } from "react-icons/md";
@@ -32,36 +33,36 @@ const skillCategories = [
   {
     title: "Frontend Development",
     skills: [
-      { name: "ReactJS", icon: <FaReact className="h-8 w-8 text-[#61DAFB]" /> },
-      { name: "Next.js", icon: <SiNextdotjs className="h-8 w-8" /> },
-      { name: "JavaScript (ES6+)", icon: <SiJavascript className="h-8 w-8 text-[#F7DF1E]" /> },
-      { name: "TypeScript", icon: <SiTypescript className="h-8 w-8 text-[#3178C6]" /> },
-      { name: "HTML5", icon: <FaHtml5 className="h-8 w-8 text-[#E34F26]" /> },
-      { name: "CSS3", icon: <FaCss3Alt className="h-8 w-8 text-[#1572B6]" /> },
-      { name: "Tailwind CSS", icon: <SiTailwindcss className="h-8 w-8 text-[#06B6D4]" /> },
+      { name: "ReactJS", icon: <FaReact className="h-full w-full text-[#61DAFB]" /> },
+      { name: "Next.js", icon: <SiNextdotjs className="h-full w-full" /> },
+      { name: "JavaScript (ES6+)", icon: <SiJavascript className="h-full w-full text-[#F7DF1E]" /> },
+      { name: "TypeScript", icon: <SiTypescript className="h-full w-full text-[#3178C6]" /> },
+      { name: "HTML5", icon: <FaHtml5 className="h-full w-full text-[#E34F26]" /> },
+      { name: "CSS3", icon: <FaCss3Alt className="h-full w-full text-[#1572B6]" /> },
+      { name: "Tailwind CSS", icon: <SiTailwindcss className="h-full w-full text-[#06B6D4]" /> },
     ]
   },
   {
     title: "Backend & Database",
     skills: [
-      { name: "Node.js", icon: <FaNodeJs className="h-8 w-8 text-[#339933]" /> },
-      { name: "Express.js", icon: <SiExpress className="h-8 w-8 text-slate-200" /> },
-      { name: "Python", icon: <FaPython className="h-8 w-8 text-[#3776AB]" /> },
-      { name: "Java", icon: <FaJava className="h-8 w-8 text-[#f89820]" /> },
-      { name: "MongoDB", icon: <SiMongodb className="h-8 w-8 text-[#47A248]" /> },
-      { name: "Prisma", icon: <SiPrisma className="h-8 w-8 text-teal-200" /> },
-      { name: "MariaDB", icon: <SiMariadb className="h-10 w-10 text-cyan-200" /> },
-      { name: "MySQL", icon: <SiMysql className="h-10 w-10 text-[#06B6D4]" /> },
+      { name: "Node.js", icon: <FaNodeJs className="h-full w-full text-[#339933]" /> },
+      { name: "Express.js", icon: <SiExpress className="h-full w-full text-slate-200" /> },
+      { name: "Python", icon: <FaPython className="h-full w-full text-[#3776AB]" /> },
+      { name: "Java", icon: <FaJava className="h-full w-full text-[#f89820]" /> },
+      { name: "MongoDB", icon: <SiMongodb className="h-full w-full text-[#47A248]" /> },
+      { name: "Prisma", icon: <SiPrisma className="h-full w-full text-teal-200" /> },
+      { name: "MariaDB", icon: <SiMariadb className="h-full w-full text-cyan-200" /> },
+      { name: "MySQL", icon: <SiMysql className="h-full w-full text-[#06B6D4]" /> },
     ]
   },
   {
     title: "Tools & Methodologies",
     skills: [
-      { name: "Git", icon: <FaGitAlt className="h-8 w-8 text-[#F05032]" /> },
-      { name: "RESTful APIs", icon: <TbApi className="h-10 w-10 text-blue-200" /> },
-      { name: "Responsive Design", icon: <MdOutlineImportantDevices className="h-8 w-8 text-rose-400" /> },
-      { name: "Figma", icon: <FaFigma className="h-8 w-8 text-[#F24E1E]" /> },
-      { name: "Docker", icon: <FaDocker className="h-8 w-8 text-sky-400" /> },
+      { name: "Git", icon: <FaGitAlt className="h-full w-full text-[#F05032]" /> },
+      { name: "Docker", icon: <FaDocker className="h-full w-full text-sky-400" /> },
+      { name: "RESTful APIs", icon: <TbApi className="h-full w-full text-blue-200" /> },
+      { name: "Responsive Design", icon: <MdOutlineImportantDevices className="h-full w-full text-rose-400" /> },
+      { name: "Figma", icon: <FaFigma className="h-full w-full text-[#F24E1E]" /> },
     ]
   }
 ];
@@ -70,11 +71,8 @@ const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    transition: {
-      staggerChildren: 0.2,
-      delayChildren: 0.1,
-    },
-  },
+    transition: { staggerChildren: 0.2, delayChildren: 0.1 }
+  }
 };
 
 const itemVariants = {
@@ -82,10 +80,8 @@ const itemVariants = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: {
-      duration: 0.5
-    }
-  },
+    transition: { duration: 0.5 }
+  }
 };
 
 export default function SkillsSection() {
@@ -118,9 +114,11 @@ export default function SkillsSection() {
               <div className="grid grid-cols-2 gap-x-6 gap-y-6 sm:grid-cols-3">
                 { category.skills.map((skill) => (
                   <div key={ skill.name } className="flex flex-col items-center justify-center gap-2 text-center">
-                    <div className="flex h-16 w-16 items-center justify-center rounded-full bg-slate-800/70 transition-colors duration-300 group-hover:bg-slate-700/80">
-                      { skill.icon }
+
+                    <div className="h-16 w-16 transition-transform duration-300 group-hover:scale-110">
+                      <SkillIcon3D icon={ skill.icon } />
                     </div>
+
                     <p className="text-sm font-medium text-slate-300">
                       { skill.name }
                     </p>
