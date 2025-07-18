@@ -1,9 +1,9 @@
 "use client";
 
+import React, { useEffect } from "react";
 import Link from "next/link";
 import { Canvas } from "@react-three/fiber";
 import { Stars } from "@react-three/drei";
-import React, { useEffect } from "react";
 import {
   useMotionTemplate,
   useMotionValue,
@@ -13,6 +13,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Github, Linkedin, Mail, Instagram } from "lucide-react";
 import GradientText from "@/components/blocks/TextAnimations/GradientText/GradientText";
+import { EffectComposer, Bloom, Vignette, DepthOfField } from "@react-three/postprocessing";
 
 const COLORS_TOP = [ "#13FFAA", "#1E67C6", "#CE84CF", "#DD335C" ];
 
@@ -166,6 +167,24 @@ export default function HeroSection() {
       <div className="absolute inset-0 z-0">
         <Canvas>
           <Stars radius={ 50 } count={ 2500 } factor={ 4 } fade speed={ 2 } />
+          <EffectComposer>
+            <Bloom
+              luminanceThreshold={ 0.2 }
+              intensity={ 0.8 }
+              mipmapBlur={ true }
+            />
+            <Vignette
+              eskil={ false }
+              offset={ 0.1 }
+              darkness={ 0.9 }
+            />
+            <DepthOfField
+              focusDistance={ 0.025 }
+              focalLength={ 0.025 }
+              bokehScale={ 2 }
+              height={ 480 }
+            />
+          </EffectComposer>
         </Canvas>
       </div>
     </motion.section>
