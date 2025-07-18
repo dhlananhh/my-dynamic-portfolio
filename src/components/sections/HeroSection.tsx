@@ -13,7 +13,14 @@ import {
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Github, Linkedin, Mail, Instagram } from "lucide-react";
 import GradientText from "@/components/blocks/TextAnimations/GradientText/GradientText";
-import { EffectComposer, Bloom, Vignette } from "@react-three/postprocessing";
+import {
+  EffectComposer,
+  Bloom,
+  Vignette,
+  ChromaticAberration,
+  Noise
+} from "@react-three/postprocessing";
+import { BlendFunction } from "postprocessing";
 
 const COLORS_TOP = [ "#13FFAA", "#1E67C6", "#CE84CF", "#DD335C" ];
 
@@ -172,6 +179,16 @@ export default function HeroSection() {
               luminanceThreshold={ 0.2 }
               intensity={ 0.8 }
               mipmapBlur={ true }
+            />
+            <ChromaticAberration
+              offset={ [ 0.001, 0.001 ] }
+              radialModulation={ true }
+              modulationOffset={ 0.1 }
+            />
+            <Noise
+              premultiply
+              blendFunction={ BlendFunction.ADD }
+              opacity={ 0.05 }
             />
             <Vignette
               eskil={ false }
