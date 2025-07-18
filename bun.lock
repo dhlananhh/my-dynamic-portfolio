@@ -35,7 +35,7 @@
         "@radix-ui/react-tooltip": "^1.2.7",
         "@radix-ui/themes": "^3.2.1",
         "@react-three/drei": "^10.5.1",
-        "@react-three/fiber": "^9.1.2",
+        "@react-three/fiber": "^9.2.0",
         "@react-three/postprocessing": "^3.0.4",
         "@typescript-eslint/eslint-plugin": "^8.34.1",
         "@typescript-eslint/parser": "^8.34.1",
@@ -2660,7 +2660,7 @@
       "sha512-ixEU41HC64adcZQV2tCIHKTFxT/HRSu3QgZrDqBeQNyNou6FYgoM2sIxujgKYGWf4bVkN5A+OBGnr8/CzVVhrQ=="
     ],
     "@react-three/fiber": [
-      "@react-three/fiber@9.1.2",
+      "@react-three/fiber@9.2.0",
       "",
       {
         "dependencies": {
@@ -2692,10 +2692,11 @@
           "expo-asset",
           "expo-file-system",
           "expo-gl",
+          "react-dom",
           "react-native"
         ]
       },
-      "sha512-k8FR9yVHV9kIF3iuOD0ds5hVymXYXfgdKklqziBVod9ZEJ8uk05Zjw29J/omU3IKeUfLNAIHfxneN3TUYM4I2w=="
+      "sha512-esZe+E9T/aYEM4HlBkirr/yRE8qWTp9WUsLISyHHMCHKlJv85uc5N4wwKw+Ay0QeTSITw6T9Q3Svpu383Q+CSQ=="
     ],
     "@react-three/postprocessing": [
       "@react-three/postprocessing@3.0.4",
