@@ -13,7 +13,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Github, Linkedin, Mail, Instagram } from "lucide-react";
 import GradientText from "@/components/blocks/TextAnimations/GradientText/GradientText";
-import { EffectComposer, Bloom, Vignette, DepthOfField } from "@react-three/postprocessing";
+import { EffectComposer, Bloom, Vignette } from "@react-three/postprocessing";
 
 const COLORS_TOP = [ "#13FFAA", "#1E67C6", "#CE84CF", "#DD335C" ];
 
@@ -177,12 +177,6 @@ export default function HeroSection() {
               eskil={ false }
               offset={ 0.1 }
               darkness={ 0.9 }
-            />
-            <DepthOfField
-              focusDistance={ 0.025 }
-              focalLength={ 0.025 }
-              bokehScale={ 2 }
-              height={ 480 }
             />
           </EffectComposer>
         </Canvas>
