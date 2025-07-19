@@ -50,14 +50,24 @@ export default function HeroSection() {
     >
       <div className="relative z-10 flex flex-col items-center text-center">
 
+        <motion.div
+          className="mb-6"
+          initial={ { opacity: 0, y: -20 } }
+          animate={ { opacity: 1, y: 0 } }
+          transition={ { duration: 0.5, delay: 0.2 } }
+        >
+          <span
+            className="animate-shine bg-[linear-gradient(110deg,#939393,45%,#fff,55%,#939393)] bg-[length:250%_100%] bg-clip-text text-5xl font-medium text-transparent"
+          >
+            Hi, I'm Lan Anh!
+          </span>
+        </motion.div>
+
         <GradientText
           className="max-w-4xl text-4xl sm:text-5xl md:text-7xl font-extrabold mb-4 tracking-tight leading-tight"
           colors={ [ "#86EFAC", "#2DD4BF", "#3B82F6", "#86EFAC" ] }
         >
-          <span className="block text-5xl">
-            Hi, I&apos;m Lan Anh!
-          </span>
-          <span className="block mt-10 font-bold">
+          <span className="block font-bold">
             I Build Modern & Intuitive
           </span>
           <span className="block font-bold">
