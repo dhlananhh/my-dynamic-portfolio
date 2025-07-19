@@ -121,7 +121,7 @@ const config: Config = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "gradient": "gradient 8s linear infinite",
-        "shine": "shine 8s linear infinite",
+        "shine": "shine 3s linear infinite",
         "rippling": "rippling 600ms ease-out",
         "spin-slow": "spin-slow 6s linear infinite",
       }
