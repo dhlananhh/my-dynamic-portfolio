@@ -13,6 +13,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Github, Linkedin, Mail, Instagram } from "lucide-react";
 import GradientText from "@/components/blocks/TextAnimations/GradientText/GradientText";
+import SplitText from "@/components/blocks/TextAnimations/SplitText/SplitText";
 import {
   EffectComposer,
   Bloom,
@@ -37,6 +38,7 @@ export default function HeroSection() {
   }, [ color ]);
 
   const backgroundImage = useMotionTemplate`radial-gradient(125% 125% at 50% 0%, #020617 50%, ${color})`;
+  const bioText = "A passionate Web Developer based in Ho Chi Minh City, dedicated to turning innovative ideas into beautiful, high-performance digital solutions.";
 
   return (
     <motion.section
@@ -63,9 +65,17 @@ export default function HeroSection() {
           </span>
         </GradientText>
 
-        <p className="my-6 max-w-xl text-center text-base leading-relaxed md:text-lg md:leading-relaxed text-slate-300">
-          A passionate <strong className="font-semibold text-white">Web Developer</strong> based in Ho Chi Minh City, dedicated to turning innovative ideas into beautiful, high-performance digital solutions.
-        </p>
+        <div className="my-6 max-w-xl">
+          <SplitText
+            text={ bioText }
+            className="text-center text-base leading-relaxed md:text-lg md:leading-relaxed text-slate-300"
+            splitType="words"
+            from={ { opacity: 0, y: 20, filter: 'blur(5px)' } }
+            to={ { opacity: 1, y: 0, filter: 'blur(0px)' } }
+            delay={ 30 }
+            duration={ 0.8 }
+          />
+        </div>
 
         <motion.div
           initial={ { opacity: 0, y: 20 } }
