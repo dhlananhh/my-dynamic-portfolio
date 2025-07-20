@@ -14,6 +14,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Github, Linkedin, Mail, Instagram } from "lucide-react";
 import GradientText from "@/components/blocks/TextAnimations/GradientText/GradientText";
 import SplitText from "@/components/blocks/TextAnimations/SplitText/SplitText";
+import ShinyText from "@/components/blocks/TextAnimations/ShinyText/ShinyText";
 import {
   EffectComposer,
   Bloom,
@@ -56,11 +57,11 @@ export default function HeroSection() {
           animate={ { opacity: 1, y: 0 } }
           transition={ { duration: 0.5, delay: 0.2 } }
         >
-          <span
-            className="animate-shine bg-shine-gradient bg-shine-size bg-clip-text text-5xl font-medium text-transparent"
-          >
-            Hi, I'm Lan Anh!
-          </span>
+          <ShinyText
+            text="Hi, I'm Lan Anh!"
+            className="text-5xl font-medium text-transparent"
+            speed={ 3 }
+          />
         </motion.div>
 
         <GradientText
