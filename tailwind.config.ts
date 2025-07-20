@@ -1,6 +1,5 @@
 import type { Config } from "tailwindcss"
 import tailwindcssAnimate from "tailwindcss-animate";
-import typography from "@tailwindcss/typography";
 
 const config: Config = {
   darkMode: [ "class" ],
@@ -104,10 +103,10 @@ const config: Config = {
         },
         "shine": {
           "from": {
-            "backgroundPosition": "200% 0",
+            "backgroundPosition": "100% 0",
           },
           "to": {
-            "backgroundPosition": "-200% 0",
+            "backgroundPosition": "-100% 0",
           },
         },
         "rippling": {
@@ -134,7 +133,7 @@ const config: Config = {
       },
     },
   },
-  plugins: [ tailwindcssAnimate, typography ],
+  plugins: [ tailwindcssAnimate ],
 } satisfies Config;
 
 export default config;
