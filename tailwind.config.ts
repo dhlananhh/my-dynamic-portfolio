@@ -100,12 +100,8 @@ const config: Config = {
           }
         },
         shine: {
-          "from": {
-            "backgroundPosition": "100% 0",
-          },
-          "to": {
-            "backgroundPosition": "-100% 0",
-          },
+          "0%": { "background-position": "100%" },
+          "100%": { "background-position": "-100%" },
         },
         rippling: {
           "0%": {
