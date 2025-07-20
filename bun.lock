@@ -38,6 +38,7 @@
         "@react-three/drei": "^10.5.1",
         "@react-three/fiber": "^9.2.0",
         "@react-three/postprocessing": "^3.0.4",
+        "@tailwindcss/typography": "^0.5.16",
         "@typescript-eslint/eslint-plugin": "^8.34.1",
         "@typescript-eslint/parser": "^8.34.1",
         "autoprefixer": "^10.4.21",
@@ -3097,6 +3098,22 @@
         }
       },
       "sha512-vB/vlf7rIky+w94aWMw34bWW1ka6g6C3xIOdICKX2GC0VcLtL6fhlLiafF0DVIwa9V6EHz8kbWMkS2s2QvvNlw=="
+    ],
+    "@tailwindcss/typography": [
+      "@tailwindcss/typography@0.5.16",
+      "",
+      {
+        "dependencies": {
+          "lodash.castarray": "^4.4.0",
+          "lodash.isplainobject": "^4.0.6",
+          "lodash.merge": "^4.6.2",
+          "postcss-selector-parser": "6.0.10"
+        },
+        "peerDependencies": {
+          "tailwindcss": ">=3.0.0 || insiders || >=4.0.0-alpha.20 || >=4.0.0-beta.1"
+        }
+      },
+      "sha512-0wDLwCVF5V3x3b1SGXPCDcdsbDHMBe+lkFzBRaHeLvNi+nrrnZ1lA18u+OTWO8iSWU2GxUOCvlXtDuqftc1oiA=="
     ],
     "@ts-morph/common": [
       "@ts-morph/common@0.19.0",
@@ -7449,6 +7466,18 @@
       {},
       "sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg=="
     ],
+    "lodash.castarray": [
+      "lodash.castarray@4.4.0",
+      "",
+      {},
+      "sha512-aVx8ztPv7/2ULbArGJ2Y42bG1mEQ5mGjpdvrbJcJFU3TbYybe+QlLS4pst9zV52ymy2in1KpFPiZnAOATxD4+Q=="
+    ],
+    "lodash.isplainobject": [
+      "lodash.isplainobject@4.0.6",
+      "",
+      {},
+      "sha512-oSXzaWypCMHkPC3NvBEaPHf0KsA5mvPrOPgQWDsbg8n7orZ290M0BmC/jgRZ4vcJ6DTAhjrsSYgdsW/F+MFOBA=="
+    ],
     "lodash.merge": [
       "lodash.merge@4.6.2",
       "",
@@ -11062,6 +11091,17 @@
       "",
       {},
       "sha512-kjeW8gjdxasbmFKpVGrGd5T4i40mV5J2Rasw48QARfYeQ8YS9x02ON9SFWax3Qf616rt4Cp3nVNIj6Hd1mP3og=="
+    ],
+    "@tailwindcss/typography/postcss-selector-parser": [
+      "postcss-selector-parser@6.0.10",
+      "",
+      {
+        "dependencies": {
+          "cssesc": "^3.0.0",
+          "util-deprecate": "^1.0.2"
+        }
+      },
+      "sha512-IQ7TZdoaqbT+LCpShg46jnZVlhWD2w6iQYAcYXfHARZ7X1t/UGhhceQDs5X0cGqKvYlHNOuv7Oa1xmb0oQuA3w=="
     ],
     "@ts-morph/common/fast-glob": [
       "fast-glob@3.3.1",
