@@ -1,5 +1,6 @@
 import type { Config } from "tailwindcss"
 import tailwindcssAnimate from "tailwindcss-animate";
+import typography from "@tailwindcss/typography";
 
 const config: Config = {
   darkMode: [ "class" ],
@@ -124,10 +125,16 @@ const config: Config = {
         "shine": "shine 3s linear infinite",
         "rippling": "rippling 600ms ease-out",
         "spin-slow": "spin-slow 6s linear infinite",
-      }
+      },
+    },
+    backgroundImage: {
+      "shine-gradient": "linear-gradient(110deg, #939393, 45%, #ffffff, 55%, #939393)",
+    },
+    backgroundSize: {
+      "shine-size": "250% 100%",
     }
   },
-  plugins: [ tailwindcssAnimate ],
-};
+  plugins: [ tailwindcssAnimate, typography ],
+} satisfies Config;
 
 export default config;
