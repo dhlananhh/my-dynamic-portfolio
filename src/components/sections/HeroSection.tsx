@@ -60,7 +60,8 @@ export default function HeroSection() {
           <ShinyText
             text="Hi, I'm Lan Anh!"
             className="text-5xl font-medium text-transparent"
-            speed={ 3 }
+            speed={ 5 }
+            disabled={ false }
           />
         </motion.div>
 
