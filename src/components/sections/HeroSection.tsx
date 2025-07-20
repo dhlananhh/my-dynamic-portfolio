@@ -57,7 +57,7 @@ export default function HeroSection() {
           transition={ { duration: 0.5, delay: 0.2 } }
         >
           <span
-            className="animate-shine bg-[linear-gradient(110deg,#939393,45%,#fff,55%,#939393)] bg-[length:250%_100%] bg-clip-text text-5xl font-medium text-transparent"
+            className="animate-shine bg-shine-gradient bg-shine-size bg-clip-text text-5xl font-medium text-transparent"
           >
             Hi, I'm Lan Anh!
           </span>
