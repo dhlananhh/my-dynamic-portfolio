@@ -11,6 +11,11 @@ const config: Config = {
     "./src/**/*.{ts,tsx}",
     "*.{js,ts,jsx,tsx,mdx}",
   ],
+  safelist: [
+    "animate-shine",
+    "bg-shine-gradient",
+    "bg-shine-size",
+  ],
   prefix: "",
   theme: {
     container: {
