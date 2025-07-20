@@ -1,5 +1,5 @@
 /*
-	Installed from https://reactbits.dev/ts/tailwind/
+  Installed from https://reactbits.dev/ts/tailwind/
 */
 
 import React from "react";
@@ -21,16 +21,15 @@ const ShinyText: React.FC<ShinyTextProps> = ({
 
   return (
     <div
-      className={`text-[#b5b5b5a4] bg-clip-text inline-block ${disabled ? "" : "animate-shine"} ${className}`}
-      style={{
-        backgroundImage:
-          "linear-gradient(120deg, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 60%)",
-        backgroundSize: "200% 100%",
+      className={ `text-[#b5b5b5a4] bg-clip-text inline-block ${disabled ? "" : "animate-shine"} ${className}` }
+      style={ {
+        backgroundImage: "linear-gradient(110deg, #939393, 45%, #ffffff, 55%, #939393)",
+        backgroundSize: "250% 100%",
         WebkitBackgroundClip: "text",
         animationDuration: animationDuration,
-      }}
+      } }
     >
-      {text}
+      { text }
     </div>
   );
 };
