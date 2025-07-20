@@ -5,9 +5,10 @@ import { motion, circOut } from "framer-motion";
 import { GlassmorphicCard } from "@/components/custom-ui/GlassmorphicCard";
 import Link from "next/link";
 import { SectionHeading } from "@/components/SectionHeading";
+import { Images } from "@/lib/images";
 
 const AboutMeSection = () => {
-  const profileImageUrl = "/images/profile-placeholder.png";
+  const profileImageUrl = Images.ProfilePlaceholder;
 
   const imageContainerVariants = {
     hidden: { opacity: 0, x: -50 },
