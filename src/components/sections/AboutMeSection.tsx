@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { motion, circOut } from "framer-motion";
 import { GlassmorphicCard } from "@/components/custom-ui/GlassmorphicCard";
 import Link from "next/link";

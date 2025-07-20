@@ -1,4 +1,4 @@
-import { StaticImageData } from "next/image";
+import { StaticImageData } from "next/legacy/image";
 
 // --- Project Thumbnails & Galleries ---
 import BookstoreThumbnail from "../../public/images/projects/bookstore-project-thumbnail.png";

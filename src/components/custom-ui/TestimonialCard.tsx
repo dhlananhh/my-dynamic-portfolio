@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { Quote } from "lucide-react";
 import { Testimonial } from "@/lib/data";
 import { Images } from "@/lib/images";
