@@ -27,7 +27,7 @@ const config: Config = {
     },
     extend: {
       fontFamily: {
-        sans: [ "var(--font-cascadia-mono)", "ui-monospace", "monospace" ],
+        sans: [ "var(--font-gelasio)", "ui-serif", "Georgia", "serif" ],
       },
       colors: {
         border: "hsl(var(--border))",
