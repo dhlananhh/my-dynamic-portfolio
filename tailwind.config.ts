@@ -10,9 +10,7 @@ const config: Config = {
     "./src/**/*.{ts,tsx}",
     "*.{js,ts,jsx,tsx,mdx}",
   ],
-  safelist: [
-    "animate-shine",
-  ],
+  safelist: [],
   prefix: "",
   theme: {
     container: {
@@ -101,7 +99,7 @@ const config: Config = {
             backgroundPosition: "0% 50%"
           }
         },
-        "shine": {
+        shine: {
           "from": {
             "backgroundPosition": "100% 0",
           },
@@ -109,7 +107,7 @@ const config: Config = {
             "backgroundPosition": "-100% 0",
           },
         },
-        "rippling": {
+        rippling: {
           "0%": {
             opacity: "1",
           },
