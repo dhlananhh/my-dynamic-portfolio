@@ -1,8 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import { Testimonial } from "@/lib/data";
 import { Quote } from "lucide-react";
+import { Testimonial } from "@/lib/data";
+import { Images } from "@/lib/images";
 
 interface TestimonialCardProps {
   testimonial: Testimonial;
@@ -19,7 +20,7 @@ export default function TestimonialCard({ testimonial }: TestimonialCardProps) {
         </blockquote>
         <figcaption className="mt-4 flex items-center gap-4">
           <Image
-            src={ testimonial.avatarUrl || "/images/avatars/default-avatar.png" }
+            src={ testimonial.avatarUrl || Images.DefaultAvatar }
             alt={ testimonial.author }
             width={ 48 }
             height={ 48 }
