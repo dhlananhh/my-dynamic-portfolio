@@ -14,7 +14,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Github, Linkedin, Mail, Instagram } from "lucide-react";
 import GradientText from "@/components/blocks/TextAnimations/GradientText/GradientText";
 import SplitText from "@/components/blocks/TextAnimations/SplitText/SplitText";
-import ShinyText from "@/components/blocks/TextAnimations/ShinyText/ShinyText";
+import { TypingAnimation } from "@/components/magicui/typing-animation";
 import {
   EffectComposer,
   Bloom,
@@ -52,16 +52,16 @@ export default function HeroSection() {
       <div className="relative z-10 flex flex-col items-center text-center">
 
         <motion.div
-          className="mb-6"
+          className="mb-6 h-16 sm:h-20 flex items-center"
           initial={ { opacity: 0, y: -20 } }
           animate={ { opacity: 1, y: 0 } }
           transition={ { duration: 0.5, delay: 0.2 } }
         >
-          <ShinyText
-            text="Hi, I'm Lan Anh!"
-            className="text-5xl font-medium text-transparent"
-            speed={ 5 }
-            disabled={ false }
+          <TypingAnimation
+            className="text-5xl font-medium text-slate-100"
+            duration={ 100 }
+            delay={ 300 }
+            children="Hi, I'm Lan Anh!"
           />
         </motion.div>
 
