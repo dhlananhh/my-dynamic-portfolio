@@ -17,6 +17,15 @@ const gelasio = Gelasio({
 export const metadata: Metadata = {
   title: "Lan Anh | Web Developer Portfolio",
   description: "A personal portfolio to showcase my skills and projects",
+  icons: {
+    icon: [
+      { url: "./icon.svg", type: "image/svg+xml" },
+      { url: "./favicon.ico", sizes: "any" },
+    ],
+    apple: "./apple-icon.png",
+  },
+
+  manifest: "./manifest.json",
   openGraph: {
     title: "Lan Anh | Web Developer Portfolio",
     description: "A personal portfolio to showcase my skills and projects",
