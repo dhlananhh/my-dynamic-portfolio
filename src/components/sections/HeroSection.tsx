@@ -59,8 +59,8 @@ export default function HeroSection() {
         >
           <TypingAnimation
             className="text-5xl font-medium text-slate-100"
-            duration={ 100 }
-            delay={ 300 }
+            duration={ 0.8 }
+            delay={ 30 }
             children="Hi, I'm Lan Anh!"
           />
         </motion.div>
@@ -70,10 +70,10 @@ export default function HeroSection() {
           colors={ [ "#86EFAC", "#2DD4BF", "#3B82F6", "#86EFAC" ] }
         >
           <span className="block font-bold">
-            I Build Modern & Intuitive
+            Transforming Ideas
           </span>
           <span className="block font-bold">
-            Web Experiences.
+            into Interactive Realities.
           </span>
         </GradientText>
 
