@@ -103,6 +103,10 @@ const config: Config = {
           "0%": { "background-position": "100%" },
           "100%": { "background-position": "-100%" },
         },
+        "shiny-text": {
+          "0%": { transform: "translateX(-100%)" },
+          "100%": { transform: "translateX(100%)" },
+        },
         rippling: {
           "0%": {
             opacity: "1",
@@ -122,6 +126,7 @@ const config: Config = {
         "accordion-up": "accordion-up 0.2s ease-out",
         "gradient": "gradient 8s linear infinite",
         "shine": "shine 3s linear infinite",
+        "shiny-text": "shiny-text 5s ease-in-out infinite",
         "rippling": "rippling 600ms ease-out",
         "spin-slow": "spin-slow 6s linear infinite",
       },
