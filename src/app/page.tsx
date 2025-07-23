@@ -1,6 +1,6 @@
 "use client";
 
-import { ScrollProgress } from "@/components/ScrollProgress";
+import { ScrollProgress } from "@/components/custom-ui/ScrollProgress";
 import HeroSection from "@/components/sections/HeroSection";
 import AboutMeSection from "@/components/sections/AboutMeSection";
 import CareerGoalsSection from "@/components/sections/CareerGoalsSection";
