@@ -178,23 +178,32 @@ The project's folder structure is organized to be clean, modular, and scalable, 
 
 ```
   src
-  ├── app/                        # App Router: Pages, Layouts, API Routes
-  │ ├── (main)/                   # Main route group for pages with shared layout
+  ├── app/                            # App Router: Pages, Layouts, API Routes
+  │ ├── (main)/                       # Main route group for pages with shared layout
   │ │ ├── layout.tsx
-  │ │ └── page.tsx                # Homepage
-  │ └── projects/                 # Dynamic routes for project details
+  │ │ └── page.tsx                    # Homepage
+  │ └── projects/                     # Dynamic routes for project details
   │   └── [slug]/
   │     └── page.tsx
-  ├── components/                 # Reusable components
-  │ ├── custom-ui/                # Custom-designed, non-Shadcn components
-  │ ├── layout/                   # Components for the main layout (Navbar, Footer)
-  │ └── sections/                 # Components for each major section of the homepage
-  ├── animations/                 # Complex animation components (e.g., SplashCursor)
-  ├── lib/                        # Library functions, helpers, and data
-  │ ├── data.ts                   # Centralized data source for projects, skills, etc.
-  │ ├── images.ts                 # Centralized module for static image assets
-  │ └── utils.ts                  # Utility functions (e.g., cn for class names)
-  └── public/                     # Static assets (images, fonts, resume PDF)
+  ├── assets/                         # For future static assets like custom SVGs or fonts
+  ├── components/                     # Reusable components, organized by function
+  │ ├── blocks/                       # Complex, reusable blocks with specific logic
+  │ │ ├── Animations/
+  │ │ └── TextAnimations/
+  │ ├── custom-ui/                    # Custom-designed, non-Shadcn components for this project
+  │ ├── layout/                       # Components for the main layout (Navbar, Footer)
+  │ ├── magicui/                      # Components adapted from the Magic UI library
+  │ │ └── typing-animation.tsx
+  │ ├── sections/                     # Components for each major section of the homepage
+  │ └── ui/                           # Auto-generated UI components (from Shadcn/ui)
+  ├── hooks/                          # Custom React hooks for shared logic
+  │ ├── use-mobile.tsx
+  │ └── use-toast.ts
+  ├── lib/                            # Library functions, helpers, and data
+  │ ├── data.ts                       # Centralized data source for projects, skills, etc.
+  │ ├── images.ts                     # Centralized module for static image assets
+  │ └── utils.ts                      # Utility functions (e.g., cn for class names)
+  └── public/                         # Static assets accessible from the root URL (images, resume PDF)
 ```
 
 ---
