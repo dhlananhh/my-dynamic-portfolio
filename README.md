@@ -82,13 +82,13 @@ This portfolio was built using a modern, scalable, and high-performance technolo
 
 | Category              | Technologies                                                                                 |
 | :-------------------- | :------------------------------------------------------------------------------------------- |
-| **Core**        | `Next.js 15`, `React 19`, `TypeScript`                                                 |
-| **Styling**     | `Tailwind CSS`, `Shadcn UI`, `Radix UI`                                                |
-| **Icons**       | `Lucide React`, `React Icons`                                                            |
-| **Animation**   | `Framer Motion`, `React Three Fiber (@react-three/drei)`, `React Bits`                 |
-| **APIs & Data** | `react-github-calendar` (for GitHub Contributions Graph), `Web3Forms` (for Contact Form) |
-| **Tooling**     | `ESLint`, `Prettier`, `pnpm`, `bun`                                                  |
-| **Deployment**  | `Vercel`                                                                                   |
+| **Core**              | `Next.js 15`, `React 19`, `TypeScript`                                                       |
+| **Styling**           | `Tailwind CSS`, `Shadcn UI`, `Radix UI`                                                      |
+| **Icons**             | `Lucide React`, `React Icons`                                                                |
+| **Animation**         | `Framer Motion`, `React Three Fiber (@react-three/drei)`, `React Bits`, `Magic UI`           |
+| **APIs & Data**       | `react-github-calendar` (for GitHub Contributions Graph), `Web3Forms` (for Contact Form)     |
+| **Tooling**           | `ESLint`, `Prettier`, `pnpm`, `bun`, `yarn`                                                  |
+| **Deployment**        | `Vercel`                                                                                     |
 
 ---
 
