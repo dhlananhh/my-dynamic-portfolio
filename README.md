@@ -183,8 +183,8 @@ The project's folder structure is organized to be clean, modular, and scalable, 
   │ │ ├── layout.tsx
   │ │ └── page.tsx                # Homepage
   │ └── projects/                 # Dynamic routes for project details
-  │ └── [slug]/
-  │ └── page.tsx
+  │   └── [slug]/
+  │     └── page.tsx
   ├── components/                 # Reusable components
   │ ├── custom-ui/                # Custom-designed, non-Shadcn components
   │ ├── layout/                   # Components for the main layout (Navbar, Footer)
@@ -192,6 +192,7 @@ The project's folder structure is organized to be clean, modular, and scalable, 
   ├── animations/                 # Complex animation components (e.g., SplashCursor)
   ├── lib/                        # Library functions, helpers, and data
   │ ├── data.ts                   # Centralized data source for projects, skills, etc.
+  │ ├── images.ts                 # Centralized module for static image assets
   │ └── utils.ts                  # Utility functions (e.g., cn for class names)
   └── public/                     # Static assets (images, fonts, resume PDF)
 ```
