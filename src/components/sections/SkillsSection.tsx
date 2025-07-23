@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { SectionHeading } from "@/components/SectionHeading";
+import { SectionHeading } from "@/components/custom-ui/SectionHeading";
 
 import { TbApi } from "react-icons/tb";
 import { MdOutlineImportantDevices } from "react-icons/md";

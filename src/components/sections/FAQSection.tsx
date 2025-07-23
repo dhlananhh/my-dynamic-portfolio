@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { SectionHeading } from "@/components/SectionHeading";
+import { SectionHeading } from "@/components/custom-ui/SectionHeading";
 import { ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 

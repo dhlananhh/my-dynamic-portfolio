@@ -1,7 +1,7 @@
 "use client";
 
 import ContactForm from "@/components/custom-ui/ContactForm";
-import { SectionHeading } from "@/components/SectionHeading";
+import { SectionHeading } from "@/components/custom-ui/SectionHeading";
 import { motion, easeInOut } from "framer-motion";
 import { FaLinkedin, FaGithub, FaEnvelope, FaInstagram } from "react-icons/fa";
 import Link from "next/link";

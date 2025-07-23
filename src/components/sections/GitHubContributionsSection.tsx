@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import GitHubCalendar from "react-github-calendar";
-import { SectionHeading } from "@/components/SectionHeading";
+import { SectionHeading } from "@/components/custom-ui/SectionHeading";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 

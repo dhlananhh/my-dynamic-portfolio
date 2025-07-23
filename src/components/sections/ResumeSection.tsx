@@ -2,7 +2,7 @@
 
 import { Download, Eye } from "lucide-react";
 import { motion } from "framer-motion";
-import { SectionHeading } from "@/components/SectionHeading";
+import { SectionHeading } from "@/components/custom-ui/SectionHeading";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 

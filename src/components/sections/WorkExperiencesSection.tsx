@@ -1,7 +1,7 @@
 "use client";
 
 import { workExperiencesData } from "@/lib/data";
-import { SectionHeading } from "@/components/SectionHeading";
+import { SectionHeading } from "@/components/custom-ui/SectionHeading";
 import { motion } from "framer-motion";
 import { Briefcase, Check } from "lucide-react";
 

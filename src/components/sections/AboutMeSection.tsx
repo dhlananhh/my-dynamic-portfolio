@@ -4,7 +4,7 @@ import Image from "next/legacy/image";
 import { motion, circOut } from "framer-motion";
 import { GlassmorphicCard } from "@/components/custom-ui/GlassmorphicCard";
 import Link from "next/link";
-import { SectionHeading } from "@/components/SectionHeading";
+import { SectionHeading } from "@/components/custom-ui/SectionHeading";
 import { Images } from "@/lib/images";
 
 const AboutMeSection = () => {

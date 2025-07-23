@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { projectsData } from "@/lib/data";
 import ProjectCard from "@/components/custom-ui/ProjectCard";
-import { SectionHeading } from "@/components/SectionHeading";
+import { SectionHeading } from "@/components/custom-ui/SectionHeading";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
 

@@ -2,7 +2,7 @@
 
 import { testimonialsData } from "@/lib/data";
 import TestimonialCard from "@/components/custom-ui/TestimonialCard";
-import { SectionHeading } from "@/components/SectionHeading";
+import { SectionHeading } from "@/components/custom-ui/SectionHeading";
 
 export default function TestimonialsSection() {
   if (!testimonialsData || testimonialsData.length === 0) {

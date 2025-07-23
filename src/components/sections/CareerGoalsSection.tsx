@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, easeOut } from "framer-motion";
-import { SectionHeading } from "@/components/SectionHeading";
+import { SectionHeading } from "@/components/custom-ui/SectionHeading";
 import { Rocket, BarChartBig, Target } from "lucide-react";
 
 const goals = [
