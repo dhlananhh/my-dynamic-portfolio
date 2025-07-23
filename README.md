@@ -98,40 +98,75 @@ To get a local copy up and running, follow these simple steps.
 
 ### Prerequisites
 
-Make sure you have Node.js (version 18.x or later) and a package manager (npm, yarn, or pnpm) installed.
+Before you begin, ensure you have the following tools installed on your system. This project supports both **Bun** (recommended for speed) and **Yarn**.
+
+1.  **Node.js**: Make sure you have Node.js version 18.x or later. You can download it from the [official Node.js website](https://nodejs.org/). To check your version, run:
+    ```bash
+    node -v
+    ```
+
+2.  **Bun** (Recommended): Bun is a fast all-in-one JavaScript runtime. To install it, run the following command in your terminal:
+    ```bash
+    # For macOS, Linux, and WSL
+    curl -fsSL https://bun.sh/install | bash
+    
+    # For Windows, you can use PowerShell
+    powershell -c "irm bun.sh/install.ps1|iex"
+    ```
+    *For other installation methods, please refer to the [official Bun documentation](https://bun.sh/docs/installation).*
+
+3.  **Yarn** (Alternative): If you prefer to use Yarn, you can install it via npm:
+    ```bash
+    npm install --global yarn
+    ```
+    To check your version, run: `yarn --version`
 
 ### Installation
 
-1. **Clone the repository:**
+Once the prerequisites are met, follow these steps:
 
-   ```bash
-   git clone https://github.com/dhlananhh/my-3d-portfolio.git
-   ```
-2. **Navigate to the project directory:**
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/dhlananhh/my-3d-portfolio.git
+    ```
 
-   ```bash
-   cd my-3d-portfolio
-   ```
-3. **Install dependencies:**
+2.  **Navigate to the project directory:**
+    ```bash
+    cd my-3d-portfolio
+    ```
 
-   ```bash
-   bun install
-   # OR yarn install
-   # OR npm install
-   ```
-4. **Set up environment variables:**
+3.  **Install dependencies:**
+    Choose **one** of the following commands based on the package manager you want to use.
 
-   - Create a new file named `.env.local` in the root of the project.
-   - Add your Web3Forms Access Key to this file. This is needed for the contact form to work.
+    *Using Bun (Recommended):*
+    ```bash
+    bun install
+    ```
 
-   ```env
-   NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY=YOUR_WEB3FORMS_ACCESS_KEY_HERE
-   ```
-5. **Run the development server:**
+    *Using Yarn:*
+    ```bash
+    yarn install
+    ```
 
-   ```bash
-   yarn dev
-   ```
+4.  **Set up environment variables:**
+    - Create a new file named `.env.local` in the root of the project.
+    - Add your Web3Forms Access Key to this file. This is needed for the contact form to work.
+    ```env
+    NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY=YOUR_WEB3FORMS_ACCESS_KEY_HERE
+    ```
+
+5.  **Run the development server:**
+    This command will start the Next.js development server with Turbopack.
+
+    *Using Bun:*
+    ```bash
+    bun dev
+    ```
+
+    *Using Yarn:*
+    ```bash
+    yarn dev
+    ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
