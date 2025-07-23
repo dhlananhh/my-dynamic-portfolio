@@ -177,33 +177,43 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 The project's folder structure is organized to be clean, modular, and scalable, following modern Next.js conventions:
 
 ```
-  src
-  ├── app/                            # App Router: Pages, Layouts, API Routes
-  │ ├── (main)/                       # Main route group for pages with shared layout
+├── public/                             # Publicly accessible static assets
+│ ├── images/                           # General project images and logos
+│ ├── resume/                           # Resume files (e.g., PDF)
+│ └── screenshots/                      # Screenshots for README documentation
+└── src/                                # Main application source code
+  ├── app/                              # App Router: Pages, Layouts, API Routes
+  │ ├── (main)/                         # Main route group for pages with shared layout
   │ │ ├── layout.tsx
-  │ │ └── page.tsx                    # Homepage
-  │ └── projects/                     # Dynamic routes for project details
-  │   └── [slug]/
-  │     └── page.tsx
-  ├── assets/                         # For future static assets like custom SVGs or fonts
-  ├── components/                     # Reusable components, organized by function
-  │ ├── blocks/                       # Complex, reusable blocks with specific logic
+  │ │ └── page.tsx # Homepage
+  │ └── projects/                       # Dynamic routes for project details
+  │ └── [slug]/
+  │ └── page.tsx
+  ├── assets/                           # For future static assets like custom fonts or SVGs (currently empty)
+  ├── components/                       # Reusable UI components
+  │ ├── blocks/                         # Complex, multi-part components or animations
   │ │ ├── Animations/
   │ │ └── TextAnimations/
-  │ ├── custom-ui/                    # Custom-designed, non-Shadcn components for this project
-  │ ├── layout/                       # Components for the main layout (Navbar, Footer)
-  │ ├── magicui/                      # Components adapted from the Magic UI library
+  │ ├── custom-ui/                      # Custom-designed, non-Shadcn components
+  │ │ ├── ContactForm.tsx
+  │ │ ├── GlassmorphicCard.tsx
+  │ │ ├── ProjectForm.tsx
+  │ │ ├── SkillBadge.tsx
+  │ │ └── TestimonialCard.tsx
+  │ ├── layout/                         # Main layout components (Navbar, Footer)
+  │ │ ├── Footer.tsx
+  │ │ └── Navbar.tsx
+  │ ├── magicui/                        # Integrated components from Magic UI library
   │ │ └── typing-animation.tsx
-  │ ├── sections/                     # Components for each major section of the homepage
-  │ └── ui/                           # Auto-generated UI components (from Shadcn/ui)
-  ├── hooks/                          # Custom React hooks for shared logic
+  │ ├── sections/                       # Major homepage sections (Hero, About, Projects, etc.)
+  │ └── ui/                             # Reusable UI primitives, often from Shadcn UI (e.g., Button)
+  ├── hooks/                            # Custom React hooks for shared logic
   │ ├── use-mobile.tsx
   │ └── use-toast.ts
-  ├── lib/                            # Library functions, helpers, and data
-  │ ├── data.ts                       # Centralized data source for projects, skills, etc.
-  │ ├── images.ts                     # Centralized module for static image assets
-  │ └── utils.ts                      # Utility functions (e.g., cn for class names)
-  └── public/                         # Static assets accessible from the root URL (images, resume PDF)
+  └── lib/                              # Library functions, helpers, and data
+    ├── data.ts                         # Centralized data for projects, skills, etc.
+    ├── images.ts                       # Centralized module for static image assets
+    └── utils.ts                        # Utility functions (e.g., cn for class names)
 ```
 
 ---
