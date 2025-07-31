@@ -185,7 +185,7 @@ The project's folder structure is organized to be clean, modular, and scalable, 
   ├── app/                              # App Router: Pages, Layouts, API Routes
   │ ├── (main)/                         # Main route group for pages with shared layout
   │ │ ├── layout.tsx
-  │ │ └── page.tsx # Homepage
+  │ │ └── page.tsx                      # Homepage
   │ └── projects/                       # Dynamic routes for project details
   │ └── [slug]/
   │ └── page.tsx
@@ -200,7 +200,7 @@ The project's folder structure is organized to be clean, modular, and scalable, 
   │ │ ├── ProjectForm.tsx
   │ │ ├── SkillBadge.tsx
   │ │ └── TestimonialCard.tsx
-  │ ├── layout/                         # Main layout components (Navbar, Footer)
+  │ ├── layouts/                         # Main layout components (Navbar, Footer)
   │ │ ├── Footer.tsx
   │ │ └── Navbar.tsx
   │ ├── magicui/                        # Integrated components from Magic UI library
