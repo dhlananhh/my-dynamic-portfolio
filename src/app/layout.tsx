@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { Gelasio } from "next/font/google";
 import type React from "react";
 import "./globals.css"
-import Navbar from "@/components/layout/Navbar";
-import Footer from "@/components/layout/Footer";
+import Navbar from "@/components/layouts/Navbar";
+import Footer from "@/components/layouts/Footer";
 import { Toaster as RadixToaster } from "@/components/ui/toaster";
 import SplashCursor from "@/components/blocks/Animations/SplashCursor/SplashCursor";
 
