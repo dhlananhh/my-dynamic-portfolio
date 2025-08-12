@@ -80,7 +80,7 @@
     "tw-animate-css": "^1.3.5",
     "vaul": "^1.1.2",
     "yarn": "^1.22.22",
-    "zod": "^3.25.56"
+    "zod": "^4.0.17"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
