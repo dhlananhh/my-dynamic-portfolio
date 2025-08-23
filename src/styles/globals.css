@@ -114,7 +114,6 @@ body {
 
 @layer base {
   * {
-    @apply border-border;
   }
   body {
     @apply bg-background text-foreground;
@@ -122,9 +121,7 @@ body {
   .project-card {
     position: relative;
     overflow: hidden;
-    transition:
-      transform 0.3s ease,
-      height 0.3s ease;
+    transition: transform 0.3s ease, height 0.3s ease;
   }
   .project-card:hover {
     transform: scale(1.05);
