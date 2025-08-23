@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Gelasio } from "next/font/google";
 import type React from "react";
-import "./globals.css"
+import "../styles/globals.css"
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { Toaster as RadixToaster } from "@/components/ui/toaster";
