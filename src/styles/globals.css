@@ -113,7 +113,15 @@ body {
 }
 
 @layer base {
-  * {
+  .border-border {
+    border-width: 1px;
+    border-color: #000;
+  }
+  .bg-background {
+    background-color: dimgray;
+  }
+  .text-foreground {
+    color: cadetblue;
   }
   body {
     @apply bg-background text-foreground;

@@ -24,6 +24,12 @@ const config: Config = {
       fontFamily: {
         sans: [ "var(--font-gelasio)", "ui-serif", "Georgia", "serif" ],
       },
+      borderWidth: {
+        border: "1px",
+      },
+      borderColor: {
+        border: "#000",
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
