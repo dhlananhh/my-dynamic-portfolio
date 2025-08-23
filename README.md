@@ -182,7 +182,7 @@ The project's folder structure is organized to be clean, modular, and scalable, 
 │ ├── resume/                           # Resume files (e.g., PDF)
 │ └── screenshots/                      # Screenshots for README documentation
 └── src/                                # Main application source code
-  ├── app/                              # App Router: Pages, Layouts, API Routes
+  ├── app/                              # App Router: Pages, Layout, API Routes
   │ ├── (main)/                         # Main route group for pages with shared layout
   │ │ ├── layout.tsx
   │ │ └── page.tsx                      # Homepage
@@ -200,7 +200,7 @@ The project's folder structure is organized to be clean, modular, and scalable, 
   │ │ ├── ProjectForm.tsx
   │ │ ├── SkillBadge.tsx
   │ │ └── TestimonialCard.tsx
-  │ ├── layouts/                         # Main layout components (Navbar, Footer)
+  │ ├── layout/                         # Main layout components (Navbar, Footer)
   │ │ ├── Footer.tsx
   │ │ └── Navbar.tsx
   │ ├── magicui/                        # Integrated components from Magic UI library
