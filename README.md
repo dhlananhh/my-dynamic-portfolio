@@ -181,39 +181,54 @@ The project's folder structure is organized to be clean, modular, and scalable, 
 │ ├── images/                           # General project images and logos
 │ ├── resume/                           # Resume files (e.g., PDF)
 │ └── screenshots/                      # Screenshots for README documentation
+│ 
 └── src/                                # Main application source code
   ├── app/                              # App Router: Pages, Layout, API Routes
   │ ├── (main)/                         # Main route group for pages with shared layout
   │ │ ├── layout.tsx
   │ │ └── page.tsx                      # Homepage
+  │ │
   │ └── projects/                       # Dynamic routes for project details
-  │ └── [slug]/
-  │ └── page.tsx
+  │   └── [slug]/
+  │     └── page.tsx
+  │
   ├── assets/                           # For future static assets like custom fonts or SVGs (currently empty)
+  │
   ├── components/                       # Reusable UI components
+  │
   │ ├── blocks/                         # Complex, multi-part components or animations
   │ │ ├── Animations/
   │ │ └── TextAnimations/
+  │ │
   │ ├── custom-ui/                      # Custom-designed, non-Shadcn components
   │ │ ├── ContactForm.tsx
   │ │ ├── GlassmorphicCard.tsx
   │ │ ├── ProjectForm.tsx
   │ │ ├── SkillBadge.tsx
   │ │ └── TestimonialCard.tsx
+  │ │
   │ ├── layout/                         # Main layout components (Navbar, Footer)
   │ │ ├── Footer.tsx
   │ │ └── Navbar.tsx
+  │ │
   │ ├── magicui/                        # Integrated components from Magic UI library
   │ │ └── typing-animation.tsx
   │ ├── sections/                       # Major homepage sections (Hero, About, Projects, etc.)
+  │ │
   │ └── ui/                             # Reusable UI primitives, often from Shadcn UI (e.g., Button)
+  │
   ├── hooks/                            # Custom React hooks for shared logic
   │ ├── use-mobile.tsx
   │ └── use-toast.ts
-  └── lib/                              # Library functions, helpers, and data
-    ├── data.ts                         # Centralized data for projects, skills, etc.
-    ├── images.ts                       # Centralized module for static image assets
-    └── utils.ts                        # Utility functions (e.g., cn for class names)
+  │
+  ├── lib/                              # Library functions, helpers, and data
+  │ ├── data.ts                         # Centralized data for projects, skills, etc.
+  │ ├── images.ts                       # Centralized module for static image assets
+  │ └── utils.ts                        # Utility functions (e.g., cn for class names)
+  │
+  └── styles/                           # 🎨 Styling: Global styles and theme configuration.
+    ├── globals.css                     # - Core global styles and custom CSS for libraries.
+    └── tailwind.config.ts              # - Tailwind CSS theme configuration (colors, fonts, plugins).
 ```
 
 ---
