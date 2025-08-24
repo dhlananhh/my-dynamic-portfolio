@@ -8,9 +8,7 @@ const config: Config = {
     "./components/**/*.{ts,tsx}",
     "./app/**/*.{ts,tsx}",
     "./src/**/*.{ts,tsx}",
-    "*.{js,ts,jsx,tsx,mdx}",
   ],
-  safelist: [],
   prefix: "",
   theme: {
     container: {
@@ -23,12 +21,6 @@ const config: Config = {
     extend: {
       fontFamily: {
         sans: [ "var(--font-gelasio)", "ui-serif", "Georgia", "serif" ],
-      },
-      borderWidth: {
-        border: "1px",
-      },
-      borderColor: {
-        border: "#000",
       },
       colors: {
         border: "hsl(var(--border))",
@@ -64,13 +56,6 @@ const config: Config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))"
         },
-        chart: {
-          "1": "hsl(var(--chart-1))",
-          "2": "hsl(var(--chart-2))",
-          "3": "hsl(var(--chart-3))",
-          "4": "hsl(var(--chart-4))",
-          "5": "hsl(var(--chart-5))"
-        }
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -79,44 +64,21 @@ const config: Config = {
       },
       keyframes: {
         "accordion-down": {
-          from: {
-            height: "0"
-          },
-          to: {
-            height: "var(--radix-accordion-content-height)"
-          }
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" }
         },
         "accordion-up": {
-          from: {
-            height: "var(--radix-accordion-content-height)"
-          },
-          to: {
-            height: "0"
-          }
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" }
         },
         gradient: {
-          "0%": {
-            backgroundPosition: "0% 50%"
-          },
-          "50%": {
-            backgroundPosition: "100% 50%"
-          },
-          "100%": {
-            backgroundPosition: "0% 50%"
-          }
+          "0%": { backgroundPosition: "0% 50%" },
+          "50%": { backgroundPosition: "100% 50%" },
+          "100%": { backgroundPosition: "0% 50%" }
         },
         shine: {
-          "0%": { "background-position": "100%" },
-          "100%": { "background-position": "-100%" },
-        },
-        rippling: {
-          "0%": {
-            opacity: "1",
-          },
-          "100%": {
-            transform: "scale(2)",
-            opacity: "0",
-          },
+          "from": { "backgroundPosition": "200% 0" },
+          "to": { "backgroundPosition": "-200% 0" },
         },
         "spin-slow": {
           "0%": { transform: "rotate(0deg)" },
@@ -128,7 +90,6 @@ const config: Config = {
         "accordion-up": "accordion-up 0.2s ease-out",
         "gradient": "gradient 8s linear infinite",
         "shine": "shine 3s linear infinite",
-        "rippling": "rippling 600ms ease-out",
         "spin-slow": "spin-slow 6s linear infinite",
       },
     },
