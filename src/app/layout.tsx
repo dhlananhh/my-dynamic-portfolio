@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Gelasio } from "next/font/google";
+import { Lexend } from "next/font/google";
 import type React from "react";
 import "../styles/globals.css"
 import Navbar from "@/components/layout/Navbar";
@@ -7,12 +7,14 @@ import Footer from "@/components/layout/Footer";
 import { Toaster as RadixToaster } from "@/components/ui/toaster";
 import SplashCursor from "@/components/blocks/Animations/SplashCursor/SplashCursor";
 
-const gelasio = Gelasio({
+
+const lexend = Lexend({
   subsets: [ "latin" ],
   display: "swap",
-  weight: [ "400", "700" ],
-  variable: "--font-gelasio"
+  weight: [ "400", "500", "700" ],
+  variable: "--font-lexend"
 });
+
 
 export const metadata: Metadata = {
   title: "Lan Anh | Web Developer Portfolio",
@@ -34,6 +36,7 @@ export const metadata: Metadata = {
   },
 };
 
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -42,7 +45,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="h-full" suppressHydrationWarning>
       <body
-        className={ `${gelasio.variable} font-sans antialiased flex flex-col min-h-screen bg-gray-950` }
+        className={ `${lexend.variable} font-sans antialiased flex flex-col min-h-screen bg-[#030014]` }
       >
         <SplashCursor />
         <Navbar />
