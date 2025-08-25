@@ -1,5 +1,6 @@
 "use client";
 
+
 import React, { useEffect } from "react";
 import Link from "next/link";
 import { Canvas } from "@react-three/fiber";
