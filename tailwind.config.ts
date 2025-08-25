@@ -20,7 +20,7 @@ const config: Config = {
     },
     extend: {
       fontFamily: {
-        sans: [ "var(--font-gelasio)", "ui-serif", "Georgia", "serif" ],
+        sans: [ "var(--font-lexend)", "ui-sans-serif", "system-ui" ],
       },
       colors: {
         border: "hsl(var(--border))",
