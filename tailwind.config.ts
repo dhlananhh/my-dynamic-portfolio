@@ -84,11 +84,6 @@ const config: Config = {
           "0%": { transform: "rotate(0deg)" },
           "100%": { transform: "rotate(360deg)" },
         },
-        "meteor": {
-          "0%": { transform: "rotate(215deg) translateX(0)", opacity: "1" },
-          "70%": { opacity: "1" },
-          "100%": { transform: "rotate(215deg) translateX(-500px)", opacity: "0" },
-        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -96,7 +91,6 @@ const config: Config = {
         "gradient": "gradient 8s linear infinite",
         "shine": "shine 3s linear infinite",
         "spin-slow": "spin-slow 6s linear infinite",
-        "meteor": "meteor 5s linear infinite",
       },
     },
   },
