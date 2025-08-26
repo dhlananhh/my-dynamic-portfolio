@@ -1,10 +1,23 @@
 "use client";
 
+
 import { useState } from "react";
 import GitHubCalendar from "react-github-calendar";
 import { SectionHeading } from "@/components/custom-ui/SectionHeading";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
+import AnimatedBlobBackground from "@/components/custom-ui/AnimatedBlobBackground";
+import { Canvas } from "@react-three/fiber";
+import { Stars } from "@react-three/drei";
+import {
+  EffectComposer,
+  Bloom,
+  Vignette,
+  ChromaticAberration,
+  Noise
+} from "@react-three/postprocessing";
+import { BlendFunction } from "postprocessing";
+
 
 const portfolioDarkTheme = {
   dark: [ "#172A3A", "#0D505E", "#1D8383", "#39C1AD", "#4DFFE2" ],
@@ -12,12 +25,15 @@ const portfolioDarkTheme = {
 
 const GITHUB_YEARS = [ 2025, 2024, 2023 ];
 
+
 export default function GitHubContributions() {
   const username = "dhlananhh";
   const [ selectedYear, setSelectedYear ] = useState(GITHUB_YEARS[ 0 ]);
 
   return (
     <section id="github-contributions" className="py-24 sm:py-32 relative bg-gray-950 text-white overflow-hidden">
+      <AnimatedBlobBackground />
+
       <div className="container relative z-10 mx-auto px-4 text-center">
         <SectionHeading title="My GitHub Contributions" subtitle="A Timeline of My Dedication" />
 
@@ -85,6 +101,34 @@ export default function GitHubContributions() {
             View my full profile on GitHub
           </a>
         </motion.div>
+      </div>
+
+      <div className="absolute inset-0 z-0">
+        <Canvas>
+          <Stars radius={ 50 } count={ 2500 } factor={ 4 } fade speed={ 2 } />
+          <EffectComposer>
+            <Bloom
+              luminanceThreshold={ 0.2 }
+              intensity={ 0.8 }
+              mipmapBlur={ true }
+            />
+            <ChromaticAberration
+              offset={ [ 0.001, 0.001 ] }
+              radialModulation={ true }
+              modulationOffset={ 0.1 }
+            />
+            <Noise
+              premultiply
+              blendFunction={ BlendFunction.ADD }
+              opacity={ 0.05 }
+            />
+            <Vignette
+              eskil={ false }
+              offset={ 0.1 }
+              darkness={ 0.9 }
+            />
+          </EffectComposer>
+        </Canvas>
       </div>
     </section>
   );
