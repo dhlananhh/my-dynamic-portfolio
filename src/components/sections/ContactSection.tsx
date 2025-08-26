@@ -62,6 +62,8 @@ export default function ContactSection() {
 
   return (
     <section id="contact" className="py-24 sm:py-32 relative bg-gray-950 text-white overflow-hidden">
+      <AnimatedBlobBackground />
+
       <div className="container relative z-10 mx-auto px-4">
         <SectionHeading title="Get In Touch" subtitle="Let's work together" />
 
