@@ -7,6 +7,17 @@ import { GlassmorphicCard } from "@/components/custom-ui/GlassmorphicCard";
 import Link from "next/link";
 import { SectionHeading } from "@/components/custom-ui/SectionHeading";
 import { Images } from "@/lib/images";
+import AnimatedBlobBackground from "@/components/custom-ui/AnimatedBlobBackground";
+import { Canvas } from "@react-three/fiber";
+import { Stars } from "@react-three/drei";
+import {
+  EffectComposer,
+  Bloom,
+  Vignette,
+  ChromaticAberration,
+  Noise
+} from "@react-three/postprocessing";
+import { BlendFunction } from "postprocessing";
 
 
 const AboutMeSection = () => {
@@ -19,6 +30,8 @@ const AboutMeSection = () => {
 
   return (
     <section id="about" className="py-24 sm:py-32 relative bg-gray-950 text-white overflow-hidden">
+      <AnimatedBlobBackground />
+
       <div className="container relative z-10 mx-auto px-4">
         <SectionHeading title="About Me" subtitle="My Journey" />
 
@@ -85,6 +98,34 @@ const AboutMeSection = () => {
             </GlassmorphicCard>
           </div>
         </div>
+      </div>
+
+      <div className="absolute inset-0 z-0">
+        <Canvas>
+          <Stars radius={ 50 } count={ 2500 } factor={ 4 } fade speed={ 2 } />
+          <EffectComposer>
+            <Bloom
+              luminanceThreshold={ 0.2 }
+              intensity={ 0.8 }
+              mipmapBlur={ true }
+            />
+            <ChromaticAberration
+              offset={ [ 0.001, 0.001 ] }
+              radialModulation={ true }
+              modulationOffset={ 0.1 }
+            />
+            <Noise
+              premultiply
+              blendFunction={ BlendFunction.ADD }
+              opacity={ 0.05 }
+            />
+            <Vignette
+              eskil={ false }
+              offset={ 0.1 }
+              darkness={ 0.9 }
+            />
+          </EffectComposer>
+        </Canvas>
       </div>
     </section>
   );
