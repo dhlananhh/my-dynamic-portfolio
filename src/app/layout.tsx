@@ -6,7 +6,6 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { Toaster as RadixToaster } from "@/components/ui/toaster";
 import SplashCursor from "@/components/blocks/Animations/SplashCursor/SplashCursor";
-import { Meteors } from "@/components/magicui/meteors";
 
 
 const lexend = Lexend({
@@ -49,7 +48,6 @@ export default function RootLayout({
         className={ `${lexend.variable} font-sans antialiased flex flex-col min-h-screen bg-gray-950` }
       >
         <SplashCursor />
-        <Meteors number={ 30 } />
         <Navbar />
         <main className="flex-grow">
           { children }
