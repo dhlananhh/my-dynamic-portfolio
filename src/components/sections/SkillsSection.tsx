@@ -2,7 +2,17 @@
 
 import { motion } from "framer-motion";
 import { SectionHeading } from "@/components/custom-ui/SectionHeading";
-
+import AnimatedBlobBackground from "@/components/custom-ui/AnimatedBlobBackground";
+import { Canvas } from "@react-three/fiber";
+import { Stars } from "@react-three/drei";
+import {
+  EffectComposer,
+  Bloom,
+  Vignette,
+  ChromaticAberration,
+  Noise
+} from "@react-three/postprocessing";
+import { BlendFunction } from "postprocessing";
 import { TbApi } from "react-icons/tb";
 import { MdOutlineImportantDevices } from "react-icons/md";
 import {
@@ -27,6 +37,7 @@ import {
   SiMariadb,
   SiMysql
 } from "react-icons/si";
+
 
 const skillCategories = [
   {
@@ -66,6 +77,7 @@ const skillCategories = [
   }
 ];
 
+
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
@@ -76,6 +88,7 @@ const containerVariants = {
     },
   },
 };
+
 
 const itemVariants = {
   hidden: { opacity: 0, y: 20 },
@@ -88,9 +101,12 @@ const itemVariants = {
   },
 };
 
+
 export default function SkillsSection() {
   return (
     <section id="skills" className="py-24 sm:py-32 relative bg-gray-950 overflow-hidden">
+      <AnimatedBlobBackground />
+
       <div className="container relative z-10 mx-auto px-4">
         <SectionHeading title="My Skills" subtitle="Technologies & Expertise" />
 
@@ -101,30 +117,62 @@ export default function SkillsSection() {
           viewport={ { once: true, amount: 0.1 } }
           className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3"
         >
-          { skillCategories.map((category) => (
-            <motion.div
-              key={ category.title }
-              variants={ itemVariants }
-              className="group relative overflow-hidden rounded-2xl border border-slate-800 bg-slate-900/50 p-6 backdrop-blur-sm transition-all duration-300 hover:border-teal-400/50 hover:bg-slate-900"
-            >
-              <h3 className="mb-6 text-xl font-bold text-slate-100 text-center">
-                { category.title }
-              </h3>
-              <div className="grid grid-cols-2 gap-x-6 gap-y-6 sm:grid-cols-3">
-                { category.skills.map((skill) => (
-                  <div key={ skill.name } className="flex flex-col items-center justify-center gap-2 text-center">
-                    <div className="flex h-16 w-16 items-center justify-center rounded-full bg-slate-800/70 transition-colors duration-300 group-hover:bg-slate-700/80">
-                      { skill.icon }
-                    </div>
-                    <p className="text-sm font-medium text-slate-300">
-                      { skill.name }
-                    </p>
-                  </div>
-                )) }
-              </div>
-            </motion.div>
-          )) }
+          {
+            skillCategories.map((category) => (
+              <motion.div
+                key={ category.title }
+                variants={ itemVariants }
+                className="group relative overflow-hidden rounded-2xl border border-slate-800 bg-slate-900/50 p-6 backdrop-blur-sm transition-all duration-300 hover:border-teal-400/50 hover:bg-slate-900"
+              >
+                <h3 className="mb-6 text-xl font-bold text-slate-100 text-center">
+                  { category.title }
+                </h3>
+                <div className="grid grid-cols-2 gap-x-6 gap-y-6 sm:grid-cols-3">
+                  {
+                    category.skills.map((skill) => (
+                      <div key={ skill.name } className="flex flex-col items-center justify-center gap-2 text-center">
+                        <div className="flex h-16 w-16 items-center justify-center rounded-full bg-slate-800/70 transition-colors duration-300 group-hover:bg-slate-700/80">
+                          { skill.icon }
+                        </div>
+                        <p className="text-sm font-medium text-slate-300">
+                          { skill.name }
+                        </p>
+                      </div>
+                    ))
+                  }
+                </div>
+              </motion.div>
+            ))
+          }
         </motion.div>
+      </div>
+
+      <div className="absolute inset-0 z-0">
+        <Canvas>
+          <Stars radius={ 50 } count={ 2500 } factor={ 4 } fade speed={ 2 } />
+          <EffectComposer>
+            <Bloom
+              luminanceThreshold={ 0.2 }
+              intensity={ 0.8 }
+              mipmapBlur={ true }
+            />
+            <ChromaticAberration
+              offset={ [ 0.001, 0.001 ] }
+              radialModulation={ true }
+              modulationOffset={ 0.1 }
+            />
+            <Noise
+              premultiply
+              blendFunction={ BlendFunction.ADD }
+              opacity={ 0.05 }
+            />
+            <Vignette
+              eskil={ false }
+              offset={ 0.1 }
+              darkness={ 0.9 }
+            />
+          </EffectComposer>
+        </Canvas>
       </div>
     </section>
   );
