@@ -2,8 +2,20 @@
 
 import { workExperiencesData } from "@/lib/data";
 import { SectionHeading } from "@/components/custom-ui/SectionHeading";
+import AnimatedBlobBackground from "@/components/custom-ui/AnimatedBlobBackground";
 import { motion } from "framer-motion";
+import { Canvas } from "@react-three/fiber";
+import { Stars } from "@react-three/drei";
+import {
+  EffectComposer,
+  Bloom,
+  Vignette,
+  ChromaticAberration,
+  Noise
+} from "@react-three/postprocessing";
+import { BlendFunction } from "postprocessing";
 import { Briefcase, Check } from "lucide-react";
+
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -31,6 +43,8 @@ export default function WorkExperiencesSection() {
 
   return (
     <section id="experience" className="py-24 sm:py-32 relative bg-gray-950 text-white overflow-hidden">
+      <AnimatedBlobBackground />
+
       <div className="container relative z-10 mx-auto max-w-4xl px-4">
         <SectionHeading title="Work Experience" subtitle="My Professional Journey" />
 
@@ -82,6 +96,34 @@ export default function WorkExperiencesSection() {
             ))
           }
         </motion.div>
+      </div>
+
+      <div className="absolute inset-0 z-0">
+        <Canvas>
+          <Stars radius={ 50 } count={ 2500 } factor={ 4 } fade speed={ 2 } />
+          <EffectComposer>
+            <Bloom
+              luminanceThreshold={ 0.2 }
+              intensity={ 0.8 }
+              mipmapBlur={ true }
+            />
+            <ChromaticAberration
+              offset={ [ 0.001, 0.001 ] }
+              radialModulation={ true }
+              modulationOffset={ 0.1 }
+            />
+            <Noise
+              premultiply
+              blendFunction={ BlendFunction.ADD }
+              opacity={ 0.05 }
+            />
+            <Vignette
+              eskil={ false }
+              offset={ 0.1 }
+              darkness={ 0.9 }
+            />
+          </EffectComposer>
+        </Canvas>
       </div>
     </section>
   );
