@@ -1,5 +1,6 @@
 "use client";
 
+
 import { Download, Eye } from "lucide-react";
 import { motion } from "framer-motion";
 import { SectionHeading } from "@/components/custom-ui/SectionHeading";
@@ -25,16 +26,27 @@ const resumeFilename = "LanAnh_Frontend_CV.pdf";
 export default function ResumeSection() {
   const paragraphVariants = {
     hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5, delay: 0.1 } },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5, delay: 0.1 }
+    },
   };
 
   const buttonsContainerVariants = {
     hidden: { opacity: 0, scale: 0.8 },
-    visible: { opacity: 1, scale: 1, transition: { duration: 0.5, delay: 0.2 } },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: { duration: 0.5, delay: 0.2 }
+    },
   };
 
   return (
-    <section id="resume" className="py-24 sm:py-32 relative bg-gray-950 text-white text-center overflow-hidden">
+    <section
+      id="resume"
+      className="py-24 sm:py-32 relative bg-gray-950 text-white text-center overflow-hidden"
+    >
       <AnimatedBlobBackground />
 
       <div className="container relative z-10 mx-auto px-4">
