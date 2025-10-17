@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import { Lexend } from "next/font/google";
 import type React from "react";
-import "../styles/globals.css"
+import "@/styles/globals.css"
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { Toaster as RadixToaster } from "@/components/ui/toaster";
 import SplashCursor from "@/components/blocks/Animations/SplashCursor/SplashCursor";
+import { useWebGLSupport } from "@/hooks/useWebGLSupport";
 
 
 const lexend = Lexend({
@@ -42,12 +43,21 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const isWebGLSupported = useWebGLSupport();
+
   return (
-    <html lang="en" className="h-full" suppressHydrationWarning>
+    <html
+      lang="en"
+      className="h-full"
+      suppressHydrationWarning
+    >
       <body
-        className={ `${lexend.variable} font-sans antialiased flex flex-col min-h-screen bg-gray-950` }
+        className={
+          `${lexend.variable} 
+          font-sans antialiased flex flex-col min-h-screen bg-gray-950`
+        }
       >
-        <SplashCursor />
+        { isWebGLSupported && <SplashCursor /> }
         <Navbar />
         <main className="flex-grow">
           { children }

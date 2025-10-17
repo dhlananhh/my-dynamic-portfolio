@@ -24,11 +24,15 @@ import {
   Noise
 } from "@react-three/postprocessing";
 import { BlendFunction } from "postprocessing";
+import { useWebGLSupport } from "@/hooks/useWebGLSupport";
+
 
 const COLORS_TOP = [ "#13FFAA", "#1E67C6", "#CE84CF", "#DD335C" ];
 
+
 export default function HeroSection() {
   const color = useMotionValue(COLORS_TOP[ 0 ]);
+  const isWebGLSupported = useWebGLSupport();
 
   useEffect(() => {
     animate(color, COLORS_TOP, {
@@ -195,31 +199,41 @@ export default function HeroSection() {
       </div>
 
       <div className="absolute inset-0 z-0">
-        <Canvas>
-          <Stars radius={ 50 } count={ 2500 } factor={ 4 } fade speed={ 2 } />
-          <EffectComposer>
-            <Bloom
-              luminanceThreshold={ 0.2 }
-              intensity={ 0.8 }
-              mipmapBlur={ true }
-            />
-            <ChromaticAberration
-              offset={ [ 0.001, 0.001 ] }
-              radialModulation={ true }
-              modulationOffset={ 0.1 }
-            />
-            <Noise
-              premultiply
-              blendFunction={ BlendFunction.ADD }
-              opacity={ 0.05 }
-            />
-            <Vignette
-              eskil={ false }
-              offset={ 0.1 }
-              darkness={ 0.9 }
-            />
-          </EffectComposer>
-        </Canvas>
+        {
+          isWebGLSupported && (
+            <Canvas>
+              <Stars
+                radius={ 50 }
+                count={ 2500 }
+                factor={ 4 }
+                fade
+                speed={ 2 }
+              />
+              <EffectComposer>
+                <Bloom
+                  luminanceThreshold={ 0.2 }
+                  intensity={ 0.8 }
+                  mipmapBlur={ true }
+                />
+                <ChromaticAberration
+                  offset={ [ 0.001, 0.001 ] }
+                  radialModulation={ true }
+                  modulationOffset={ 0.1 }
+                />
+                <Noise
+                  premultiply
+                  blendFunction={ BlendFunction.ADD }
+                  opacity={ 0.05 }
+                />
+                <Vignette
+                  eskil={ false }
+                  offset={ 0.1 }
+                  darkness={ 0.9 }
+                />
+              </EffectComposer>
+            </Canvas>
+          )
+        }
       </div>
     </motion.section>
   );
