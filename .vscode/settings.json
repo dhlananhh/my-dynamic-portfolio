@@ -1,0 +1,54 @@
+{
+  "json.schemaDownload.trustedDomains": {
+    "https://esm.sh/": true,
+    "https://unpkg.com/": true,
+    "https://ui.shadcn.com/": true
+  },
+  "workbench.colorTheme": "Catppuccin Mocha",
+  "workbench.iconTheme": "catppuccin-mocha",
+  "workbench.editor.empty.hint": "hidden",
+  "workbench.editor.showIcons": true,
+  "workbench.productIconTheme": "fluent-icons",
+  "editor.fontFamily": "'CaskaydiaMono Nerd Font Mono', Consolas, 'Courier New', monospace",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 14,
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.wordWrap": "on",
+  "editor.indentSize": "tabSize",
+  "editor.formatOnSave": true,
+  "editor.guides.bracketPairs": "active",
+  "editor.rulers": [113],
+  "editor.inlineSuggest.enabled": true,
+  "window.zoomLevel": 1,
+  "editor.quickSuggestions": {
+    "comments": "on",
+    "other": "on",
+    "strings": "on"
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "files.associations": {
+    "*.css": "tailwindcss",
+    "*.html": "html",
+    "*.js": "javascriptreact",
+    "*.jsx": "javascriptreact",
+    "*.ts": "typescriptreact",
+    "*.tsx": "typescriptreact",
+    "*.md": "markdown",
+    "*.ejs": "html",
+    "*.xml": "xml",
+    "*.vue": "vue"
+  },
+  "files.exclude": {
+    "**/.git": true,
+    "**/.next": true,
+    "**/node_modules": true
+  },
+  "eslint.format.enable": false,
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "typescript": "typescriptreact"
+  }
+}
