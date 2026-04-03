@@ -3,7 +3,7 @@
 
 import Sidebar from "@/components/layout/Sidebar";
 import MobileHeader from "@/components/layout/MobileHeader";
-import { SidebarProvider, useSidebar } from "@/context/SidebarContext";
+import { SidebarProvider, useSidebar } from "@/contexts/SidebarContext";
 import { cn } from "@/lib/utils";
 import Footer from "@/components/layout/Footer";
 

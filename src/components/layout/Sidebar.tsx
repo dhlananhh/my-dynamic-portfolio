@@ -6,7 +6,7 @@ import { Link, usePathname } from "@/i18n/routing";
 // import Link from "next/link";
 import Image from "next/legacy/image";
 // import { usePathname } from "next/navigation";
-import { useSidebar } from "@/context/SidebarContext";
+import { useSidebar } from "@/contexts/SidebarContext";
 import { useTranslations } from "next-intl";
 import LanguageSwitcher from "./LanguageSwitcher";
 import { cn } from "@/lib/utils";
