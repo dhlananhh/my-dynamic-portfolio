@@ -12,26 +12,31 @@ function AppLayout({ children }: { children: React.ReactNode }) {
   const { isCollapsed } = useSidebar();
 
   return (
-    <div className="min-h-screen xl:flex">
-      <div className="hidden md:block fixed inset-y-0 left-0 z-40 transition-all duration-300">
+    <div className="relative min-h-screen bg-gray-950 w-full flex flex-col">
+      <div className="hidden md:block fixed inset-y-0 left-0 z-40 transition-all duration-300 print:hidden">
         <Sidebar />
       </div>
 
-      <div className="block md:hidden">
+      <div className="block md:hidden print:hidden">
         <MobileHeader />
       </div>
 
       <main
         className={
           cn(
-            "relative min-h-screen transition-all duration-300 ease-in-out w-full",
-            isCollapsed ? "md:pl-[5rem]" : "md:pl-[18rem]"
+            "relative transition-all duration-300 ease-in-out flex flex-col flex-grow w-full",
+            "min-h-[100dvh]",
+            isCollapsed ? "md:pl-[5rem] print:pl-0" : "md:pl-[18rem] print:pl-0"
           )
         }
       >
-        {children}
+        <div className="flex-grow w-full">
+          {children}
+        </div>
 
-        <Footer />
+        <div className="print:hidden">
+          <Footer />
+        </div>
       </main>
     </div>
   );

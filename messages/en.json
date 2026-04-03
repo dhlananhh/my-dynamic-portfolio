@@ -29,5 +29,16 @@
     "designedBy": "Designed by",
     "rights": "All rights reserved.",
     "backToTop": "Back to Top"
+  },
+  "Resume": {
+    "title": "Interactive Resume",
+    "subtitle": "Coded with code, not Canva",
+    "exportPdf": "Export to PDF",
+    "education": "Education",
+    "experience": "Experience",
+    "projects": "Selected Projects",
+    "skills": "Core Skills",
+    "certifications": "Certifications",
+    "appendix": "Appendix: Credentials & Proofs"
   }
 }

@@ -9,7 +9,7 @@ import "@/styles/globals.css"
 import Footer from "@/components/layout/Footer";
 import { Toaster as RadixToaster } from "@/components/ui/toaster";
 import SplashCursor from "@/components/blocks/Animations/SplashCursor/SplashCursor";
-import { WebGLChecker } from "@/components/layout/WebGLChecker";
+// import { WebGLChecker } from "@/components/layout/WebGLChecker";
 
 
 const lexend = Lexend({
@@ -69,7 +69,7 @@ export default async function RootLayout({
         }
       >
         <NextIntlClientProvider messages={messages}>
-          <WebGLChecker />
+          {/* <WebGLChecker /> */}
           <main className="flex-grow">
             {children}
           </main>

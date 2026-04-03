@@ -107,3 +107,19 @@
     @apply bg-background text-foreground;
   }
 }
+
+@media print {
+  @page {
+    size: A4;
+    margin: 0mm;
+  }
+
+  body {
+    background: white !important;
+    overflow: hidden !important;
+  }
+
+  .page-break-avoid {
+    break-inside: avoid;
+  }
+}

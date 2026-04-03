@@ -29,5 +29,16 @@
     "designedBy": "Thiết kế bởi",
     "rights": "Mọi bản quyền được bảo lưu.",
     "backToTop": "Lên đầu trang"
+  },
+  "Resume": {
+    "title": "Sơ Yếu Lý Lịch",
+    "subtitle": "Được lập trình 100%, không sử dụng Canva",
+    "exportPdf": "Xuất file PDF",
+    "education": "Học Vấn",
+    "experience": "Kinh Nghiệm Làm Việc",
+    "projects": "Dự Án Nổi Bật",
+    "skills": "Kỹ Năng",
+    "certifications": "Chứng Chỉ",
+    "appendix": "Phụ Lục: Minh Chứng Chứng Chỉ"
   }
 }
