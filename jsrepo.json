@@ -1,5 +1,5 @@
 {
-  "$schema": "https://unpkg.com/jsrepo@2.4.1/schemas/project-config.json",
+  "$schema": "https://unpkg.com/jsrepo@2.5.2/schemas/project-config.json",
   "repos": [
     "https://reactbits.dev/ts/tailwind"
   ],
