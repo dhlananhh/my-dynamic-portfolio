@@ -32,8 +32,14 @@ const eslintConfig = [
     rules: {
       "@typescript-eslint/no-explicit-any": "off",
       "no-unused-vars": "off",
-      "@typescript-eslint/no-unused-vars": "error"
-    }
+      "@typescript-eslint/no-unused-vars": "error",
+      "react/jsx-curly-spacing": [ "error", { "when": "never", "children": true } ]
+    },
+    "extends": [
+      "eslint:recommended",
+      "plugin:react/recommended",
+      "prettier"
+    ]
   }
 ];
 
