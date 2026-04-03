@@ -28,12 +28,12 @@ export default function Footer() {
 
   return (
     <footer className="w-full bg-slate-950 text-slate-300 py-12 md:py-20 relative z-10 overflow-hidden border-t border-slate-800">
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-3/4 h-[300px] bg-teal-500/10 rounded-[100%] blur-[120px] pointer-events-none -z-10" />
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-3/4 h-[200px] bg-teal-500/10 rounded-[100%] blur-[100px] pointer-events-none -z-10" />
 
       <div className="mx-auto px-6 lg:px-12 w-full max-w-7xl">
 
         {/* CTA */}
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-8 pb-16 border-b border-slate-800">
+        {/* <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-8 pb-16 border-b border-slate-800">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -63,7 +63,7 @@ export default function Footer() {
               <Mail className="h-5 w-5" />
             </Link>
           </motion.div>
-        </div>
+        </div> */}
 
         {/* LINKS & MENU */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 py-12 border-b border-slate-800">
