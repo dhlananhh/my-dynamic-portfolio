@@ -49,3 +49,6 @@ globals.d.ts
 # lockfiles from other package managers
 package-lock.json
 pnpm-lock.yaml
+
+# code dump
+project_code.txt
