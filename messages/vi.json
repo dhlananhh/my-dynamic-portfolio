@@ -20,11 +20,14 @@
     "contactMe": "Liên hệ tôi"
   },
   "Footer": {
-    "designedBy": "Thiết kế & Lập trình bởi",
-    "rights": "Mọi bản quyền thuộc về",
-    "viewSource": "Xem mã nguồn",
-    "scrollToTop": "Lên đầu trang",
-    "privacy": "Chính sách",
-    "terms": "Điều khoản"
+    "readyToConnect": "Bạn có dự án nào đang ấp ủ không?",
+    "reachOut": "Hộp thư của tôi luôn mở. Dù bạn có ý tưởng dự án, cơ hội việc làm hay chỉ muốn trò chuyện, tôi sẽ phản hồi sớm nhất có thể!",
+    "sayHello": "Gửi tin nhắn",
+    "explore": "Khám phá",
+    "connect": "Kết nối",
+    "bio": "Kỹ sư phần mềm chuyên mảng Frontend, luôn tìm kiếm giải pháp tối ưu để biến ý tưởng thành giao diện trực quan.",
+    "designedBy": "Thiết kế bởi",
+    "rights": "Mọi bản quyền được bảo lưu.",
+    "backToTop": "Lên đầu trang"
   }
 }

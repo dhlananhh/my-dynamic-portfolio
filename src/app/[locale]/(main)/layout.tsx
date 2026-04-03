@@ -1,9 +1,12 @@
 "use client";
 
+
 import Sidebar from "@/components/layout/Sidebar";
 import MobileHeader from "@/components/layout/MobileHeader";
 import { SidebarProvider, useSidebar } from "@/context/SidebarContext";
 import { cn } from "@/lib/utils";
+import Footer from "@/components/layout/Footer";
+
 
 function AppLayout({ children }: { children: React.ReactNode }) {
   const { isCollapsed } = useSidebar();
@@ -27,6 +30,8 @@ function AppLayout({ children }: { children: React.ReactNode }) {
         }
       >
         {children}
+
+        <Footer />
       </main>
     </div>
   );
