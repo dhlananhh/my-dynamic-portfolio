@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Lexend } from "next/font/google";
 import type React from "react";
 import "@/styles/globals.css"
-import Navbar from "@/components/layout/Navbar";
+// import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { Toaster as RadixToaster } from "@/components/ui/toaster";
 import SplashCursor from "@/components/blocks/Animations/SplashCursor/SplashCursor";
@@ -46,21 +46,21 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className="h-full"
+      className="h-full scroll-smooth"
       suppressHydrationWarning
     >
       <body
         className={
           `${lexend.variable} 
-          font-sans antialiased flex flex-col min-h-screen bg-gray-950`
+          font-sans antialiased bg-gray-950 text-slate-200 overflow-x-hidden min-h-screen`
         }
       >
         <WebGLChecker />
-        <Navbar />
+        {/* <Navbar /> */}
         <main className="flex-grow">
-          { children }
+          {children}
         </main>
-        <Footer />
+        {/* <Footer /> */}
         <RadixToaster />
       </body>
     </html>
