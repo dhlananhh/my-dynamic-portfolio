@@ -20,11 +20,14 @@
     "contactMe": "Contact me"
   },
   "Footer": {
-    "designedBy": "Designed & Built by",
-    "rights": "All rights reserved",
-    "viewSource": "View Source Code",
-    "scrollToTop": "Back to top",
-    "privacy": "Privacy Policy",
-    "terms": "Terms"
+    "readyToConnect": "Have a project in mind?",
+    "reachOut": "My inbox is always open. Whether you have a project idea, a job opportunity, or just want to say hi, I'll try my best to get back to you!",
+    "sayHello": "Let's Talk",
+    "explore": "Explore",
+    "connect": "Connect",
+    "bio": "Frontend software engineers are always looking for optimal solutions to transform ideas into intuitive interfaces.",
+    "designedBy": "Designed by",
+    "rights": "All rights reserved.",
+    "backToTop": "Back to Top"
   }
 }
