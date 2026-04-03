@@ -2,12 +2,22 @@
 
 
 import React from "react";
-import Link from "next/link";
+import { Link, usePathname } from "@/i18n/routing";
+// import Link from "next/link";
 import Image from "next/legacy/image";
-import { usePathname } from "next/navigation";
+// import { usePathname } from "next/navigation";
 import { useSidebar } from "@/context/SidebarContext";
+import { useTranslations } from "next-intl";
+import LanguageSwitcher from "./LanguageSwitcher";
 import { cn } from "@/lib/utils";
 import { Images } from "@/lib/images";
+import { Button } from "@/components/ui/button";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 import {
   LayoutDashboard,
   User,
@@ -21,13 +31,6 @@ import {
   Instagram,
   ChevronsLeft,
 } from "lucide-react";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
-import { Button } from "@/components/ui/button";
 
 
 const navItems = [
@@ -56,6 +59,7 @@ interface SidebarProps {
 export default function Sidebar({ className }: SidebarProps) {
   const pathname = usePathname();
   const { isCollapsed, toggleSidebar } = useSidebar();
+  const t = useTranslations("Sidebar");
 
   return (
     <TooltipProvider delayDuration={0}>
@@ -70,7 +74,7 @@ export default function Sidebar({ className }: SidebarProps) {
           {/* Profile Section */}
           <div className={
             cn(
-              "flex items-center gap-3 pb-4 border-b border-slate-700/60",
+              "flex items-center gap-3 pb-4 border-b border-slate-700/60 mt-2",
               isCollapsed && "justify-center"
             )
           }>
@@ -138,22 +142,33 @@ export default function Sidebar({ className }: SidebarProps) {
 
           {/* Socials Section */}
           <div className={
-            cn("pb-4 border-t border-slate-700/60", isCollapsed && "hidden")
+            cn(
+              "pb-4 border-t border-slate-700/60",
+              isCollapsed && "hidden"
+            )
           }>
             <p className="text-xs uppercase text-slate-500 my-4 text-center">Socials</p>
             <div className="flex justify-center gap-4">
-              {socialItems.map((social) => (
-                <Link key={social.href} href={social.href} target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors">
-                  <social.icon className="h-5 w-5" />
-                </Link>
-              ))}
+              {
+                socialItems.map((social) => (
+                  <Link
+                    key={social.href}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors"
+                  >
+                    <social.icon className="h-5 w-5" />
+                  </Link>
+                ))
+              }
             </div>
           </div>
-
         </div>
 
         {/* Sidebar Toggle */}
-        <div className="p-4 border-t border-slate-700/60 space-y-2">
+        <div className="p-4 border-t border-slate-700/60 space-y-4">
+          <LanguageSwitcher isCollapsed={isCollapsed} />
+
           <Tooltip>
             <TooltipTrigger asChild>
               <Link
@@ -164,19 +179,34 @@ export default function Sidebar({ className }: SidebarProps) {
                 )}
               >
                 <Newspaper className="h-5 w-5 flex-shrink-0" />
-                <span className={cn(isCollapsed && "hidden")}>View Resume</span>
+                <span
+                  className={
+                    cn(isCollapsed && "hidden")
+                  }>
+                  {t("viewResume")}
+                </span>
               </Link>
             </TooltipTrigger>
-            {isCollapsed && (
-              <TooltipContent side="right">View Resume</TooltipContent>
-            )}
+            {
+              isCollapsed && (
+                <TooltipContent side="right">
+                  {t("viewResume")}
+                </TooltipContent>
+              )
+            }
           </Tooltip>
 
           <Button
             onClick={toggleSidebar}
             className="w-full flex items-center justify-center gap-2 rounded-lg px-4 py-2.5 text-slate-400 hover:bg-slate-700 hover:text-white"
           >
-            <ChevronsLeft className={cn("h-5 w-5 transition-transform", isCollapsed && "rotate-180")} />
+            <ChevronsLeft className={
+              cn(
+                "h-5 w-5 transition-transform",
+                isCollapsed && "rotate-180"
+              )
+            }
+            />
             <span className={cn(isCollapsed && "hidden")}>Collapse</span>
           </Button>
         </div>

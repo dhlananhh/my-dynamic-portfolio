@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
 import { Lexend } from "next/font/google";
+import { NextIntlClientProvider } from "next-intl";
+import { getMessages } from "next-intl/server";
+import { notFound } from "next/navigation";
+import { routing } from "@/i18n/routing";
 import type React from "react";
 import "@/styles/globals.css"
-// import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { Toaster as RadixToaster } from "@/components/ui/toaster";
 import SplashCursor from "@/components/blocks/Animations/SplashCursor/SplashCursor";
@@ -10,7 +13,7 @@ import { WebGLChecker } from "@/components/layout/WebGLChecker";
 
 
 const lexend = Lexend({
-  subsets: [ "latin" ],
+  subsets: [ "latin", "vietnamese" ],
   display: "swap",
   weight: [ "400", "500", "700" ],
   variable: "--font-lexend"
@@ -38,14 +41,24 @@ export const metadata: Metadata = {
 };
 
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
+  params
 }: Readonly<{
   children: React.ReactNode;
+  params: Promise<{ locale: string }>
 }>) {
+  const { locale } = await params;
+
+  if (!routing.locales.includes(locale as any)) {
+    notFound();
+  }
+
+  const messages = await getMessages();
+
   return (
     <html
-      lang="en"
+      lang={locale}
       className="h-full scroll-smooth"
       suppressHydrationWarning
     >
@@ -55,13 +68,13 @@ export default function RootLayout({
           font-sans antialiased bg-gray-950 text-slate-200 overflow-x-hidden min-h-screen`
         }
       >
-        <WebGLChecker />
-        {/* <Navbar /> */}
-        <main className="flex-grow">
-          {children}
-        </main>
-        {/* <Footer /> */}
-        <RadixToaster />
+        <NextIntlClientProvider messages={messages}>
+          <WebGLChecker />
+          <main className="flex-grow">
+            {children}
+          </main>
+          <RadixToaster />
+        </NextIntlClientProvider>
       </body>
     </html>
   );

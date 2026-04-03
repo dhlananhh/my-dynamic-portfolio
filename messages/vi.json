@@ -1,0 +1,30 @@
+{
+  "Sidebar": {
+    "home": "Trang chủ",
+    "about": "Về tôi",
+    "projects": "Dự án",
+    "testimonials": "Đánh giá",
+    "faq": "Câu hỏi",
+    "resume": "Hồ sơ CV",
+    "contact": "Liên hệ",
+    "socials": "Mạng xã hội",
+    "viewResume": "Xem CV",
+    "collapse": "Thu gọn"
+  },
+  "Hero": {
+    "greeting": "Xin chào, tôi là Lan Anh!",
+    "heading1": "Biến Ý Tưởng Thành",
+    "heading2": "Giải Pháp Công Nghệ Thực Tế.",
+    "bio": "Một Lập trình viên Web đam mê làm việc tại TP.Hồ Chí Minh, khao khát chuyển hóa những ý tưởng sáng tạo thành các sản phẩm kỹ thuật số đẹp mắt và tối ưu hiệu năng.",
+    "viewProjects": "Xem dự án",
+    "contactMe": "Liên hệ tôi"
+  },
+  "Footer": {
+    "designedBy": "Thiết kế & Lập trình bởi",
+    "rights": "Mọi bản quyền thuộc về",
+    "viewSource": "Xem mã nguồn",
+    "scrollToTop": "Lên đầu trang",
+    "privacy": "Chính sách",
+    "terms": "Điều khoản"
+  }
+}

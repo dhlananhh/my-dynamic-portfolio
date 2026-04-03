@@ -19,10 +19,12 @@ function AppLayout({ children }: { children: React.ReactNode }) {
       </div>
 
       <main
-        className={cn(
-          "relative min-h-screen transition-all duration-300 ease-in-out w-full",
-          isCollapsed ? "md:pl-[5rem]" : "md:pl-[18rem]"
-        )}
+        className={
+          cn(
+            "relative min-h-screen transition-all duration-300 ease-in-out w-full",
+            isCollapsed ? "md:pl-[5rem]" : "md:pl-[18rem]"
+          )
+        }
       >
         {children}
       </main>
