@@ -1,5 +1,6 @@
 "use client";
 
+
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
@@ -7,16 +8,7 @@ import { projectsData } from "@/lib/data";
 import ProjectCard from "@/components/custom-ui/ProjectCard";
 import { SectionHeading } from "@/components/custom-ui/SectionHeading";
 import AnimatedBlobBackground from "@/components/custom-ui/AnimatedBlobBackground";
-import { Canvas } from "@react-three/fiber";
-import { Stars } from "@react-three/drei";
-import {
-  EffectComposer,
-  Bloom,
-  Vignette,
-  ChromaticAberration,
-  Noise
-} from "@react-three/postprocessing";
-import { BlendFunction } from "postprocessing";
+import { Button } from "@/components/ui/button";
 
 
 const containerVariants = {
@@ -56,29 +48,31 @@ export default function ProjectsSection() {
 
         <motion.div
           className="flex flex-wrap items-center justify-center gap-3 mt-10 mb-12"
-          initial={ { opacity: 0, y: -20 } }
-          animate={ { opacity: 1, y: 0 } }
-          transition={ { duration: 0.5 } }
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
         >
-          { categories.map((category) => (
-            <button
-              key={ category }
-              onClick={ () => setSelectedCategory(category) }
-              className={ cn(
-                "px-5 py-2 text-sm font-semibold rounded-lg transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-950",
-                selectedCategory === category
-                  ? "bg-gradient-to-r from-green-400 to-blue-600 text-white shadow-lg scale-105"
-                  : "bg-gray-800 text-gray-300 hover:bg-gray-700/80 hover:text-white"
-              ) }
-            >
-              { category }
-            </button>
-          )) }
+          {
+            categories.map((category) => (
+              <Button
+                key={category}
+                onClick={() => setSelectedCategory(category)}
+                className={cn(
+                  "px-5 py-2 text-sm font-semibold rounded-lg transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-950",
+                  selectedCategory === category
+                    ? "bg-gradient-to-r from-green-400 to-blue-600 text-white shadow-lg scale-105"
+                    : "bg-gray-800 text-gray-300 hover:bg-gray-700/80 hover:text-white"
+                )}
+              >
+                {category}
+              </Button>
+            ))
+          }
         </motion.div>
 
         <motion.div
-          key={ selectedCategory }
-          variants={ containerVariants }
+          key={selectedCategory}
+          variants={containerVariants}
           initial="hidden"
           animate="visible"
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10"
@@ -87,42 +81,14 @@ export default function ProjectsSection() {
             {
               filteredProjects.map((project, index) => (
                 <ProjectCard
-                  key={ project.id }
-                  project={ project }
-                  index={ index }
+                  key={project.id}
+                  project={project}
+                  index={index}
                 />
               ))
             }
           </AnimatePresence>
         </motion.div>
-      </div>
-
-      <div className="absolute inset-0 z-0">
-        <Canvas>
-          <Stars radius={ 50 } count={ 2500 } factor={ 4 } fade speed={ 2 } />
-          <EffectComposer>
-            <Bloom
-              luminanceThreshold={ 0.2 }
-              intensity={ 0.8 }
-              mipmapBlur={ true }
-            />
-            <ChromaticAberration
-              offset={ [ 0.001, 0.001 ] }
-              radialModulation={ true }
-              modulationOffset={ 0.1 }
-            />
-            <Noise
-              premultiply
-              blendFunction={ BlendFunction.ADD }
-              opacity={ 0.05 }
-            />
-            <Vignette
-              eskil={ false }
-              offset={ 0.1 }
-              darkness={ 0.9 }
-            />
-          </EffectComposer>
-        </Canvas>
       </div>
     </section>
   );

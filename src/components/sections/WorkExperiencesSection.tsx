@@ -4,8 +4,8 @@ import { workExperiencesData } from "@/lib/data";
 import { SectionHeading } from "@/components/custom-ui/SectionHeading";
 import AnimatedBlobBackground from "@/components/custom-ui/AnimatedBlobBackground";
 import { motion } from "framer-motion";
-import { Canvas } from "@react-three/fiber";
-import { Stars } from "@react-three/drei";
+// import { Canvas } from "@react-three/fiber";
+// import { Stars } from "@react-three/drei";
 import {
   EffectComposer,
   Bloom,
@@ -98,7 +98,7 @@ export default function WorkExperiencesSection() {
         </motion.div>
       </div>
 
-      <div className="absolute inset-0 z-0">
+      {/* <div className="absolute inset-0 z-0">
         <Canvas>
           <Stars radius={ 50 } count={ 2500 } factor={ 4 } fade speed={ 2 } />
           <EffectComposer>
@@ -124,7 +124,7 @@ export default function WorkExperiencesSection() {
             />
           </EffectComposer>
         </Canvas>
-      </div>
+      </div> */}
     </section>
   );
 }

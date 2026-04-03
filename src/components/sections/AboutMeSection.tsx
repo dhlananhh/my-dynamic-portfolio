@@ -8,16 +8,6 @@ import Link from "next/link";
 import { SectionHeading } from "@/components/custom-ui/SectionHeading";
 import { Images } from "@/lib/images";
 import AnimatedBlobBackground from "@/components/custom-ui/AnimatedBlobBackground";
-import { Canvas } from "@react-three/fiber";
-import { Stars } from "@react-three/drei";
-import {
-  EffectComposer,
-  Bloom,
-  Vignette,
-  ChromaticAberration,
-  Noise
-} from "@react-three/postprocessing";
-import { BlendFunction } from "postprocessing";
 
 
 const AboutMeSection = () => {
@@ -38,15 +28,15 @@ const AboutMeSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16 items-start md:items-center">
           <motion.div
             className="relative"
-            variants={ imageContainerVariants }
+            variants={imageContainerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={ { once: true, amount: 0.2 } }
+            viewport={{ once: true, amount: 0.2 }}
           >
             <div className="absolute -inset-3 sm:-inset-4 rounded-xl bg-gradient-to-br from-purple-500/30 via-pink-500/20 to-teal-500/30 blur-xl opacity-60 sm:opacity-70 transition-all duration-500 group-hover:opacity-90"></div>
             <div className="relative aspect-[3/4] sm:aspect-square rounded-xl overflow-hidden border border-zinc-800 shadow-2xl group">
               <Image
-                src={ profileImageUrl }
+                src={profileImageUrl}
                 alt="Duong Hoang Lan Anh - Frontend Developer"
                 layout="fill"
                 objectFit="cover"
@@ -98,34 +88,6 @@ const AboutMeSection = () => {
             </GlassmorphicCard>
           </div>
         </div>
-      </div>
-
-      <div className="absolute inset-0 z-0">
-        <Canvas>
-          <Stars radius={ 50 } count={ 2500 } factor={ 4 } fade speed={ 2 } />
-          <EffectComposer>
-            <Bloom
-              luminanceThreshold={ 0.2 }
-              intensity={ 0.8 }
-              mipmapBlur={ true }
-            />
-            <ChromaticAberration
-              offset={ [ 0.001, 0.001 ] }
-              radialModulation={ true }
-              modulationOffset={ 0.1 }
-            />
-            <Noise
-              premultiply
-              blendFunction={ BlendFunction.ADD }
-              opacity={ 0.05 }
-            />
-            <Vignette
-              eskil={ false }
-              offset={ 0.1 }
-              darkness={ 0.9 }
-            />
-          </EffectComposer>
-        </Canvas>
       </div>
     </section>
   );

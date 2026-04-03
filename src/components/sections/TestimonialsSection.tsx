@@ -5,8 +5,8 @@ import { testimonialsData } from "@/lib/data";
 import TestimonialCard from "@/components/custom-ui/TestimonialCard";
 import { SectionHeading } from "@/components/custom-ui/SectionHeading";
 import AnimatedBlobBackground from "@/components/custom-ui/AnimatedBlobBackground";
-import { Canvas } from "@react-three/fiber";
-import { Stars } from "@react-three/drei";
+// import { Canvas } from "@react-three/fiber";
+// import { Stars } from "@react-three/drei";
 import {
   EffectComposer,
   Bloom,
@@ -50,7 +50,7 @@ export default function TestimonialsSection() {
         </div>
       </div>
 
-      <div className="absolute inset-0 z-0">
+      {/* <div className="absolute inset-0 z-0">
         <Canvas>
           <Stars radius={ 50 } count={ 2500 } factor={ 4 } fade speed={ 2 } />
           <EffectComposer>
@@ -76,7 +76,7 @@ export default function TestimonialsSection() {
             />
           </EffectComposer>
         </Canvas>
-      </div>
+      </div> */}
     </section>
   );
 }
