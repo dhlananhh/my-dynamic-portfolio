@@ -1,11 +1,14 @@
 "use client";
 
-import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/routing";
 import { motion } from "framer-motion";
-import { Github, Linkedin, Mail, Instagram } from "lucide-react";
+import { Github } from "lucide-react";
 import { IoChevronUpCircleSharp } from "react-icons/io5";
 
 export default function Footer() {
+  const t = useTranslations("Footer");
+
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -13,185 +16,63 @@ export default function Footer() {
     });
   };
 
+  const currentYear = new Date().getFullYear();
+
   return (
-    <footer className="bg-gray-950 border-t border-gray-800">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div className="md:col-span-1">
-            <Link
-              href="#home"
-              className="text-xl font-bold bg-gradient-to-r from-teal-400 via-cyan-500 to-blue-600
-              bg-clip-text text-transparent"
-            >
-              Lan Anh
-            </Link>
-            <p className="mt-4 text-gray-400">
-              Passionate about creating dynamic websites and applications with modern frontend technology.
-            </p>
-          </div>
+    <footer className="w-full bg-slate-900/40 backdrop-blur-sm border-t border-slate-800/80 mt-16 pb-8 md:pb-0 relative z-10">
+      <div className="mx-auto px-4 sm:px-6 lg:px-8">
 
-          <div>
-            <h3 className="text-sm font-semibold text-gray-100 uppercase tracking-wider mb-4">
-              Navigation
-            </h3>
-            <ul className="space-y-2">
-              {
-                [
-                  "Home",
-                  "About",
-                  "Goals",
-                  "Experiences",
-                  "Projects",
-                  "Skills",
-                  "Contributions",
-                  "Testimonials",
-                  "FAQ",
-                  "Resume",
-                  "Contact"
-                ]
-                  .map((item) => (
-                    <li key={ item }>
-                      <Link
-                        href={ `#${item.toLowerCase()}` }
-                        className="text-gray-600 hover:text-blue-400 transition-colors"
-                      >
-                        { item }
-                      </Link>
-                    </li>
-                  )) }
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="text-sm font-semibold text-gray-100 uppercase tracking-wider mb-4">
-              Services
-            </h3>
-            <ul className="space-y-2">
-              {
-                [
-                  "Frontend Development",
-                  "Full-Stack Solutions",
-                  "AI & Chatbot Integration",
-                ].map((item) => (
-                  <li key={ item }>
-                    <Link
-                      href="#"
-                      className="text-gray-600 hover:text-blue-400 transition-colors"
-                    >
-                      { item }
-                    </Link>
-                  </li>
-                ))
-              }
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="text-sm font-semibold text-gray-100 uppercase tracking-wider mb-4">
-              Contact
-            </h3>
-            <ul className="space-y-2">
-              <li className="flex items-center text-gray-600 hover:text-blue-400 transition-colors">
-                <Mail className="h-4 w-4 mr-2" /> dhlananh2309@gmail.com
-              </li>
-              <li className="flex items-center text-gray-600 hover:text-blue-400 transition-colors">
-                <Github className="h-4 w-4 mr-2" /> github.com/dhlananhh
-              </li>
-              <li className="flex items-center text-gray-600 hover:text-blue-400 transition-colors">
-                <Linkedin className="h-4 w-4 mr-2" /> linkedin.com/in/dhlananh
-              </li>
-              <li className="flex items-center text-gray-600 hover:text-blue-400 transition-colors">
-                <Instagram className="h-4 w-4 mr-2" /> instagram.com/dhlananh
-              </li>
-            </ul>
-          </div>
+        {/* Nút Cuộn lên đầu trang (Giữa / Nhỏ) */}
+        <div className="absolute left-1/2 -top-5 -translate-x-1/2">
+          <motion.button
+            onClick={scrollToTop}
+            title={t('scrollToTop')}
+            className="rounded-full bg-slate-900 text-teal-400 p-1 border border-slate-700/60 shadow-lg hover:text-white hover:bg-teal-500 hover:border-teal-500 transition-all duration-300 focus:outline-none"
+            whileHover={{ scale: 1.15 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <IoChevronUpCircleSharp size={36} />
+          </motion.button>
         </div>
 
-        <div className="mt-8 pt-8 border-t border-gray-200">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400 text-md">
-              Designed & Built by Lan Anh. © { new Date().getFullYear() } All rights reserved.
+        <div className="py-8 md:py-6 flex flex-col md:flex-row justify-between items-center gap-6 text-sm">
+
+          {/* Box Bên Trái: Tác quyền */}
+          <div className="flex flex-col items-center md:items-start text-slate-400">
+            <p>
+              {t("designedBy")}{" "}
+              <span className="text-slate-200 font-medium">Lan Anh</span>
             </p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link
-                href="#"
-                className="text-gray-500 hover:text-blue-600"
-              >
-                Privacy Policy
+            <p className="mt-1 text-xs">
+              © {currentYear} • {t("rights")}
+            </p>
+          </div>
+
+          {/* Box Bên Phải: Menu Phụ / Source code */}
+          <div className="flex flex-col items-center md:items-end gap-3 text-slate-400">
+            <div className="flex gap-4 items-center font-medium">
+              <Link href="/" className="hover:text-teal-400 transition-colors">
+                {t('terms')}
               </Link>
-              <Link
-                href="#"
-                className="text-gray-500 hover:text-blue-600"
-              >
-                Terms of Service
-              </Link>
-              <Link
-                href="#"
-                className="text-gray-500 hover:text-blue-600"
-              >
-                Cookies
+              <span className="text-slate-700">|</span>
+              <Link href="/" className="hover:text-teal-400 transition-colors">
+                {t('privacy')}
               </Link>
             </div>
+
+            <a
+              href="https://github.com/dhlananhh/my-3d-portfolio"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 hover:text-teal-400 transition-colors group"
+            >
+              <Github size={14} className="group-hover:animate-pulse text-slate-500 group-hover:text-teal-400" />
+              <span>{t("viewSource")}</span>
+            </a>
           </div>
+
         </div>
       </div>
-
-      <div className="fixed bottom-4 left-4 z-40 flex flex-col space-y-2">
-        <a
-          href="https://github.com/dhlananhh"
-          rel="noopener noreferrer"
-          target="_blank"
-          className="p-2 bg-gray-800 rounded-full shadow-lg hover:bg-cyan-500/30 transition-colors"
-          aria-label="Github Profile"
-        >
-          <Github className="h-5 w-5 text-gray-300" />
-        </a>
-        <a
-          href="https://linkedin.com/in/dhlananh"
-          rel="noopener noreferrer"
-          target="_blank"
-          className="p-2 bg-gray-800 rounded-full shadow-lg hover:bg-cyan-500/30 transition-colors"
-          aria-label="LinkedIn Profile"
-        >
-          <Linkedin className="h-5 w-5 text-gray-300" />
-        </a>
-        <a
-          href="mailto:dhlananh2309@gmail.com"
-          rel="noopener noreferrer"
-          target="_blank"
-          className="p-2 bg-gray-800 rounded-full shadow-lg hover:bg-cyan-500/30 transition-colors"
-          aria-label="Send Email"
-        >
-          <Mail className="h-5 w-5 text-gray-300" />
-        </a>
-        <a
-          href="https://www.instagram.com/dhlananh"
-          rel="noopener noreferrer"
-          target="_blank"
-          className="p-2 bg-gray-800 rounded-full shadow-lg hover:bg-cyan-500/30 transition-colors"
-          aria-label="Instagram"
-        >
-          <Instagram className="h-5 w-5 text-gray-300" />
-        </a>
-      </div>
-
-      {/* Scroll to Top Button */ }
-      <motion.button
-        onClick={ scrollToTop }
-        aria-label="Scroll to top"
-        className="fixed bottom-6 right-6 z-50 p-3 rounded-full bg-gradient-to-r
-        from-teal-400 via-cyan-500 to-blue-600 text-white hover:bg-teal-600
-        focus:outline-none focus:ring-2 focus:ring-teal-400 focus:ring-opacity-50
-        transition-all duration-300 shadow-lg"
-        whileHover={ { scale: 1.1, rotate: 360 } }
-        whileTap={ { scale: 0.95 } }
-        initial={ { scale: 0, opacity: 0 } }
-        animate={ { scale: 1, opacity: 1 } }
-        exit={ { scale: 0, opacity: 0 } }
-        transition={ { type: "spring", stiffness: 260, damping: 20, rotate: { duration: 0.7 } } }
-      >
-        <IoChevronUpCircleSharp size={ 30 } />
-      </motion.button>
     </footer>
-  )
+  );
 }

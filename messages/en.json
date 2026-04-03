@@ -1,0 +1,30 @@
+{
+  "Sidebar": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "testimonials": "Testimonials",
+    "faq": "FAQ",
+    "resume": "Resume",
+    "contact": "Contact",
+    "socials": "Socials",
+    "viewResume": "View Resume",
+    "collapse": "Collapse"
+  },
+  "Hero": {
+    "greeting": "Hi, I'm Lan Anh!",
+    "heading1": "Transforming Ideas",
+    "heading2": "into Interactive Realities.",
+    "bio": "A passionate Web Developer based in Ho Chi Minh City, dedicated to turning innovative ideas into beautiful, high-performance digital solutions.",
+    "viewProjects": "View Projects",
+    "contactMe": "Contact me"
+  },
+  "Footer": {
+    "designedBy": "Designed & Built by",
+    "rights": "All rights reserved",
+    "viewSource": "View Source Code",
+    "scrollToTop": "Back to top",
+    "privacy": "Privacy Policy",
+    "terms": "Terms"
+  }
+}

@@ -7,8 +7,8 @@ import { SectionHeading } from "@/components/custom-ui/SectionHeading";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import AnimatedBlobBackground from "@/components/custom-ui/AnimatedBlobBackground";
-import { Canvas } from "@react-three/fiber";
-import { Stars } from "@react-three/drei";
+// import { Canvas } from "@react-three/fiber";
+// import { Stars } from "@react-three/drei";
 import {
   EffectComposer,
   Bloom,
@@ -102,7 +102,7 @@ export default function ResumeSection() {
         </motion.div>
       </div>
 
-      <div className="absolute inset-0 z-0">
+      {/* <div className="absolute inset-0 z-0">
         <Canvas>
           <Stars radius={ 50 } count={ 2500 } factor={ 4 } fade speed={ 2 } />
           <EffectComposer>
@@ -128,7 +128,7 @@ export default function ResumeSection() {
             />
           </EffectComposer>
         </Canvas>
-      </div>
+      </div> */}
     </section>
   );
 }

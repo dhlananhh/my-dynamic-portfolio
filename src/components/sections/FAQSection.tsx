@@ -1,22 +1,12 @@
 "use client";
 
 
-import { useState } from "react";
+import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { SectionHeading } from "@/components/custom-ui/SectionHeading";
 import { ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 import AnimatedBlobBackground from "@/components/custom-ui/AnimatedBlobBackground";
-import { Canvas } from "@react-three/fiber";
-import { Stars } from "@react-three/drei";
-import {
-  EffectComposer,
-  Bloom,
-  Vignette,
-  ChromaticAberration,
-  Noise
-} from "@react-three/postprocessing";
-import { BlendFunction } from "postprocessing";
 
 
 const faqData = [
@@ -73,16 +63,16 @@ export default function FAQSection() {
 
         <motion.div
           className="mt-16 space-y-4"
-          variants={ containerVariants }
+          variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={ { once: true, amount: 0.1 } }
+          viewport={{ once: true, amount: 0.1 }}
         >
           {
             faqData.map((faq, index) => (
               <motion.div
-                key={ index }
-                variants={ itemVariants }
+                key={index}
+                variants={itemVariants}
                 className="group relative rounded-xl"
               >
                 <div
@@ -93,11 +83,11 @@ export default function FAQSection() {
 
                 <div className="relative overflow-hidden rounded-xl border border-slate-800 bg-slate-900">
                   <button
-                    onClick={ () => handleToggle(index) }
+                    onClick={() => handleToggle(index)}
                     className="flex w-full items-center justify-between p-6 text-left"
                   >
                     <span className="text-lg font-medium text-slate-100">
-                      { faq.question }
+                      {faq.question}
                     </span>
                     <ChevronDown
                       className={
@@ -116,15 +106,15 @@ export default function FAQSection() {
                           initial="collapsed"
                           animate="open"
                           exit="collapsed"
-                          variants={ {
+                          variants={{
                             open: { opacity: 1, height: "auto" },
                             collapsed: { opacity: 0, height: 0 },
-                          } }
-                          transition={ { duration: 0.4, ease: [ 0.04, 0.62, 0.23, 0.98 ] } }
+                          }}
+                          transition={{ duration: 0.4, ease: [ 0.04, 0.62, 0.23, 0.98 ] }}
                           className="overflow-hidden"
                         >
                           <div className="prose prose-invert max-w-none px-6 pb-6 text-slate-300">
-                            <p>{ faq.answer }</p>
+                            <p>{faq.answer}</p>
                           </div>
                         </motion.div>
                       )
@@ -135,34 +125,6 @@ export default function FAQSection() {
             ))
           }
         </motion.div>
-      </div>
-
-      <div className="absolute inset-0 z-0">
-        <Canvas>
-          <Stars radius={ 50 } count={ 2500 } factor={ 4 } fade speed={ 2 } />
-          <EffectComposer>
-            <Bloom
-              luminanceThreshold={ 0.2 }
-              intensity={ 0.8 }
-              mipmapBlur={ true }
-            />
-            <ChromaticAberration
-              offset={ [ 0.001, 0.001 ] }
-              radialModulation={ true }
-              modulationOffset={ 0.1 }
-            />
-            <Noise
-              premultiply
-              blendFunction={ BlendFunction.ADD }
-              opacity={ 0.05 }
-            />
-            <Vignette
-              eskil={ false }
-              offset={ 0.1 }
-              darkness={ 0.9 }
-            />
-          </EffectComposer>
-        </Canvas>
       </div>
     </section>
   );

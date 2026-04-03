@@ -7,16 +7,7 @@ import { SectionHeading } from "@/components/custom-ui/SectionHeading";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import AnimatedBlobBackground from "@/components/custom-ui/AnimatedBlobBackground";
-import { Canvas } from "@react-three/fiber";
-import { Stars } from "@react-three/drei";
-import {
-  EffectComposer,
-  Bloom,
-  Vignette,
-  ChromaticAberration,
-  Noise
-} from "@react-three/postprocessing";
-import { BlendFunction } from "postprocessing";
+import { Button } from "@/components/ui/button";
 
 
 const portfolioDarkTheme = {
@@ -39,9 +30,9 @@ export default function GitHubContributions() {
 
         <motion.div
           className="mt-16 flex flex-col items-center justify-center gap-8 md:flex-row md:items-start"
-          initial={ { opacity: 0, y: 20 } }
-          animate={ { opacity: 1, y: 0 } }
-          transition={ { duration: 0.5, delay: 0.2 } }
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
         >
           <div className="group relative w-full max-w-max">
             <div
@@ -51,45 +42,46 @@ export default function GitHubContributions() {
             />
             <div className="relative p-4 sm:p-6 rounded-2xl border border-slate-800 bg-slate-900/60 backdrop-blur-sm">
               <GitHubCalendar
-                username={ username }
-                year={ selectedYear }
+                username={username}
+                year={selectedYear}
                 colorScheme="dark"
-                theme={ portfolioDarkTheme }
-                blockSize={ 14 }
-                blockMargin={ 5 }
-                fontSize={ 16 }
+                theme={portfolioDarkTheme}
+                blockSize={14}
+                blockMargin={5}
+                fontSize={16}
               />
             </div>
           </div>
 
           <motion.div
             className="flex flex-row md:flex-col gap-3 "
-            initial={ { opacity: 0, x: 20 } }
-            animate={ { opacity: 1, x: 0 } }
-            transition={ { duration: 0.5, delay: 0.4 } }
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
           >
-            { GITHUB_YEARS.map((year) => (
-              <button
-                key={ year }
-                onClick={ () => setSelectedYear(year) }
-                className={ cn(
-                  "px-4 py-2 rounded-lg font-semibold text-sm transition-all duration-300",
-                  "focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-950 focus:ring-teal-400",
-                  selectedYear === year
-                    ? "bg-teal-500 text-white shadow-lg"
-                    : "bg-slate-800 text-slate-300 hover:bg-slate-700/80 hover:text-white"
-                ) }
-              >
-                { year }
-              </button>
-            )) }
+            {
+              GITHUB_YEARS.map((year) => (
+                <Button
+                  key={year}
+                  onClick={() => setSelectedYear(year)}
+                  className={cn(
+                    "px-4 py-2 rounded-lg font-semibold text-sm transition-all duration-300",
+                    "focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-950 focus:ring-teal-400",
+                    selectedYear === year
+                      ? "bg-teal-500 text-white shadow-lg"
+                      : "bg-slate-800 text-slate-300 hover:bg-slate-700/80 hover:text-white"
+                  )}
+                >
+                  {year}
+                </Button>
+              ))}
           </motion.div>
         </motion.div>
 
         <motion.div
-          initial={ { opacity: 0 } }
-          animate={ { opacity: 1 } }
-          transition={ { duration: 0.5, delay: 0.6 } }
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.6 }}
           className="mt-8"
         >
           <a
@@ -101,34 +93,6 @@ export default function GitHubContributions() {
             View my full profile on GitHub
           </a>
         </motion.div>
-      </div>
-
-      <div className="absolute inset-0 z-0">
-        <Canvas>
-          <Stars radius={ 50 } count={ 2500 } factor={ 4 } fade speed={ 2 } />
-          <EffectComposer>
-            <Bloom
-              luminanceThreshold={ 0.2 }
-              intensity={ 0.8 }
-              mipmapBlur={ true }
-            />
-            <ChromaticAberration
-              offset={ [ 0.001, 0.001 ] }
-              radialModulation={ true }
-              modulationOffset={ 0.1 }
-            />
-            <Noise
-              premultiply
-              blendFunction={ BlendFunction.ADD }
-              opacity={ 0.05 }
-            />
-            <Vignette
-              eskil={ false }
-              offset={ 0.1 }
-              darkness={ 0.9 }
-            />
-          </EffectComposer>
-        </Canvas>
       </div>
     </section>
   );

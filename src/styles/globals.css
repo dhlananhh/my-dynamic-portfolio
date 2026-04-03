@@ -57,7 +57,10 @@
   body {
     background-color: hsl(var(--background));
     color: hsl(var(--foreground));
-    sans: [ "var(--font-lexend)", "ui-sans-serif", "system-ui"];
+    sans:
+      [ "var(--font-lexend)",
+      "ui-sans-serif",
+      "system-ui"];
   }
 }
 

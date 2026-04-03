@@ -1,19 +1,10 @@
 "use client";
 
 
+import React from "react";
 import { motion, easeOut } from "framer-motion";
 import { SectionHeading } from "@/components/custom-ui/SectionHeading";
 import AnimatedBlobBackground from "@/components/custom-ui/AnimatedBlobBackground";
-import { Canvas } from "@react-three/fiber";
-import { Stars } from "@react-three/drei";
-import {
-  EffectComposer,
-  Bloom,
-  Vignette,
-  ChromaticAberration,
-  Noise
-} from "@react-three/postprocessing";
-import { BlendFunction } from "postprocessing";
 import {
   Rocket,
   BarChartBig,
@@ -66,57 +57,29 @@ const CareerGoalsSection = () => {
           {
             goals.map((goal, index) => (
               <motion.div
-                key={ index }
+                key={index}
                 className="h-full"
-                variants={ cardVariants }
+                variants={cardVariants}
                 initial="hidden"
                 whileInView="visible"
-                viewport={ { once: true, amount: 0.3 } }
-                custom={ index }
+                viewport={{ once: true, amount: 0.3 }}
+                custom={index}
               >
                 <div className="p-8 h-full rounded-2xl bg-slate-900/50 border border-slate-700/80
                               hover:border-teal-500/80 hover:bg-slate-800/60
                               transition-all duration-300 shadow-lg">
                   <div className="flex items-center gap-4 mb-5">
                     <goal.icon className="w-9 h-9 text-teal-400 flex-shrink-0" />
-                    <h3 className="text-xl font-bold text-slate-100">{ goal.title }</h3>
+                    <h3 className="text-xl font-bold text-slate-100">{goal.title}</h3>
                   </div>
                   <p className="text-slate-300 leading-relaxed">
-                    { goal.description }
+                    {goal.description}
                   </p>
                 </div>
               </motion.div>
             ))
           }
         </div>
-      </div>
-
-      <div className="absolute inset-0 z-0">
-        <Canvas>
-          <Stars radius={ 50 } count={ 2500 } factor={ 4 } fade speed={ 2 } />
-          <EffectComposer>
-            <Bloom
-              luminanceThreshold={ 0.2 }
-              intensity={ 0.8 }
-              mipmapBlur={ true }
-            />
-            <ChromaticAberration
-              offset={ [ 0.001, 0.001 ] }
-              radialModulation={ true }
-              modulationOffset={ 0.1 }
-            />
-            <Noise
-              premultiply
-              blendFunction={ BlendFunction.ADD }
-              opacity={ 0.05 }
-            />
-            <Vignette
-              eskil={ false }
-              offset={ 0.1 }
-              darkness={ 0.9 }
-            />
-          </EffectComposer>
-        </Canvas>
       </div>
     </section>
   );
