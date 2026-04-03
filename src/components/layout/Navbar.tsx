@@ -14,7 +14,7 @@ const navItems: NavItem[] = [
   { href: "/#hero", label: "Home" },
   { href: "/#about", label: "About" },
   { href: "/#goals", label: "Goals" },
-  { href: "/#experience", label: "Experience" },
+  { href: "/#experiences", label: "Experiences" },
   { href: "/#projects", label: "Projects" },
   { href: "/#skills", label: "Skills" },
   { href: "/#github-contributions", label: "Contributions" },
@@ -103,8 +103,8 @@ export default function Navbar() {
                 className={ cn(
                   "px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200",
                   activeSection === item.href.substring(2)
-                    ? "text-teal-300 bg-teal-500/10"
-                    : "text-slate-300 hover:text-white hover:bg-slate-700/50"
+                    ? "text-teal-300 bg-teal-500/10 text-md"
+                    : "text-slate-300 hover:text-white hover:bg-slate-700/50 text-md"
                 ) }
               >
                 { item.label }

@@ -1,11 +1,23 @@
 "use client";
 
-import { useState } from "react";
-import { projectsData } from "@/lib/data";
-import ProjectCard from "@/components/custom-ui/ProjectCard";
-import { SectionHeading } from "@/components/SectionHeading";
+import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
+import { projectsData } from "@/lib/data";
+import ProjectCard from "@/components/custom-ui/ProjectCard";
+import { SectionHeading } from "@/components/custom-ui/SectionHeading";
+import AnimatedBlobBackground from "@/components/custom-ui/AnimatedBlobBackground";
+import { Canvas } from "@react-three/fiber";
+import { Stars } from "@react-three/drei";
+import {
+  EffectComposer,
+  Bloom,
+  Vignette,
+  ChromaticAberration,
+  Noise
+} from "@react-three/postprocessing";
+import { BlendFunction } from "postprocessing";
+
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -17,10 +29,12 @@ const containerVariants = {
   },
 };
 
+
 const getCategories = (projects: typeof projectsData) => {
   const categories = projects.map(p => p.category);
   return [ "All", ...Array.from(new Set(categories)) ];
 };
+
 
 export default function ProjectsSection() {
   const [ selectedCategory, setSelectedCategory ] = useState("All");
@@ -35,17 +49,11 @@ export default function ProjectsSection() {
 
   return (
     <section id="projects" className="py-24 sm:py-32 relative bg-gray-950 text-white overflow-hidden">
-      {/* Background */ }
-      <div className="absolute inset-0 z-0 opacity-70 sm:opacity-100">
-        <div className="absolute top-1/4 left-1/4 w-72 h-72 sm:w-96 sm:h-96 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full mix-blend-screen filter blur-3xl opacity-20 sm:opacity-25 animate-blob"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-72 h-72 sm:w-96 sm:h-96 bg-gradient-to-r from-teal-500 to-pink-500 rounded-full mix-blend-screen filter blur-3xl opacity-20 sm:opacity-25 animate-blob animation-delay-2000"></div>
-        <div className="absolute top-1/3 right-1/5 w-72 h-72 sm:w-96 sm:h-96 bg-gradient-to-r from-pink-500 to-yellow-500 rounded-full mix-blend-screen filter blur-3xl opacity-15 sm:opacity-20 animate-blob animation-delay-4000"></div>
-      </div>
+      <AnimatedBlobBackground />
 
       <div className="container mx-auto px-4 relative z-10">
         <SectionHeading title="Featured Projects" subtitle="My recent work" />
 
-        {/* Filter Buttons */ }
         <motion.div
           className="flex flex-wrap items-center justify-center gap-3 mt-10 mb-12"
           initial={ { opacity: 0, y: -20 } }
@@ -68,7 +76,6 @@ export default function ProjectsSection() {
           )) }
         </motion.div>
 
-        {/* Projects Grid */ }
         <motion.div
           key={ selectedCategory }
           variants={ containerVariants }
@@ -77,15 +84,45 @@ export default function ProjectsSection() {
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10"
         >
           <AnimatePresence>
-            { filteredProjects.map((project, index) => (
-              <ProjectCard
-                key={ project.id }
-                project={ project }
-                index={ index }
-              />
-            )) }
+            {
+              filteredProjects.map((project, index) => (
+                <ProjectCard
+                  key={ project.id }
+                  project={ project }
+                  index={ index }
+                />
+              ))
+            }
           </AnimatePresence>
         </motion.div>
+      </div>
+
+      <div className="absolute inset-0 z-0">
+        <Canvas>
+          <Stars radius={ 50 } count={ 2500 } factor={ 4 } fade speed={ 2 } />
+          <EffectComposer>
+            <Bloom
+              luminanceThreshold={ 0.2 }
+              intensity={ 0.8 }
+              mipmapBlur={ true }
+            />
+            <ChromaticAberration
+              offset={ [ 0.001, 0.001 ] }
+              radialModulation={ true }
+              modulationOffset={ 0.1 }
+            />
+            <Noise
+              premultiply
+              blendFunction={ BlendFunction.ADD }
+              opacity={ 0.05 }
+            />
+            <Vignette
+              eskil={ false }
+              offset={ 0.1 }
+              darkness={ 0.9 }
+            />
+          </EffectComposer>
+        </Canvas>
       </div>
     </section>
   );

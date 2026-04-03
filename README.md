@@ -82,13 +82,13 @@ This portfolio was built using a modern, scalable, and high-performance technolo
 
 | Category              | Technologies                                                                                 |
 | :-------------------- | :------------------------------------------------------------------------------------------- |
-| **Core**        | `Next.js 15`, `React 19`, `TypeScript`                                                 |
-| **Styling**     | `Tailwind CSS`, `Shadcn UI`, `Radix UI`                                                |
-| **Icons**       | `Lucide React`, `React Icons`                                                            |
-| **Animation**   | `Framer Motion`, `React Three Fiber (@react-three/drei)`, `React Bits`                 |
-| **APIs & Data** | `react-github-calendar` (for GitHub Contributions Graph), `Web3Forms` (for Contact Form) |
-| **Tooling**     | `ESLint`, `Prettier`, `pnpm`, `bun`                                                  |
-| **Deployment**  | `Vercel`                                                                                   |
+| **Core**              | `Next.js 15`, `React 19`, `TypeScript`                                                       |
+| **Styling**           | `Tailwind CSS`, `Shadcn UI`, `Radix UI`                                                      |
+| **Icons**             | `Lucide React`, `React Icons`                                                                |
+| **Animation**         | `Framer Motion`, `React Three Fiber (@react-three/drei)`, `React Bits`, `Magic UI`           |
+| **APIs & Data**       | `react-github-calendar` (for GitHub Contributions Graph), `Web3Forms` (for Contact Form)     |
+| **Tooling**           | `ESLint`, `Prettier`, `pnpm`, `bun`, `yarn`                                                  |
+| **Deployment**        | `Vercel`                                                                                     |
 
 ---
 
@@ -98,40 +98,75 @@ To get a local copy up and running, follow these simple steps.
 
 ### Prerequisites
 
-Make sure you have Node.js (version 18.x or later) and a package manager (npm, yarn, or pnpm) installed.
+Before you begin, ensure you have the following tools installed on your system. This project supports both **Bun** (recommended for speed) and **Yarn**.
+
+1.  **Node.js**: Make sure you have Node.js version 18.x or later. You can download it from the [official Node.js website](https://nodejs.org/). To check your version, run:
+    ```bash
+    node -v
+    ```
+
+2.  **Bun** (Recommended): Bun is a fast all-in-one JavaScript runtime. To install it, run the following command in your terminal:
+    ```bash
+    # For macOS, Linux, and WSL
+    curl -fsSL https://bun.sh/install | bash
+    
+    # For Windows, you can use PowerShell
+    powershell -c "irm bun.sh/install.ps1|iex"
+    ```
+    *For other installation methods, please refer to the [official Bun documentation](https://bun.sh/docs/installation).*
+
+3.  **Yarn** (Alternative): If you prefer to use Yarn, you can install it via npm:
+    ```bash
+    npm install --global yarn
+    ```
+    To check your version, run: `yarn --version`
 
 ### Installation
 
-1. **Clone the repository:**
+Once the prerequisites are met, follow these steps:
 
-   ```bash
-   git clone https://github.com/dhlananhh/my-3d-portfolio.git
-   ```
-2. **Navigate to the project directory:**
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/dhlananhh/my-3d-portfolio.git
+    ```
 
-   ```bash
-   cd my-3d-portfolio
-   ```
-3. **Install dependencies:**
+2.  **Navigate to the project directory:**
+    ```bash
+    cd my-3d-portfolio
+    ```
 
-   ```bash
-   bun install
-   # OR yarn install
-   # OR npm install
-   ```
-4. **Set up environment variables:**
+3.  **Install dependencies:**
+    Choose **one** of the following commands based on the package manager you want to use.
 
-   - Create a new file named `.env.local` in the root of the project.
-   - Add your Web3Forms Access Key to this file. This is needed for the contact form to work.
+    *Using Bun (Recommended):*
+    ```bash
+    bun install
+    ```
 
-   ```env
-   NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY=YOUR_WEB3FORMS_ACCESS_KEY_HERE
-   ```
-5. **Run the development server:**
+    *Using Yarn:*
+    ```bash
+    yarn install
+    ```
 
-   ```bash
-   yarn dev
-   ```
+4.  **Set up environment variables:**
+    - Create a new file named `.env.local` in the root of the project.
+    - Add your Web3Forms Access Key to this file. This is needed for the contact form to work.
+    ```env
+    NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY=YOUR_WEB3FORMS_ACCESS_KEY_HERE
+    ```
+
+5.  **Run the development server:**
+    This command will start the Next.js development server with Turbopack.
+
+    *Using Bun:*
+    ```bash
+    bun dev
+    ```
+
+    *Using Yarn:*
+    ```bash
+    yarn dev
+    ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
@@ -142,23 +177,58 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 The project's folder structure is organized to be clean, modular, and scalable, following modern Next.js conventions:
 
 ```
-  src
-  ├── app/                        # App Router: Pages, Layouts, API Routes
-  │ ├── (main)/                   # Main route group for pages with shared layout
+├── public/                             # Publicly accessible static assets
+│ ├── images/                           # General project images and logos
+│ ├── resume/                           # Resume files (e.g., PDF)
+│ └── screenshots/                      # Screenshots for README documentation
+│ 
+└── src/                                # Main application source code
+  ├── app/                              # App Router: Pages, Layout, API Routes
+  │ ├── (main)/                         # Main route group for pages with shared layout
   │ │ ├── layout.tsx
-  │ │ └── page.tsx                # Homepage
-  │ └── projects/                 # Dynamic routes for project details
-  │ └── [slug]/
-  │ └── page.tsx
-  ├── components/                 # Reusable components
-  │ ├── custom-ui/                # Custom-designed, non-Shadcn components
-  │ ├── layout/                   # Components for the main layout (Navbar, Footer)
-  │ └── sections/                 # Components for each major section of the homepage
-  ├── animations/                 # Complex animation components (e.g., SplashCursor)
-  ├── lib/                        # Library functions, helpers, and data
-  │ ├── data.ts                   # Centralized data source for projects, skills, etc.
-  │ └── utils.ts                  # Utility functions (e.g., cn for class names)
-  └── public/                     # Static assets (images, fonts, resume PDF)
+  │ │ └── page.tsx                      # Homepage
+  │ │
+  │ └── projects/                       # Dynamic routes for project details
+  │   └── [slug]/
+  │     └── page.tsx
+  │
+  ├── assets/                           # For future static assets like custom fonts or SVGs (currently empty)
+  │
+  ├── components/                       # Reusable UI components
+  │
+  │ ├── blocks/                         # Complex, multi-part components or animations
+  │ │ ├── Animations/
+  │ │ └── TextAnimations/
+  │ │
+  │ ├── custom-ui/                      # Custom-designed, non-Shadcn components
+  │ │ ├── ContactForm.tsx
+  │ │ ├── GlassmorphicCard.tsx
+  │ │ ├── ProjectForm.tsx
+  │ │ ├── SkillBadge.tsx
+  │ │ └── TestimonialCard.tsx
+  │ │
+  │ ├── layout/                         # Main layout components (Navbar, Footer)
+  │ │ ├── Footer.tsx
+  │ │ └── Navbar.tsx
+  │ │
+  │ ├── magicui/                        # Integrated components from Magic UI library
+  │ │ └── typing-animation.tsx
+  │ ├── sections/                       # Major homepage sections (Hero, About, Projects, etc.)
+  │ │
+  │ └── ui/                             # Reusable UI primitives, often from Shadcn UI (e.g., Button)
+  │
+  ├── hooks/                            # Custom React hooks for shared logic
+  │ ├── use-mobile.tsx
+  │ └── use-toast.ts
+  │
+  ├── lib/                              # Library functions, helpers, and data
+  │ ├── data.ts                         # Centralized data for projects, skills, etc.
+  │ ├── images.ts                       # Centralized module for static image assets
+  │ └── utils.ts                        # Utility functions (e.g., cn for class names)
+  │
+  └── styles/                           # 🎨 Styling: Global styles and theme configuration.
+    ├── globals.css                     # - Core global styles and custom CSS for libraries.
+    └── tailwind.config.ts              # - Tailwind CSS theme configuration (colors, fonts, plugins).
 ```
 
 ---

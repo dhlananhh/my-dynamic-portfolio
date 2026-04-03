@@ -1,32 +1,53 @@
 "use client";
 
+
 import { Download, Eye } from "lucide-react";
 import { motion } from "framer-motion";
-import { SectionHeading } from "@/components/SectionHeading";
+import { SectionHeading } from "@/components/custom-ui/SectionHeading";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import AnimatedBlobBackground from "@/components/custom-ui/AnimatedBlobBackground";
+import { Canvas } from "@react-three/fiber";
+import { Stars } from "@react-three/drei";
+import {
+  EffectComposer,
+  Bloom,
+  Vignette,
+  ChromaticAberration,
+  Noise
+} from "@react-three/postprocessing";
+import { BlendFunction } from "postprocessing";
+
 
 const resumeLink = "/resume/LanAnh_Frontend_CV.pdf";
 const resumeFilename = "LanAnh_Frontend_CV.pdf";
 
+
 export default function ResumeSection() {
   const paragraphVariants = {
     hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5, delay: 0.1 } },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5, delay: 0.1 }
+    },
   };
 
   const buttonsContainerVariants = {
     hidden: { opacity: 0, scale: 0.8 },
-    visible: { opacity: 1, scale: 1, transition: { duration: 0.5, delay: 0.2 } },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: { duration: 0.5, delay: 0.2 }
+    },
   };
 
   return (
-    <section id="resume" className="py-24 sm:py-32 relative bg-gray-950 text-white text-center overflow-hidden">
-      <div className="absolute inset-0 z-0 opacity-70 sm:opacity-100">
-        <div className="absolute top-1/4 left-1/4 w-72 h-72 sm:w-96 sm:h-96 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full mix-blend-screen filter blur-3xl opacity-20 sm:opacity-25 animate-blob"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-72 h-72 sm:w-96 sm:h-96 bg-gradient-to-r from-teal-500 to-pink-500 rounded-full mix-blend-screen filter blur-3xl opacity-20 sm:opacity-25 animate-blob animation-delay-2000"></div>
-        <div className="absolute top-1/3 right-1/5 w-72 h-72 sm:w-96 sm:h-96 bg-gradient-to-r from-pink-500 to-yellow-500 rounded-full mix-blend-screen filter blur-3xl opacity-15 sm:opacity-20 animate-blob animation-delay-4000"></div>
-      </div>
+    <section
+      id="resume"
+      className="py-24 sm:py-32 relative bg-gray-950 text-white text-center overflow-hidden"
+    >
+      <AnimatedBlobBackground />
 
       <div className="container relative z-10 mx-auto px-4">
         <SectionHeading title="Resume" subtitle="My Professional Background" />
@@ -40,6 +61,7 @@ export default function ResumeSection() {
         >
           Take a look at my professional experience and skills. You can view it directly in your browser or download a PDF copy for your convenience.
         </motion.p>
+
         <motion.div
           variants={ buttonsContainerVariants }
           initial="hidden"
@@ -52,7 +74,12 @@ export default function ResumeSection() {
             size="lg"
             className="text-white bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 font-medium rounded-lg text-lg px-6 py-3 text-center"
           >
-            <Link href={ resumeLink } target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center">
+            <Link
+              href={ resumeLink }
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center"
+            >
               <Eye size={ 50 } className="mr-2" />
               View Online
             </Link>
@@ -63,12 +90,44 @@ export default function ResumeSection() {
             size="lg"
             className="bg-gray-700/80 border-gray-400 text-gray-200 hover:text-white hover:bg-gray-800/50 focus:ring-4 focus:outline-none focus:ring-gray-600 font-medium rounded-lg text-lg px-6 py-3 text-center"
           >
-            <Link href={ resumeLink } download={ resumeFilename } className="inline-flex items-center justify-center">
+            <Link
+              href={ resumeLink }
+              download={ resumeFilename }
+              className="inline-flex items-center justify-center"
+            >
               <Download size={ 20 } className="mr-2" />
               Download CV (.pdf)
             </Link>
           </Button>
         </motion.div>
+      </div>
+
+      <div className="absolute inset-0 z-0">
+        <Canvas>
+          <Stars radius={ 50 } count={ 2500 } factor={ 4 } fade speed={ 2 } />
+          <EffectComposer>
+            <Bloom
+              luminanceThreshold={ 0.2 }
+              intensity={ 0.8 }
+              mipmapBlur={ true }
+            />
+            <ChromaticAberration
+              offset={ [ 0.001, 0.001 ] }
+              radialModulation={ true }
+              modulationOffset={ 0.1 }
+            />
+            <Noise
+              premultiply
+              blendFunction={ BlendFunction.ADD }
+              opacity={ 0.05 }
+            />
+            <Vignette
+              eskil={ false }
+              offset={ 0.1 }
+              darkness={ 0.9 }
+            />
+          </EffectComposer>
+        </Canvas>
       </div>
     </section>
   );

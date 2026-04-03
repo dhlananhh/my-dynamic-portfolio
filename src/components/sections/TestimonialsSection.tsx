@@ -1,8 +1,21 @@
 "use client";
 
+
 import { testimonialsData } from "@/lib/data";
 import TestimonialCard from "@/components/custom-ui/TestimonialCard";
-import { SectionHeading } from "@/components/SectionHeading";
+import { SectionHeading } from "@/components/custom-ui/SectionHeading";
+import AnimatedBlobBackground from "@/components/custom-ui/AnimatedBlobBackground";
+import { Canvas } from "@react-three/fiber";
+import { Stars } from "@react-three/drei";
+import {
+  EffectComposer,
+  Bloom,
+  Vignette,
+  ChromaticAberration,
+  Noise
+} from "@react-three/postprocessing";
+import { BlendFunction } from "postprocessing";
+
 
 export default function TestimonialsSection() {
   if (!testimonialsData || testimonialsData.length === 0) {
@@ -13,10 +26,7 @@ export default function TestimonialsSection() {
 
   return (
     <section id="testimonials" className="py-24 sm:py-32 relative bg-gray-950 text-white overflow-hidden">
-      <div className="absolute inset-0 z-0 opacity-70 sm:opacity-100">
-        <div className="absolute top-1/4 left-1/4 w-72 h-72 sm:w-96 sm:h-96 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full mix-blend-screen filter blur-3xl opacity-20 sm:opacity-25 animate-blob"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-72 h-72 sm:w-96 sm:h-96 bg-gradient-to-r from-teal-500 to-pink-500 rounded-full mix-blend-screen filter blur-3xl opacity-20 sm:opacity-25 animate-blob animation-delay-2000"></div>
-      </div>
+      <AnimatedBlobBackground />
 
       <div className="container relative z-10 mx-auto px-4">
         <SectionHeading title="Testimonials" subtitle="What My Collaborators Say" />
@@ -28,13 +38,44 @@ export default function TestimonialsSection() {
           maskImage: "linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%)"
         } }
       >
-        <div className="flex w-max animate-[scroll_40s_linear_infinite] gap-8 py-4 group-hover:[animation-play-state:paused]">
-          { duplicatedTestimonials.map((testimonial, index) => (
-            <div key={ index } className="w-[clamp(20rem,40vw,28rem)]">
-              <TestimonialCard testimonial={ testimonial } />
-            </div>
-          )) }
+        <div className="flex w-max animate-[scroll_40s_linear_infinite] gap-8 py-4 
+        group-hover:[animation-play-state:paused]">
+          {
+            duplicatedTestimonials.map((testimonial, index) => (
+              <div key={ index } className="w-[clamp(20rem,40vw,28rem)]">
+                <TestimonialCard testimonial={ testimonial } />
+              </div>
+            ))
+          }
         </div>
+      </div>
+
+      <div className="absolute inset-0 z-0">
+        <Canvas>
+          <Stars radius={ 50 } count={ 2500 } factor={ 4 } fade speed={ 2 } />
+          <EffectComposer>
+            <Bloom
+              luminanceThreshold={ 0.2 }
+              intensity={ 0.8 }
+              mipmapBlur={ true }
+            />
+            <ChromaticAberration
+              offset={ [ 0.001, 0.001 ] }
+              radialModulation={ true }
+              modulationOffset={ 0.1 }
+            />
+            <Noise
+              premultiply
+              blendFunction={ BlendFunction.ADD }
+              opacity={ 0.05 }
+            />
+            <Vignette
+              eskil={ false }
+              offset={ 0.1 }
+              darkness={ 0.9 }
+            />
+          </EffectComposer>
+        </Canvas>
       </div>
     </section>
   );

@@ -40,7 +40,7 @@ export default function Footer() {
                   "Home",
                   "About",
                   "Goals",
-                  "Experience",
+                  "Experiences",
                   "Projects",
                   "Skills",
                   "Contributions",

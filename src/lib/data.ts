@@ -1,9 +1,12 @@
+import { StaticImageData } from "next/legacy/image";
+import { Images } from "./images";
+
 export interface Project {
   id: string;
   title: string;
   description: string;
   shortDescription: string;
-  imageUrl: string;
+  imageUrl: StaticImageData;
   videoUrl?: string;
   githubUrl: string;
   tools: string[];
@@ -13,7 +16,7 @@ export interface Project {
   projectStatus: string;
   liveDemoUrl?: string;
   keyFeatures?: string[];
-  galleryImages?: string[];
+  galleryImages?: StaticImageData[];
 }
 
 export interface Testimonial {
@@ -21,7 +24,7 @@ export interface Testimonial {
   quote: string;
   author: string;
   company?: string;
-  avatarUrl?: string;
+  avatarUrl?: StaticImageData;
 }
 
 export interface WorkExperience {
@@ -41,7 +44,7 @@ export const projectsData: Project[] = [
     slug: "online-bookstore-project-frontend",
     shortDescription: "The client-side application for a collaborative online bookstore project.",
     description: "As part of my Software Architecture final exam, I took on the role of Frontend Developer. My responsibilities included building the entire user interface using Next.js and TailwindCSS, managing application state, fetching data from the backend API, and integrating a custom-built chatbot to enhance user engagement.",
-    imageUrl: "/images/projects/bookstore-project-thumbnail.png",
+    imageUrl: Images.BookstoreThumbnail,
     githubUrl: "https://github.com/minhlq2003/bookstore-frontend-nextjs",
     tools: [ "Next.js", "TailwindCSS", "TypeScript", "React Query" ],
     category: "Web",
@@ -50,14 +53,13 @@ export const projectsData: Project[] = [
     liveDemoUrl: "https://bookstore-frontend-nextjs.vercel.app/",
     keyFeatures: [ "Responsive and interactive UI", "Client-side data fetching and caching", "Integration with a Node.js backend", "Seamless chatbot widget integration" ],
     galleryImages: [
-      "/images/projects/bookstore-project-thumbnail.png",
-      "/images/projects/bookstore-project-homepage-1.png",
-      "/images/projects/bookstore-project-homepage-2.png",
-      "/images/projects/bookstore-project-homepage-3.png",
-      "/images/projects/bookstore-project-category-astronaut-1.png",
-      "/images/projects/bookstore-project-category-astronaut-2.png",
-      "/images/projects/bookstore-project-category-astronaut-3.png",
-      "/images/projects/bookstore-project-category-astronaut-3.png",
+      Images.BookstoreThumbnail,
+      Images.BookstoreHomepage1,
+      Images.BookstoreHomepage2,
+      Images.BookstoreHomepage3,
+      Images.BookstoreCategory1,
+      Images.BookstoreCategory2,
+      Images.BookstoreCategory3,
     ]
   },
   {
@@ -66,14 +68,14 @@ export const projectsData: Project[] = [
     slug: "online-bookstore-project-backend",
     shortDescription: "The server-side API for the collaborative online bookstore project.",
     description: "This is the backend component of the Software Architecture final exam project. While my primary role was on the frontend, I worked closely with the backend team to define API endpoints and data structures. The backend provides RESTful APIs for managing books, users, and orders.",
-    imageUrl: "/images/projects/bookstore-project-backend.png",
+    imageUrl: Images.BookstoreBackend,
     githubUrl: "https://github.com/HieuTrungMc/bookstore-backend-nodejs",
     tools: [ "Node.js", "Express.js", "Prisma", "MariaDB", "JWT" ],
     category: "Web",
     projectStartDate: new Date("2025-01-11"),
     projectStatus: "Completed",
     keyFeatures: [ "RESTful API design", "Secure authentication with JSON Web Tokens (JWT)", "Database management with Prisma ORM", "Structured data models for books and users" ],
-    galleryImages: [ "/images/projects/bookstore-project-backend.png" ]
+    galleryImages: [ Images.BookstoreBackend ]
   },
   {
     id: "3",
@@ -81,14 +83,14 @@ export const projectsData: Project[] = [
     slug: "bookstore-chatbot",
     shortDescription: "A Python-based chatbot to assist users with book searches.",
     description: "This component of the bookstore project involved creating a chatbot from the ground up. The bot is designed to understand natural language queries, search the bookstore's database for relevant books, and provide helpful recommendations to users. This was my first foray into applying NLP techniques in a practical application.",
-    imageUrl: "/images/projects/bookstore-chatbot-project-thumbnail.png",
+    imageUrl: Images.BookstoreChatbot,
     githubUrl: "https://github.com/dhlananhh/bookstore_chatbot",
     tools: [ "Python", "Flask", "NLP", "JavaScript", "MariaDB" ],
     category: "AI",
     projectStartDate: new Date("2025-01-11"),
     projectStatus: "Completed",
     keyFeatures: [ "Natural Language Processing (NLP) for query understanding", "Direct database querying for real-time results", "Simple web interface for interaction", "Designed for easy integration into the frontend" ],
-    galleryImages: [ "/images/projects/bookstore-project-chatbot.png" ]
+    galleryImages: [ Images.BookstoreChatbot ]
   },
   {
     id: "4",
@@ -96,7 +98,7 @@ export const projectsData: Project[] = [
     slug: "chathub-web",
     shortDescription: "A real-time, web-based chat application for instant communication and collaboration.",
     description: "This project demonstrates the ability to build a real-time chat platform using modern web technologies. The focus was on creating a responsive and engaging user experience with features like live messaging, user presence indicators, and a clean interface, proving skills in handling real-time, bi-directional communication on the web.",
-    imageUrl: "/images/projects/chathub-web.png",
+    imageUrl: Images.ChatHubWeb,
     githubUrl: "https://github.com/dhlananhh/ChatHub-Web",
     tools: [ "Next.js", "TailwindCSS", "TypeScript" ],
     category: "Web",
@@ -104,7 +106,7 @@ export const projectsData: Project[] = [
     projectStatus: "Completed",
     liveDemoUrl: "https://chathub-web-liard.vercel.app/",
     keyFeatures: [ "Real-time messaging functionality", "Modern and clean user interface", "User authentication and profiles", "Responsive design for both mobile and desktop" ],
-    galleryImages: [ "/images/projects/chathub-web.png" ]
+    galleryImages: [ Images.ChatHubWeb ]
   },
   {
     id: "5",
@@ -112,7 +114,7 @@ export const projectsData: Project[] = [
     slug: "foreverbuy-ecommerce-website",
     shortDescription: "A stylish and modern e-commerce storefront with a focus on seamless user experience.",
     description: "ForeverBuy is another take on a modern e-commerce platform, focusing on a minimalistic and clean UI/UX design. This project showcases the ability to build a visually appealing and highly performant online store, with smooth animations, fast page loads, and a checkout process designed to maximize conversion.",
-    imageUrl: "/images/projects/foreverbuy-ecommerce-project-thumbnail.png",
+    imageUrl: Images.ForeverBuyThumbnail,
     githubUrl: "https://github.com/dhlananhh/ForeverBuy-Ecommerce",
     tools: [ "Next.js", "TailwindCSS", "TypeScript" ],
     category: "Web",
@@ -121,19 +123,19 @@ export const projectsData: Project[] = [
     liveDemoUrl: "https://forever-frontend-hazel.vercel.app/",
     keyFeatures: [ "Minimalistic and clean UI/UX design", "Fast page loads optimized with Next.js", "Smooth page animations and transitions", "A streamlined, multi-step checkout flow" ],
     galleryImages: [
-      "/images/projects/foreverbuy-ecommerce-project-thumbnail.png",
-      "/images/projects/foreverbuy-ecommerce-project-homepage-1.png",
-      "/images/projects/foreverbuy-ecommerce-project-homepage-2.png",
-      "/images/projects/foreverbuy-ecommerce-project-homepage-3.png",
-      "/images/projects/foreverbuy-ecommerce-project-homepage-4.png",
-      "/images/projects/foreverbuy-ecommerce-foreverbuy-ecommerce-project-collection-page-1.png",
-      "/images/projects/foreverbuy-ecommerce-foreverbuy-ecommerce-project-collection-page-2.png",
-      "/images/projects/foreverbuy-ecommerce-foreverbuy-ecommerce-project-collection-page-3.png",
-      "/images/projects/foreverbuy-ecommerce-foreverbuy-ecommerce-project-collection-page-4.png",
-      "/images/projects/foreverbuy-ecommerce-foreverbuy-ecommerce-project-collection-page-5.png",
-      "/images/projects/foreverbuy-ecommerce-project-login-page.png",
-      "/images/projects/foreverbuy-ecommerce-project-cart-page.png",
-      "/images/projects/foreverbuy-ecommerce-project-product-details-page.png",
+      Images.ForeverBuyThumbnail,
+      Images.ForeverBuyHomepage1,
+      Images.ForeverBuyHomepage2,
+      Images.ForeverBuyHomepage3,
+      Images.ForeverBuyHomepage4,
+      Images.ForeverBuyCollection1,
+      Images.ForeverBuyCollection2,
+      Images.ForeverBuyCollection3,
+      Images.ForeverBuyCollection4,
+      Images.ForeverBuyCollection5,
+      Images.ForeverBuyLogin,
+      Images.ForeverBuyCart,
+      Images.ForeverBuyDetails,
     ]
   },
   {
@@ -142,7 +144,7 @@ export const projectsData: Project[] = [
     slug: "portfolio-website",
     shortDescription: "The very portfolio you are currently exploring, designed to be a dynamic and interactive showcase of my journey as a developer.",
     description: "The primary goal of this project was to create a personal, professional space to showcase my skills, projects, and career journey. I chose a modern tech stack, including Next.js for its performance and SEO capabilities, and Framer Motion to craft a dynamic, memorable user experience. This portfolio is not just a list of my work; it's a testament to my skills in frontend development, my attention to design detail, and my ability to build a complete application from the ground up.",
-    imageUrl: "/images/projects/portfolio-website-thumbnail.png",
+    imageUrl: Images.PortfolioThumbnail,
     githubUrl: "https://github.com/dhlananhh/my-3d-portfolio",
     tools: [
       "Next.js",
@@ -168,18 +170,18 @@ export const projectsData: Project[] = [
       "Fully Responsive Design for All Devices"
     ],
     galleryImages: [
-      "/images/projects/portfolio-website-thumbnail.png",
-      "/images/projects/portfolio-website-career-goals.png",
-      "/images/projects/portfolio-website-projects-section.png",
-      "/images/projects/portfolio-website-skills-section.png",
-      "/images/projects/portfolio-website-github-contributions-section.png",
-      "/images/projects/portfolio-website-testimonials-section.png",
-      "/images/projects/portfolio-website-faq-section.png",
-      "/images/projects/portfolio-website-resume-section.png",
-      "/images/projects/portfolio-website-contact-section.png",
-      "/images/projects/portfolio-website-project-details-page-1.png",
-      "/images/projects/portfolio-website-project-details-page-2.png",
-      "/images/projects/portfolio-website-project-details-page-3.png",
+      Images.PortfolioThumbnail,
+      Images.PortfolioCareerGoals,
+      Images.PortfolioProjects,
+      Images.PortfolioSkills,
+      Images.PortfolioGithub,
+      Images.PortfolioTestimonials,
+      Images.PortfolioFAQ,
+      Images.PortfolioResume,
+      Images.PortfolioContact,
+      Images.PortfolioDetails1,
+      Images.PortfolioDetails2,
+      Images.PortfolioDetails3,
     ]
   },
 ];
@@ -190,42 +192,42 @@ export const testimonialsData: Testimonial[] = [
     quote: "Lan Anh's coding ability and meticulousness have been a great help to our dev team. The quality of her work consistently exceeded our expectations, and she was a pleasure to collaborate with.",
     author: "Jane Doe",
     company: "Senior Engineer, InnovateTech",
-    avatarUrl: "/images/avatars/jane-doe.png",
+    avatarUrl: Images.JaneDoeAvatar,
   },
   {
     id: "2",
     quote: "Working with Lan Anh was very professional and efficient. She not only has excellent technical skills but also a remarkable ability to work in a team and adapt to new challenges wonderfully.",
     author: "John Smith",
     company: "Head of IT, Digital Solutions Co.",
-    avatarUrl: "/images/avatars/john-smith.png",
+    avatarUrl: Images.JohnSmithAvatar,
   },
   {
     id: "3",
     quote: "As a Project Manager, I valued Lan Anh's clear communication and commitment to deadlines. She's a reliable developer who truly understands the project's vision and delivers accordingly.",
     author: "Michael Chen",
     company: "Project Manager, Agile Creators",
-    avatarUrl: "/images/avatars/michael-chen.png",
+    avatarUrl: Images.MichaelChenAvatar,
   },
   {
     id: "4",
     quote: "It's rare to find a developer who has such a keen eye for design. Lan Anh brought our Figma designs to life with pixel-perfect accuracy and added insightful animations that enhanced the user experience.",
     author: "Sophia Rodriguez",
     company: "Lead UI/UX Designer, Creative Minds Agency",
-    avatarUrl: "/images/avatars/sophia-rodriguez.png",
+    avatarUrl: Images.SophiaRodriguezAvatar,
   },
   {
     id: "5",
     quote: "Pair-programming with Lan Anh was always a learning experience. She's a quick problem-solver and is always open to discussing new approaches. Her proficiency in React and Next.js is top-notch.",
     author: "David Lee",
     company: "Backend Developer, Synergy Systems",
-    avatarUrl: "/images/avatars/david-lee.png",
+    avatarUrl: Images.DavidLeeAvatar,
   },
   {
     id: "6",
     quote: "Lan Anh consistently delivered high-quality, clean code that was easy to review and maintain. Her attention to detail and proactive approach made a significant impact on our product's stability.",
     author: "Emily White",
     company: "Tech Lead, QuantumLeap Software",
-    avatarUrl: "/images/avatars/emily-white.png",
+    avatarUrl: Images.EmilyWhiteAvatar,
   }
 ];
 
