@@ -1,12 +1,12 @@
 <div align="center">
   <!-- Introduction -->
   <img
-    src="https://raw.githubusercontent.com/dhlananhh/my-3d-portfolio/main/public/images/projects/portfolio-website-thumbnail.png"
+    src="https://raw.githubusercontent.com/dhlananhh/my-dynamic-portfolio/main/public/images/projects/portfolio-website-thumbnail.png"
     alt="Project Banner"
     width="800"
   />
   <h1>
-    <b>✨ Lan Anh's 3D Developer Portfolio ✨</b>
+    <b>✨ Lan Anh's Dynamic Developer Portfolio ✨</b>
   </h1>
   <p>
     A dynamic and interactive personal portfolio built with Next.js, Framer Motion, and Three.js, designed to showcase my journey and skills as a modern Web Developer.
@@ -21,16 +21,16 @@
     />
   </a>
   <img
-    src="https://img.shields.io/github/languages/code-size/dhlananhh/my-3d-portfolio?style=for-the-badge&color=8B5CF6"
+    src="https://img.shields.io/github/languages/code-size/dhlananhh/my-dynamic-portfolio?style=for-the-badge&color=8B5CF6"
     alt="Code Size"
   />
   <img
-    src="https://img.shields.io/github/last-commit/dhlananhh/my-3d-portfolio?style=for-the-badge&color=F59E0B"
+    src="https://img.shields.io/github/last-commit/dhlananhh/my-dynamic-portfolio?style=for-the-badge&color=F59E0B"
     alt="Last Commit"
   />
-  <a href="https://github.com/dhlananhh/my-3d-portfolio/blob/main/LICENSE.md" target="_blank">
+  <a href="https://github.com/dhlananhh/my-dynamic-portfolio/blob/main/LICENSE.md" target="_blank">
     <img
-      src="https://img.shields.io/github/license/dhlananhh/my-3d-portfolio?style=for-the-badge&color=EC4899"
+      src="https://img.shields.io/github/license/dhlananhh/my-dynamic-portfolio?style=for-the-badge&color=EC4899"
       alt="License"
     />
   </a>
@@ -82,10 +82,10 @@ This portfolio was built using a modern, scalable, and high-performance technolo
 
 | Category              | Technologies                                                                                 |
 | :-------------------- | :------------------------------------------------------------------------------------------- |
-| **Core**              | `Next.js 15`, `React 19`, `TypeScript`                                                       |
+| **Core**              | `Next.js 16`, `React 19`, `TypeScript`                                                       |
 | **Styling**           | `Tailwind CSS`, `Shadcn UI`, `Radix UI`                                                      |
 | **Icons**             | `Lucide React`, `React Icons`                                                                |
-| **Animation**         | `Framer Motion`, `React Three Fiber (@react-three/drei)`, `React Bits`, `Magic UI`           |
+| **Animation**         | `Framer Motion`, `React Bits`, `Magic UI`           |
 | **APIs & Data**       | `react-github-calendar` (for GitHub Contributions Graph), `Web3Forms` (for Contact Form)     |
 | **Tooling**           | `ESLint`, `Prettier`, `pnpm`, `bun`, `yarn`                                                  |
 | **Deployment**        | `Vercel`                                                                                     |
@@ -127,12 +127,12 @@ Once the prerequisites are met, follow these steps:
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/dhlananhh/my-3d-portfolio.git
+    git clone https://github.com/dhlananhh/my-dynamic-portfolio.git
     ```
 
 2.  **Navigate to the project directory:**
     ```bash
-    cd my-3d-portfolio
+    cd my-dynamic-portfolio
     ```
 
 3.  **Install dependencies:**

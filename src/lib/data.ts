@@ -155,7 +155,7 @@ export const projectsData: Project[] = [
     shortDescription: "The very portfolio you are currently exploring, designed to be a dynamic and interactive showcase of my journey as a developer.",
     description: "The primary goal of this project was to create a personal, professional space to showcase my skills, projects, and career journey. I chose a modern tech stack, including Next.js for its performance and SEO capabilities, and Framer Motion to craft a dynamic, memorable user experience. This portfolio is not just a list of my work; it's a testament to my skills in frontend development, my attention to design detail, and my ability to build a complete application from the ground up.",
     imageUrl: Images.PortfolioThumbnail,
-    githubUrl: "https://github.com/dhlananhh/my-3d-portfolio",
+    githubUrl: "https://github.com/dhlananhh/my-dynamic-portfolio",
     tools: [
       "Next.js",
       "TailwindCSS",
