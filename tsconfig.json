@@ -22,10 +22,12 @@
         "name": "next"
       }
     ],
+    "noUncheckedSideEffectImports": false,
     "paths": {
       "@/*": [
         "./src/*"
-      ]
+      ],
+      "@payload-config": ["./src/payload.config.ts"] 
     }
   },
   "include": [

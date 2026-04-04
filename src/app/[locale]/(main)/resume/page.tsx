@@ -3,18 +3,44 @@
 
 import React from "react";
 import { useTranslations } from "next-intl";
-import { workExperiencesData, projectsData, certificationsData } from "@/lib/data";
-import { Download, Mail, Phone, MapPin, Globe, Github, Linkedin } from "lucide-react";
+import { getTranslations } from "next-intl/server";
+import { getPayload } from "payload";
+import config from "@payload-config"
+import {
+  workExperiencesData,
+  projectsData,
+  certificationsData
+} from "@/lib/data";
 import { SectionHeading } from "@/components/custom-ui/SectionHeading";
 import AnimatedBlobBackground from "@/components/custom-ui/AnimatedBlobBackground";
+import PrintButton from "@/components/custom-ui/PrintButton";
+import {
+  Download,
+  Mail,
+  Phone,
+  MapPin,
+  Globe,
+  Github,
+  Linkedin
+} from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 
 export default function ResumePage() {
   const t = useTranslations("Resume");
+  // const t = await getTranslations("Resume");
 
   const handlePrint = () => {
     window.print();
   };
+
+  // const payload = await getPayload({ config: config });
+  // const fetchedCertifications = await payload.find({
+  //   collection: "certifications",
+  //   sort: "order",
+  //   limit: 20,
+  // });
+  // const certData = fetchedCertifications.docs;
 
   return (
     <main className="py-24 sm:py-32 relative overflow-hidden print:py-0">
@@ -24,13 +50,13 @@ export default function ResumePage() {
       </div>
       <div className="container relative z-10 mx-auto px-4 mb-16 text-center print:hidden">
         <SectionHeading title={t("title")} subtitle={t("subtitle")} />
-        <button
+        <Button
           onClick={handlePrint}
           className="mt-10 mx-auto inline-flex items-center gap-2 rounded-lg bg-teal-500 hover:bg-teal-400 hover:scale-105 transition-all text-slate-950 font-bold px-8 py-3"
         >
           <Download size={20} />
           <span>{t("exportPdf")}</span>
-        </button>
+        </Button>
       </div>
 
 
