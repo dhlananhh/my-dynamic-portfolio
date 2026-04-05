@@ -7,6 +7,7 @@ export const config = {
   matcher: [
     "/",
     "/(en|vi)/:path*",
-    "/((?!api|_next|_vercel|admin|admin/.*|\\..*|manifest.json).*)",
+    // exclude api, _next, _vercel, admin, static file, manifest.json, sitemap.xml
+    "/((?!api|_next|_vercel|admin|admin/.*|\\..*|manifest.json|sitemap.xml).*)",
   ]
 };
