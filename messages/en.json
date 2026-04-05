@@ -19,6 +19,97 @@
     "viewProjects": "View Projects",
     "contactMe": "Contact me"
   },
+  "About": {
+    "title": "About Me",
+    "subtitle": "My Journey",
+    "status": "Available for work",
+    "p1": "Hello! I'm <strong className='text-teal-400'>Dương Hoàng Lan Anh</strong>, a final-year Software Engineering student at the Industrial University of Ho Chi Minh City. My academic journey has been a deep dive into technology, but my true passion sparked in the world of web development. I am driven by the challenge of transforming creative ideas into interactive, beautiful, and user-centric digital experiences.",
+    "p2": "My core strength lies in frontend development, with a strong focus on modern JavaScript, particularly <strong className='font-semibold text-white'>React</strong> and <strong className='font-semibold text-white'>Next.js</strong>. I don't just write code; I strive to build high-performance, responsive, and accessible interfaces. For me, a successful project is one where clean code and thoughtful design converge to create an intuitive and seamless journey for the end-user.",
+    "p3": "As I approach graduation, I'm eager to apply my academic knowledge and creative energy to real-world challenges. I am a firm believer in lifelong learning and thrive in collaborative environments where I can contribute to a team's success while continuously growing my own skills. My goal is to craft web experiences that are not only functional but also leave a lasting positive impression.",
+    "name": "Name",
+    "email": "Email",
+    "location": "Location",
+    "availability": "Availability",
+    "city": "Ho Chi Minh City, Vietnam",
+    "available": "Open to opportunities"
+  },
+  "Goals": {
+    "title": "Career Goals",
+    "subtitle": "My Roadmap",
+    "shortTitle": "Short-Term Goal",
+    "shortDesc": "To secure a challenging Frontend Developer position where I can apply my skills in React and Next.js, contribute to meaningful projects, and continuously learn from experienced mentors within a collaborative team.",
+    "midTitle": "Mid-Term Goal",
+    "midDesc": "To evolve into a Senior Frontend Developer, taking ownership of complex features, mentoring junior developers, and deepening my expertise in performance optimization and building highly scalable applications.",
+    "longTitle": "Long-Term Goal",
+    "longDesc": "To become a technical lead or solutions architect, guiding technical strategy, driving innovation in user experience, and making a significant impact on the products and teams I help create."
+  },
+  "Experience": {
+    "title": "Work Experience",
+    "subtitle": "My Professional Journey"
+  },
+  "Projects": {
+    "title": "Featured Projects",
+    "subtitle": "My recent work",
+    "all": "All",
+    "start": "Start",
+    "status": "Status",
+    "viewCode": "View Code",
+    "liveDemo": "Live Demo",
+    "detailOverview": "Project Goal & Overview",
+    "detailFeatures": "Key Features",
+    "detailTech": "Technologies Used",
+    "detailGallery": "Gallery",
+    "allProjects": "All Projects",
+    "category": "Category",
+    "date": "Date"
+  },
+  "Skills": {
+    "title": "My Skills",
+    "subtitle": "Technologies & Expertise",
+    "frontend": "Frontend Development",
+    "backend": "Backend & Database",
+    "tools": "Tools & Methodologies"
+  },
+  "Github": {
+    "title": "My GitHub Contributions",
+    "subtitle": "A Timeline of My Dedication",
+    "viewProfile": "View my full profile on GitHub"
+  },
+  "Testimonials": {
+    "title": "Testimonials",
+    "subtitle": "What My Collaborators Say"
+  },
+  "FAQ": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Have Questions? I Have Answers",
+    "q1": "Are you currently available for freelance projects or full-time opportunities?",
+    "a1": "Absolutely! I am actively seeking new full-time opportunities. I am also open to discussing interesting freelance projects that align with my skillset. Please feel free to reach out via the contact form below.",
+    "q2": "What is your preferred technology stack?",
+    "a2": "My core expertise lies in the modern JavaScript ecosystem. I'm most proficient with React and Next.js for frontend development. For backend tasks, I'm comfortable with Node.js and have experience with various databases like MongoDB and MariaDB.",
+    "q3": "What does your typical development process look like?",
+    "a3": "I follow an agile approach. My process usually starts with understanding the requirements and user stories, followed by designing a component architecture. I then move to development, writing clean and maintainable code.",
+    "q4": "Are you open to working remotely or considering relocation?",
+    "a4": "I am fully equipped and experienced in working remotely and have a proven track record of maintaining high productivity. I am also open to discussing relocation opportunities."
+  },
+  "Contact": {
+    "title": "Get In Touch",
+    "subtitle": "Let's work together",
+    "info": "Contact Information",
+    "currentStatus": "Current Status",
+    "statusDesc": "Available for freelance work and full-time opportunities",
+    "sendMessage": "Send Me a Message",
+    "formName": "Full Name",
+    "formNamePlaceholder": "Your Name",
+    "formEmail": "Email Address",
+    "formEmailPlaceholder": "youremail@example.com",
+    "formSubject": "Subject",
+    "formSubjectPlaceholder": "Subject about cooperation opportunities...",
+    "formMessage": "Message",
+    "formMessagePlaceholder": "Your detailed message here...",
+    "formSubmit": "Send Message",
+    "formSubmitting": "Sending...",
+    "warningSetup": "Form submission configuration is pending. Setup needed."
+  },
   "Footer": {
     "readyToConnect": "Have a project in mind?",
     "reachOut": "My inbox is always open. Whether you have a project idea, a job opportunity, or just want to say hi, I'll try my best to get back to you!",
@@ -28,17 +119,17 @@
     "bio": "Frontend software engineers are always looking for optimal solutions to transform ideas into intuitive interfaces.",
     "designedBy": "Designed by",
     "rights": "All rights reserved.",
-    "backToTop": "Back to Top"
+    "backToTop": "Top"
   },
   "Resume": {
     "title": "Interactive Resume",
-    "subtitle": "Coded with code, not Canva",
+    "subtitle": "Coded with React, not Canva",
     "exportPdf": "Export to PDF",
     "education": "Education",
     "experience": "Experience",
     "projects": "Selected Projects",
     "skills": "Core Skills",
     "certifications": "Certifications",
-    "appendix": "Appendix: Credentials & Proofs"
+    "appendix": "Appendix"
   }
 }

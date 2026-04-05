@@ -4,8 +4,12 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 import { Project } from "@/lib/data";
-import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import {
+  FaGithub,
+  FaExternalLinkAlt
+} from "react-icons/fa";
 import {
   CalendarDays,
   GitBranch,
@@ -23,12 +27,14 @@ const formatDate = (date: Date): string => {
   return new Intl.DateTimeFormat("en-UK", {
     year: "numeric",
     month: "short",
-    day: "2-digit",
+    day: "2-digit"
   }).format(date);
 };
 
 
 export default function ProjectCard({ project, index }: ProjectCardProps) {
+  const t = useTranslations("Projects");
+
   const statusColor =
     project.projectStatus.toLowerCase() === "completed"
       ? "bg-green-500 text-green-50"
@@ -41,7 +47,10 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
   };
 
   return (
-    <Link href={`/projects/${project.slug}`} passHref>
+    <Link
+      href={`/projects/${project.slug}`}
+      passHref
+    >
       <div className="relative w-full h-56 sm:h-60">
         <Image
           src={project.imageUrl || "/images/placeholder-project.png"}
@@ -63,7 +72,9 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
         <div className="flex flex-wrap text-xs text-gray-500 mb-3 gap-x-4 gap-y-1">
           <div className="flex items-center">
             <CalendarDays size={14} className="mr-1.5 text-teal-500" />
-            <span>Start: {formatDate(new Date(project.projectStartDate))}</span>
+            <span>
+              {t("start")}: {formatDate(new Date(project.projectStartDate))}
+            </span>
           </div>
           <div className="flex items-center">
             {
@@ -73,7 +84,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
                 <GitBranch size={14} className="mr-1.5 text-green-400" />
               )
             }
-            Status:
+            {t("status")}:
             <span className={`ml-1 px-1.5 py-0.5 rounded-sm text-xs ${statusColor}`}>
               {project.projectStatus}
             </span>
@@ -104,7 +115,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
                 className="flex-1 text-center sm:text-left inline-flex items-center justify-center sm:justify-start gap-2 bg-gray-700 hover:bg-gray-600 text-gray-300 hover:text-white font-medium py-2 px-4 rounded-lg text-sm transform active:scale-95 transition-all duration-150 ease-in-out"
               >
                 <FaGithub size={16} />
-                View Code
+                {t("viewCode")}
               </Link>
             )
           }
@@ -118,7 +129,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
                 className="flex-1 sm:text-left inline-flex items-center justify-center sm:justify-start gap-2 rounded-lg text-sm py-2 px-4 text-center font-medium text-white bg-linear-to-br from-green-400 to-blue-600 hover:bg-linear-to-bl focus:ring-4 focus:outline-hidden focus:ring-green-200 dark:focus:ring-green-800 transform active:scale-95 transition-all duration-150 ease-in-out"
               >
                 <FaExternalLinkAlt size={14} />
-                Live Demo
+                {t("liveDemo")}
               </Link>
             )
           }

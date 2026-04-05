@@ -14,10 +14,101 @@
   "Hero": {
     "greeting": "Xin chào, tôi là Lan Anh!",
     "heading1": "Biến Ý Tưởng Thành",
-    "heading2": "Giải Pháp Công Nghệ Thực Tế.",
-    "bio": "Một Lập trình viên Web đam mê làm việc tại TP.Hồ Chí Minh, khao khát chuyển hóa những ý tưởng sáng tạo thành các sản phẩm kỹ thuật số đẹp mắt và tối ưu hiệu năng.",
+    "heading2": "Giải Pháp Số Hoàn Hảo.",
+    "bio": "Một Lập trình viên Web đam mê làm việc tại TP.Hồ Chí Minh, luôn khát khao chuyển hóa ý tưởng thành các ứng dụng số mượt mà, tối ưu hiệu năng.",
     "viewProjects": "Xem dự án",
     "contactMe": "Liên hệ tôi"
+  },
+  "About": {
+    "title": "Về Bản Thân",
+    "subtitle": "Hành Trình Của Tôi",
+    "status": "Sẵn sàng làm việc",
+    "p1": "Xin chào! Tôi là <strong className='text-teal-400'>Dương Hoàng Lan Anh</strong>, sinh viên năm cuối ngành Kỹ Thuật Phần Mềm tại Đại học Công Nghiệp TP.Hồ Chí Minh. Dù học rộng về IT, niềm đam mê cháy bỏng của tôi lại nằm ở Lập trình Web Frontend, nơi biến sự sáng tạo thành những trải nghiệm thân thiện với người dùng.",
+    "p2": "Sức mạnh cốt lõi của tôi là lập trình Frontend, tập trung vào hệ sinh thái JavaScript hiện đại, đặc biệt là <strong className='font-semibold text-white'>React</strong> và <strong className='font-semibold text-white'>Next.js</strong>. Tôi không chỉ viết code; tôi cố gắng xây dựng các giao diện với hiệu năng cao, tốc độ mượt mà. Đối với tôi, một dự án xuất sắc là sự giao thoa giữa code sạch (Clean code) và trải nghiệm thẩm mỹ UX/UI xuất sắc.",
+    "p3": "Gần tốt nghiệp, tôi luôn khao khát mang lý thuyết học đường giải quyết những bài toán thực tiễn. Tôi là người có tư duy học hỏi trọn đời, dễ dàng bắt nhịp vào môi trường đội nhóm. Mục tiêu của tôi là tạo ra các sản phẩm không chỉ chạy đúng tính năng, mà còn mang lại ấn tượng đẹp đẽ sâu sắc tới người truy cập.",
+    "name": "Tên đầy đủ",
+    "email": "Email liên lạc",
+    "location": "Vị trí",
+    "availability": "Tình trạng",
+    "city": "Thành phố Hồ Chí Minh, Việt Nam",
+    "available": "Sẵn sàng tiếp nhận Cơ hội"
+  },
+  "Goals": {
+    "title": "Mục Tiêu Sự Nghiệp",
+    "subtitle": "Định hướng phát triển",
+    "shortTitle": "Mục tiêu Ngắn Hạn",
+    "shortDesc": "Tìm kiếm vị trí Frontend Developer chuyên nghiệp để áp dụng vững kỹ năng React và Next.js. Trực tiếp góp mặt trong các dự án sản phẩm và nhanh chóng cọ xát với thực tiễn cũng như những lập trình viên nhiều năm kinh nghiệm trong team.",
+    "midTitle": "Mục tiêu Trung Hạn",
+    "midDesc": "Phát triển năng lực lên mức Senior Frontend Developer. Có khả năng ôm trọn phát triển nhiều Component phức tạp của hệ thống. Đồng thời đào sâu xử lí bài toán Performance / Load Times (Hiệu năng Hệ thống).",
+    "longTitle": "Mục tiêu Dài Hạn",
+    "longDesc": "Trở thành người Trưởng nhóm Kỹ thuật (Technical Lead/ Architecture), lên chiến lược định hình cấu trúc App hoàn hảo nhất, chèo lái định hướng kỹ thuật và UX cho những ứng dụng ảnh hưởng lớn."
+  },
+  "Experience": {
+    "title": "Kinh Nghiệm Chuyên Môn",
+    "subtitle": "Con Đường Hành Nghề"
+  },
+  "Projects": {
+    "title": "Dự Án Nổi Bật",
+    "subtitle": "Sản phẩm thực tế tôi phát triển",
+    "all": "Tất Cả",
+    "start": "Bắt đầu",
+    "status": "Trạng thái",
+    "viewCode": "Mã Nguồn",
+    "liveDemo": "Xem Trực Tiếp",
+    "detailOverview": "Mục Tiêu Của Dự Án",
+    "detailFeatures": "Tính Năng Nổi Bật",
+    "detailTech": "Công Nghệ Đã Dùng",
+    "detailGallery": "Hình Ảnh / Thư Viện",
+    "allProjects": "Mọi Dự án",
+    "category": "Mảng",
+    "date": "Thời gian"
+  },
+  "Skills": {
+    "title": "Bộ Kỹ Năng",
+    "subtitle": "Ngôn Ngữ & Các Khung Kiến Trúc (Frameworks)",
+    "frontend": "Công Nghệ Front-End",
+    "backend": "Máy Chủ & Hệ Cơ Sở Dữ Liệu",
+    "tools": "Quản Trị, Git & Thiết Kế"
+  },
+  "Github": {
+    "title": "Hoạt Động GitHub",
+    "subtitle": "Theo Giới Quá Trình Viết Mã Của Tôi",
+    "viewProfile": "Theo dõi trên tài khoản Git Thực Tế"
+  },
+  "Testimonials": {
+    "title": "Nhận Xét Lời Đánh Giá",
+    "subtitle": "Đối Tác và Mọi Người Đã Phản Hồi Tôi Ra Sao?"
+  },
+  "FAQ": {
+    "title": "Những Câu Hỏi Thông Thường (FQA)",
+    "subtitle": "Có Câu Hỏi Khúc Mắc? Dưới Đây Của Giải Đáp",
+    "q1": "Tình trạng khả dụng của bạn? Nhận dự án full-time không?",
+    "a1": "Hoàn toàn luôn! Bạn vui lòng có nhã húng đưa tay giao mình hợp tác cho Job Công Ty/ Nhận Gấp Gửi Các Project qua Lượt Phản hổi Cổng Tương Tác Lối Nhắn của Phía Footer nghen.",
+    "q2": "Công Nhuể Xương Bạn Cốt là hệ Nào Ư?",
+    "a2": "Ecosystem Thuần Code Tôn Sắc (Native Modern Script) Mình chắp Code Nhất Phân Hệ JS! Tần 2 Khuất Trọn Stack Cả Đội Chặn Già Mông Với Ract/ TypesCript Node và NEXT!. Mông Hệ MongoDB.",
+    "q3": "Khi Dắt Task Mọi Dev Work bạn Chắp Luân Đâu Bước Flow Nào Đi Mềm Vần Làm Web??",
+    "a3": "Agile Phối Luôn Nhạy Cực - Quét Nhớ Yêu Chữ Rồi Làm Ra Frame/ Sọc Trục - Và Vào Render Cho Ra Source Thùng Quản lí,  Vọng Thư Test Review !!!",
+    "q4": "Khả Nhu Bứt Sóc Code Ở Nơi Cảng Mọi Địa Xạ Ra?",
+    "a4": "Em Set Xuy Xạch Trang Thiết Nắm Thầu Setup Work Không Thời Xà Sẵn Chốt Từ Cổ Máy Bán Xã Ở Công ty !!!!"
+  },
+  "Contact": {
+    "title": "Vào Khu Liên Lạc Thần Gấp",
+    "subtitle": "Chặn Tin Vào Kết Nói Bầu Cho Work Xóa Rắc Web !",
+    "info": "Thông Tin Nút Gọi Chớp Góc Thùng Thấy !",
+    "currentStatus": "Nhự Nỗi Mạng Hệ Bây Giờ !",
+    "statusDesc": "Tiềm Cận Phất Xúc Free Tận Thu Bạt/ Cơ Thu Ngẫm Lụ Full Tích Job!!",
+    "sendMessage": "Biểu Xọt Form Code Chèn Rởi Box  Lỗi Liên Xuyên Gập Code! ",
+    "formName": "Tên Đầy Lưng Họ Và Ngang Tròn Bạn!",
+    "formNamePlaceholder": "Hưng Rút Hoặc Ai...v.vv ",
+    "formEmail": "E Lấp Hòm Lạc Thù Phỏng Hòng!",
+    "formEmailPlaceholder": "Ai@exampleGhi...!!!. ",
+    "formSubject": "Việc Dán Dự Bạc Lập Dính Mục Ngữ Cho Job: !.. ",
+    "formSubjectPlaceholder": "Khán Gọi Ngõ...",
+    "formMessage": "Xin Góc Nội Khối Y Tỏa Văn Nghét Tin Bác Mọc !...",
+    "formMessagePlaceholder": "Chỉ Thể Tin Bốc Phức Rác Kể Cho Khéo!!!",
+    "formSubmit": "Sấn Nháy Rán Thả Kẹo Tin Băng Khách",
+    "formSubmitting": "Ngỏ Nén Vào Đã Nhích Nắp Dụ Khía... Đợi Máy!.",
+    "warningSetup": "Phản Khủng Nước Quăng Không Thiết App Ngã Code Access Forms Mật."
   },
   "Footer": {
     "readyToConnect": "Bạn có dự án nào đang ấp ủ không?",
@@ -28,17 +119,17 @@
     "bio": "Kỹ sư phần mềm chuyên mảng Frontend, luôn tìm kiếm giải pháp tối ưu để biến ý tưởng thành giao diện trực quan.",
     "designedBy": "Thiết kế bởi",
     "rights": "Mọi bản quyền được bảo lưu.",
-    "backToTop": "Lên đầu trang"
+    "backToTop": "Lên trang"
   },
   "Resume": {
-    "title": "Sơ Yếu Lý Lịch",
-    "subtitle": "Được lập trình 100%, không sử dụng Canva",
+    "title": "Resume",
+    "subtitle": "Được lập trình bằng Code, không sử dụng Canva",
     "exportPdf": "Xuất file PDF",
-    "education": "Học Vấn",
-    "experience": "Kinh Nghiệm Làm Việc",
-    "projects": "Dự Án Nổi Bật",
-    "skills": "Kỹ Năng",
-    "certifications": "Chứng Chỉ",
-    "appendix": "Phụ Lục: Minh Chứng Chứng Chỉ"
+    "education": "Học vấn",
+    "experience": "Kinh nghiệm làm việc",
+    "projects": "Dự Án nổi bật",
+    "skills": "Kỹ năng",
+    "certifications": "Chứng chỉ",
+    "appendix": "Phụ lục"
   }
 }
