@@ -11,7 +11,7 @@ import { Certifications } from "@/collections/Certificates";
 
 
 const filename = fileURLToPath(import.meta.url);
-const dirname = path.dirname(filename);
+// const dirname = path.dirname(filename);
 
 
 export default buildConfig({
@@ -22,10 +22,15 @@ export default buildConfig({
   editor: lexicalEditor({}),
   secret: process.env.PAYLOAD_SECRET || "strongp@ssword123",
   typescript: {
-    outputFile: path.resolve(dirname, "payload-types.ts"),
+    // outputFile: path.resolve(dirname, "../src/payload-types.ts"),
+    outputFile: path.resolve(process.cwd(), "src/payload-types.ts"),
+    declare: false,
+  },
+  graphQL: {
+    schemaOutputFile: path.resolve(process.cwd(), "src/payload-generated-schema.ts"),
   },
   db: mongooseAdapter({
-    url: process.env.MONGODB_URI || '',
+    url: process.env.MONGODB_URI || "mongodb://localhost:27017/portfolio",
     connectOptions: {
       serverSelectionTimeoutMS: 5000,
       bufferCommands: false,
