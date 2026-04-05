@@ -28,6 +28,7 @@ const ignorePaths = [
   path.join("src", "generated", "prisma"),
   path.join("prisma", "migrations"),
   path.join("src", "components", "ui"),
+  path.join("src", "hooks"),
 ];
 
 // Các file cụ thể cần bỏ qua
