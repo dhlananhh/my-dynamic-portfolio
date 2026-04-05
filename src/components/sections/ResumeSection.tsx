@@ -72,7 +72,7 @@ export default function ResumeSection() {
           <Button
             asChild
             size="lg"
-            className="text-white bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 font-medium rounded-lg text-lg px-6 py-3 text-center"
+            className="text-white bg-linear-to-br from-green-400 to-blue-600 hover:bg-linear-to-bl focus:ring-4 focus:outline-hidden focus:ring-green-200 font-medium rounded-lg text-lg px-6 py-3 text-center"
           >
             <Link
               href={ resumeLink }
@@ -88,7 +88,7 @@ export default function ResumeSection() {
             asChild
             variant="outline"
             size="lg"
-            className="bg-gray-700/80 border-gray-400 text-gray-200 hover:text-white hover:bg-gray-800/50 focus:ring-4 focus:outline-none focus:ring-gray-600 font-medium rounded-lg text-lg px-6 py-3 text-center"
+            className="bg-gray-700/80 border-gray-400 text-gray-200 hover:text-white hover:bg-gray-800/50 focus:ring-4 focus:outline-hidden focus:ring-gray-600 font-medium rounded-lg text-lg px-6 py-3 text-center"
           >
             <Link
               href={ resumeLink }

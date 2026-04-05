@@ -77,7 +77,7 @@ export default function FAQSection() {
               >
                 <div
                   className="absolute -inset-px rounded-xl 
-                  bg-gradient-to-r from-teal-400 via-sky-400 to-purple-500
+                  bg-linear-to-r from-teal-400 via-sky-400 to-purple-500
                   opacity-0 transition-opacity duration-500 group-hover:opacity-70"
                 />
 
@@ -92,7 +92,7 @@ export default function FAQSection() {
                     <ChevronDown
                       className={
                         cn(
-                          "h-6 w-6 flex-shrink-0 text-teal-400 transition-transform duration-300",
+                          "h-6 w-6 shrink-0 text-teal-400 transition-transform duration-300",
                           openFaqIndex === index && "rotate-180"
                         )
                       }

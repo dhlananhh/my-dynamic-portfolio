@@ -2,7 +2,7 @@
 
 
 import React from "react"
-import Image from "next/legacy/image";
+import Image from "next/image";
 import { Quote } from "lucide-react";
 import { Testimonial } from "@/lib/data";
 import { Images } from "@/lib/images";
@@ -19,7 +19,7 @@ export default function TestimonialCard({ testimonial }: TestimonialCardProps) {
     border border-slate-700/80 bg-slate-800/60 backdrop-blur-lg shadow-lg">
       <div className="flex flex-col h-full gap-y-4">
         <Quote className="h-8 w-8 text-teal-500/80" />
-        <blockquote className="text-slate-200 text-lg leading-relaxed italic flex-grow">
+        <blockquote className="text-slate-200 text-lg leading-relaxed italic grow">
           &quot;{testimonial.quote}&quot;
         </blockquote>
         <figcaption className="mt-4 flex items-center gap-4">

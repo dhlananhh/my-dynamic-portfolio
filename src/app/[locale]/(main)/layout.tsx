@@ -24,13 +24,13 @@ function AppLayout({ children }: { children: React.ReactNode }) {
       <main
         className={
           cn(
-            "relative transition-all duration-300 ease-in-out flex flex-col flex-grow w-full",
-            "min-h-[100dvh]",
-            isCollapsed ? "md:pl-[5rem] print:pl-0" : "md:pl-[18rem] print:pl-0"
+            "relative transition-all duration-300 ease-in-out flex flex-col grow w-full",
+            "min-h-dvh",
+            isCollapsed ? "md:pl-20 print:pl-0" : "md:pl-72 print:pl-0"
           )
         }
       >
-        <div className="flex-grow w-full">
+        <div className="grow w-full">
           {children}
         </div>
 

@@ -4,7 +4,7 @@
 import React from "react";
 import { Link, usePathname } from "@/i18n/routing";
 // import Link from "next/link";
-import Image from "next/legacy/image";
+import Image from "next/image";
 // import { usePathname } from "next/navigation";
 import { useSidebar } from "@/contexts/SidebarContext";
 import { useTranslations } from "next-intl";
@@ -26,11 +26,13 @@ import {
   CircleHelp,
   Newspaper,
   Send,
-  Github,
-  Linkedin,
-  Instagram,
   ChevronsLeft,
 } from "lucide-react";
+import {
+  FaInstagram,
+  FaGithub,
+  FaLinkedin
+} from "react-icons/fa";
 
 
 const navItems = [
@@ -46,9 +48,9 @@ const navItems = [
 ];
 
 const socialItems = [
-  { href: "https://github.com/dhlananhh", icon: Github },
-  { href: "https://linkedin.com/in/dhlananh", icon: Linkedin },
-  { href: "https://www.instagram.com/dhlananh", icon: Instagram },
+  { href: "https://github.com/dhlananhh", icon: FaGithub },
+  { href: "https://linkedin.com/in/dhlananh", icon: FaLinkedin },
+  { href: "https://www.instagram.com/dhlananh", icon: FaInstagram },
 ];
 
 
@@ -65,12 +67,12 @@ export default function Sidebar({ className }: SidebarProps) {
     <TooltipProvider delayDuration={0}>
       <aside className={
         cn(
-          "flex h-[100dvh] flex-col bg-slate-900/80 backdrop-blur-xl border-r border-slate-700/60 transition-all duration-300 ease-in-out z-40 overflow-y-auto hide-scrollbar",
+          "flex h-dvh flex-col bg-slate-900/80 backdrop-blur-xl border-r border-slate-700/60 transition-all duration-300 ease-in-out z-40 overflow-y-auto hide-scrollbar",
           isCollapsed ? "w-20" : "w-72",
           className
         )
       }>
-        <div className="flex flex-col flex-grow p-4">
+        <div className="flex flex-col grow p-4">
           {/* Profile Section */}
           <div className={
             cn(
@@ -97,7 +99,7 @@ export default function Sidebar({ className }: SidebarProps) {
           </div>
 
           {/* Navigation Section */}
-          <nav className="flex-grow py-6">
+          <nav className="grow py-6">
             <ul className="space-y-2">
               {
                 navItems.map((item) => {
@@ -117,7 +119,7 @@ export default function Sidebar({ className }: SidebarProps) {
                                 isCollapsed && "justify-center"
                               )}
                           >
-                            <item.icon className="h-5 w-5 flex-shrink-0" />
+                            <item.icon className="h-5 w-5 shrink-0" />
                             <span className={
                               cn(
                                 "text-sm",
@@ -178,7 +180,7 @@ export default function Sidebar({ className }: SidebarProps) {
                   "hover:bg-slate-700", isCollapsed && "py-2.5"
                 )}
               >
-                <Newspaper className="h-5 w-5 flex-shrink-0" />
+                <Newspaper className="h-5 w-5 shrink-0" />
                 <span
                   className={
                     cn(isCollapsed && "hidden")

@@ -7,12 +7,14 @@ import { Link } from "@/i18n/routing";
 import { motion } from "framer-motion";
 import {
   ArrowUpRight,
-  Github,
-  Linkedin,
-  Instagram,
   Mail,
   ArrowUp
 } from "lucide-react";
+import {
+  FaInstagram,
+  FaGithub,
+  FaLinkedin
+} from "react-icons/fa";
 import { Button } from "@/components/ui/button";
 
 
@@ -28,7 +30,7 @@ export default function Footer() {
 
   return (
     <footer className="w-full bg-slate-950 text-slate-300 py-12 md:py-20 relative z-10 overflow-hidden border-t border-slate-800">
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-3/4 h-[200px] bg-teal-500/10 rounded-[100%] blur-[100px] pointer-events-none -z-10" />
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-3/4 h-50 bg-teal-500/10 rounded-[100%] blur-[100px] pointer-events-none -z-10" />
 
       <div className="mx-auto px-6 lg:px-12 w-full max-w-7xl">
 
@@ -40,7 +42,7 @@ export default function Footer() {
             viewport={{ once: true }}
             className="max-w-2xl"
           >
-            <h2 className="text-4xl md:text-5xl font-extrabold mb-4 bg-gradient-to-r from-teal-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent">
+            <h2 className="text-4xl md:text-5xl font-extrabold mb-4 bg-linear-to-r from-teal-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent">
               {t("readyToConnect")}
             </h2>
             <p className="text-slate-400 text-lg md:text-xl leading-relaxed">
@@ -58,7 +60,7 @@ export default function Footer() {
               href="/contact"
               className="group relative inline-flex items-center gap-2 px-8 py-4 bg-teal-500 text-slate-950 font-bold rounded-full overflow-hidden transition-all hover:scale-105"
             >
-              <div className="absolute inset-0 w-0 bg-white transition-all duration-[250ms] ease-out group-hover:w-full opacity-20" />
+              <div className="absolute inset-0 w-0 bg-white transition-all duration-250 ease-out group-hover:w-full opacity-20" />
               <span>{t("sayHello")}</span>
               <Mail className="h-5 w-5" />
             </Link>
@@ -70,7 +72,7 @@ export default function Footer() {
 
           {/* Logo */}
           <div className="lg:col-span-2">
-            <span className="text-3xl font-bold bg-gradient-to-r from-slate-100 to-slate-500 bg-clip-text text-transparent mb-4 inline-block">
+            <span className="text-3xl font-bold bg-linear-to-r from-slate-100 to-slate-500 bg-clip-text text-transparent mb-4 inline-block">
               Lan Anh
             </span>
             <p className="text-slate-500 text-sm max-w-xs leading-relaxed">
@@ -115,9 +117,21 @@ export default function Footer() {
             <ul className="flex flex-col gap-3">
               {
                 [
-                  { name: "GitHub", href: "https://github.com/dhlananhh", icon: Github },
-                  { name: "LinkedIn", href: "https://linkedin.com/in/dhlananh", icon: Linkedin },
-                  { name: "Instagram", href: "https://www.instagram.com/dhlananh", icon: Instagram },
+                  {
+                    name: "GitHub",
+                    href: "https://github.com/dhlananhh",
+                    icon: FaGithub
+                  },
+                  {
+                    name: "LinkedIn",
+                    href: "https://linkedin.com/in/dhlananh",
+                    icon: FaLinkedin
+                  },
+                  {
+                    name: "Instagram",
+                    href: "https://www.instagram.com/dhlananh",
+                    icon: FaInstagram
+                  },
                 ].map((social) => (
                   <li key={social.name}>
                     <Link
@@ -131,7 +145,8 @@ export default function Footer() {
                       <ArrowUpRight className="h-3 w-3 opacity-0 group-hover:opacity-100 -translate-x-2 translate-y-2 group-hover:translate-x-0 group-hover:translate-y-0 transition-all text-teal-400" />
                     </Link>
                   </li>
-                ))}
+                ))
+              }
             </ul>
           </div>
 
@@ -146,7 +161,7 @@ export default function Footer() {
           {/* Scroll To Top Action */}
           <Button
             onClick={scrollToTop}
-            className="flex items-center gap-2 text-sm text-slate-400 hover:text-white group px-4 py-2 bg-slate-900 rounded-full border border-slate-800 hover:border-slate-600 transition-all focus:outline-none focus:ring-2 focus:ring-teal-500/50"
+            className="flex items-center gap-2 text-sm text-slate-400 hover:text-white group px-4 py-2 bg-slate-900 rounded-full border border-slate-800 hover:border-slate-600 transition-all focus:outline-hidden focus:ring-2 focus:ring-teal-500/50"
           >
             <span>{t("backToTop")}</span>
             <div className="p-1 rounded-full bg-slate-800 group-hover:bg-teal-500 group-hover:text-slate-950 transition-colors">

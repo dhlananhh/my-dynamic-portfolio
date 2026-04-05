@@ -71,7 +71,7 @@ export default function ContactSection() {
               {
                 contactDetails.map((item) => (
                   <li key={item.name} className="flex items-start gap-4">
-                    <item.icon className="text-blue-400 w-5 h-5 mt-1 flex-shrink-0" />
+                    <item.icon className="text-blue-400 w-5 h-5 mt-1 shrink-0" />
                     <div>
                       <p className="text-sm text-zinc-400">{item.name}</p>
                       <Link

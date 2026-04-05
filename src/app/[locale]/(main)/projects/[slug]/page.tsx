@@ -1,15 +1,15 @@
 "use client";
 
+
 import React, { use, useState } from "react";
 import { projectsData, Project } from "@/lib/data";
 import { notFound } from "next/navigation";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import {
   ExternalLink,
-  Github,
   Calendar,
   Activity,
   ArrowLeft,
@@ -20,21 +20,41 @@ import {
   Rocket,
   ChartColumnStacked
 } from "lucide-react";
+import {
+  FaGithub,
+} from "react-icons/fa";
 import { cn } from "@/lib/utils";
 import { Images } from "@/lib/images";
+
 
 const getProjectBySlug = (slug: string): Project | undefined => {
   return projectsData.find((project) => project.slug === slug);
 };
 
-const InfoPill = ({ icon: Icon, text }: { icon: React.ComponentType<{ className?: string }>, text: string }) => (
+
+const InfoPill = ({
+  icon: Icon,
+  text
+}: {
+  icon: React.ComponentType<{ className?: string }>,
+  text: string
+}) => (
   <div className="flex items-center gap-2 rounded-full border border-slate-700/80 bg-slate-900/60 px-3 py-1.5 text-xs text-slate-300 backdrop-blur-md">
     <Icon className="h-4 w-4 text-teal-400" />
     <span>{text}</span>
   </div>
 );
 
-const ContentSection = ({ title, icon: Icon, children }: { title: string; icon: React.ComponentType<{ className?: string }>; children: React.ReactNode }) => (
+
+const ContentSection = ({
+  title,
+  icon: Icon,
+  children
+}: {
+  title: string;
+  icon: React.ComponentType<{ className?: string }>;
+  children: React.ReactNode
+}) => (
   <motion.div
     className="space-y-4"
     initial={{ opacity: 0, y: 20 }}
@@ -51,6 +71,7 @@ const ContentSection = ({ title, icon: Icon, children }: { title: string; icon: 
     </div>
   </motion.div>
 );
+
 
 export default function ProjectDetailPage(props: { params: Promise<{ slug: string }> }) {
   const params = use(props.params);
@@ -99,7 +120,7 @@ export default function ProjectDetailPage(props: { params: Promise<{ slug: strin
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <h1 className="text-4xl font-extrabold tracking-tight md:text-5xl lg:text-6xl bg-gradient-to-b from-slate-100 to-slate-400 bg-clip-text text-transparent">
+              <h1 className="text-4xl font-extrabold tracking-tight md:text-5xl lg:text-6xl bg-linear-to-b from-slate-100 to-slate-400 bg-clip-text text-transparent">
                 {project.title}
               </h1>
 
@@ -120,7 +141,7 @@ export default function ProjectDetailPage(props: { params: Promise<{ slug: strin
                       href={project.liveDemoUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-green-500 to-blue-600 px-6 py-3 text-base font-semibold text-white shadow-lg transition-transform hover:scale-105"
+                      className="inline-flex items-center justify-center gap-2 rounded-lg bg-linear-to-r from-green-500 to-blue-600 px-6 py-3 text-base font-semibold text-white shadow-lg transition-transform hover:scale-105"
                     >
                       <ExternalLink className="h-5 w-5" /> Live Demo
                     </Link>
@@ -134,7 +155,7 @@ export default function ProjectDetailPage(props: { params: Promise<{ slug: strin
                       rel="noopener noreferrer"
                       className="inline-flex items-center justify-center gap-2 rounded-lg bg-slate-700/80 px-6 py-3 text-base font-semibold text-slate-200 shadow-lg transition-colors hover:bg-slate-700"
                     >
-                      <Github className="h-5 w-5" /> View Code
+                      <FaGithub className="h-5 w-5" /> View Code
                     </Link>
                   )
                 }
@@ -171,7 +192,10 @@ export default function ProjectDetailPage(props: { params: Promise<{ slug: strin
       </div>
 
       {/* Back to All Projects button */}
-      <Link href="/#projects" className="fixed top-6 left-6 z-50 flex items-center gap-2 rounded-full bg-slate-900/50 p-2 pr-4 text-sm text-white backdrop-blur-lg transition-colors hover:bg-slate-800">
+      <Link
+        href="/#projects"
+        className="fixed top-6 left-6 z-50 flex items-center gap-2 rounded-full bg-slate-900/50 p-2 pr-4 text-sm text-white backdrop-blur-lg transition-colors hover:bg-slate-800"
+      >
         <ArrowLeft className="h-5 w-5" />
         <span>All Projects</span>
       </Link>
@@ -180,32 +204,50 @@ export default function ProjectDetailPage(props: { params: Promise<{ slug: strin
       <div className="container mx-auto max-w-5xl px-4 pb-24 sm:pb-32">
         <div className="space-y-20">
           {/* Project Goal Section */}
-          <ContentSection title="Project Goal & Overview" icon={Target}>
+          <ContentSection
+            title="Project Goal & Overview"
+            icon={Target}
+          >
             <p>{project.description}</p>
           </ContentSection>
 
           {/* Key Features Section */}
           {
             project.keyFeatures && project.keyFeatures.length > 0 && (
-              <ContentSection title="Key Features" icon={Rocket}>
-                <ul className="grid grid-cols-1 gap-x-8 gap-y-4 sm:grid-cols-2 !list-none !p-0">
-                  {project.keyFeatures.map((feature, index) => (
-                    <li key={index} className="flex items-start gap-3">
-                      <CheckCircle className="h-6 w-6 flex-shrink-0 text-green-400 mt-1" />
-                      <span className="text-slate-300">{feature}</span>
-                    </li>
-                  ))}
+              <ContentSection
+                title="Key Features"
+                icon={Rocket}
+              >
+                <ul className="grid grid-cols-1 gap-x-8 gap-y-4 sm:grid-cols-2 list-none! p-0!">
+                  {
+                    project.keyFeatures.map((feature, index) => (
+                      <li
+                        key={index}
+                        className="flex items-start gap-3"
+                      >
+                        <CheckCircle className="h-6 w-6 shrink-0 text-green-400 mt-1" />
+                        <span className="text-slate-300">{feature}</span>
+                      </li>
+                    ))
+                  }
                 </ul>
               </ContentSection>
             )
           }
 
           {/* Technologies Section */}
-          <ContentSection title="Technologies Used" icon={Github}>
+          <ContentSection
+            title="Technologies Used"
+            icon={FaGithub}
+          >
             <div className="flex flex-wrap gap-3">
               {
                 project.tools.map(tool => (
-                  <Badge key={tool} variant="secondary" className="border-none bg-teal-400/10 px-4 py-1 text-sm text-teal-300 hover:bg-teal-700">
+                  <Badge
+                    key={tool}
+                    variant="secondary"
+                    className="border-none bg-teal-400/10 px-4 py-1 text-sm text-teal-300 hover:bg-teal-700"
+                  >
                     {tool}
                   </Badge>
                 ))
@@ -216,7 +258,10 @@ export default function ProjectDetailPage(props: { params: Promise<{ slug: strin
           {/* Image Gallery Section */}
           {
             project.galleryImages && project.galleryImages.length > 0 && (
-              <ContentSection title="Gallery" icon={ImageIcon}>
+              <ContentSection
+                title="Gallery"
+                icon={ImageIcon}
+              >
                 <div className="space-y-4 not-prose">
 
                   {/* Main Image View Wrapper */}
@@ -233,8 +278,8 @@ export default function ProjectDetailPage(props: { params: Promise<{ slug: strin
                         <Image
                           src={project.galleryImages[ activeIndex ]}
                           alt={`Project gallery image ${activeIndex + 1}`}
-                          layout="fill"
-                          objectFit="cover"
+                          fill={true}
+                          style={{ objectFit: "cover" }}
                           placeholder="blur"
                         />
                       </motion.div>
@@ -245,7 +290,7 @@ export default function ProjectDetailPage(props: { params: Promise<{ slug: strin
                       {/* Previous Button */}
                       <motion.button
                         onClick={handlePrev}
-                        className="p-2 rounded-full bg-white/10 text-white backdrop-blur-sm transition-colors hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-white/50"
+                        className="p-2 rounded-full bg-white/10 text-white backdrop-blur-xs transition-colors hover:bg-white/20 focus:outline-hidden focus:ring-2 focus:ring-white/50"
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.95 }}
                       >
@@ -255,7 +300,7 @@ export default function ProjectDetailPage(props: { params: Promise<{ slug: strin
                       {/* Next Button */}
                       <motion.button
                         onClick={handleNext}
-                        className="p-2 rounded-full bg-white/10 text-white backdrop-blur-sm transition-colors hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-white/50"
+                        className="p-2 rounded-full bg-white/10 text-white backdrop-blur-xs transition-colors hover:bg-white/20 focus:outline-hidden focus:ring-2 focus:ring-white/50"
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.95 }}
                       >
@@ -264,37 +309,41 @@ export default function ProjectDetailPage(props: { params: Promise<{ slug: strin
                     </div>
 
                     {/* Image Counter */}
-                    <div className="absolute bottom-4 right-4 rounded-full bg-black/40 px-3 py-1 text-xs text-white backdrop-blur-sm">
+                    <div className="absolute bottom-4 right-4 rounded-full bg-black/40 px-3 py-1 text-xs text-white backdrop-blur-xs">
                       {activeIndex + 1} / {project.galleryImages.length}
                     </div>
                   </div>
 
                   {/* Thumbnail Strip */}
                   <div className="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-6 lg:grid-cols-7 gap-3 pt-2">
-                    {project.galleryImages.map((img, idx) => (
-                      <div
-                        key={idx}
-                        onClick={() => setActiveIndex(idx)}
-                        className="relative aspect-square cursor-pointer overflow-hidden rounded-md transition-all duration-300"
-                      >
-                        <Image
-                          src={img}
-                          alt={`Thumbnail ${idx + 1}`}
-                          layout="fill"
-                          objectFit="cover"
-                          className={cn(
-                            "transition-all duration-300",
-                            activeIndex !== idx && "scale-100 opacity-50 hover:opacity-100",
-                            activeIndex === idx && "scale-110 opacity-100"
-                          )}
-                        />
+                    {
+                      project.galleryImages.map((img, idx) => (
+                        <div
+                          key={idx}
+                          onClick={() => setActiveIndex(idx)}
+                          className="relative aspect-square cursor-pointer overflow-hidden rounded-md transition-all duration-300"
+                        >
+                          <Image
+                            src={img}
+                            alt={`Thumbnail ${idx + 1}`}
+                            fill={true}
+                            style={{ objectFit: "cover" }}
+                            className={cn(
+                              "transition-all duration-300",
+                              activeIndex !== idx && "scale-100 opacity-50 hover:opacity-100",
+                              activeIndex === idx && "scale-110 opacity-100"
+                            )}
+                          />
 
-                        {/* Active border */}
-                        {activeIndex === idx && (
-                          <motion.div layoutId="active-thumbnail-border" className="absolute inset-0 border-2 border-teal-400 rounded-md" />
-                        )}
-                      </div>
-                    ))}
+                          {/* Active border */}
+                          {
+                            activeIndex === idx && (
+                              <motion.div layoutId="active-thumbnail-border" className="absolute inset-0 border-2 border-teal-400 rounded-md" />
+                            )
+                          }
+                        </div>
+                      ))
+                    }
                   </div>
                 </div>
               </ContentSection>

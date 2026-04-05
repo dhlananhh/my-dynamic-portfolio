@@ -1,13 +1,14 @@
 "use client";
 
 
-import Image from "next/legacy/image";
-import { motion, circOut } from "framer-motion";
-import { GlassmorphicCard } from "@/components/custom-ui/GlassmorphicCard";
+import React from "react";
+import Image from "next/image";
 import Link from "next/link";
-import { SectionHeading } from "@/components/custom-ui/SectionHeading";
+import { motion, circOut } from "framer-motion";
 import { Images } from "@/lib/images";
 import AnimatedBlobBackground from "@/components/custom-ui/AnimatedBlobBackground";
+import { SectionHeading } from "@/components/custom-ui/SectionHeading";
+import { GlassmorphicCard } from "@/components/custom-ui/GlassmorphicCard";
 
 
 const AboutMeSection = () => {
@@ -15,15 +16,29 @@ const AboutMeSection = () => {
 
   const imageContainerVariants = {
     hidden: { opacity: 0, x: -50 },
-    visible: { opacity: 1, x: 0, transition: { duration: 0.7, ease: circOut, delay: 0.3 } },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 0.7,
+        ease: circOut,
+        delay: 0.3
+      }
+    },
   };
 
   return (
-    <section id="about" className="py-24 sm:py-32 relative bg-gray-950 text-white overflow-hidden">
+    <section
+      id="about"
+      className="py-24 sm:py-32 relative bg-gray-950 text-white overflow-hidden"
+    >
       <AnimatedBlobBackground />
 
       <div className="container relative z-10 mx-auto px-4">
-        <SectionHeading title="About Me" subtitle="My Journey" />
+        <SectionHeading
+          title="About Me"
+          subtitle="My Journey"
+        />
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16 items-start md:items-center">
           <motion.div
@@ -33,19 +48,19 @@ const AboutMeSection = () => {
             whileInView="visible"
             viewport={{ once: true, amount: 0.2 }}
           >
-            <div className="absolute -inset-3 sm:-inset-4 rounded-xl bg-gradient-to-br from-purple-500/30 via-pink-500/20 to-teal-500/30 blur-xl opacity-60 sm:opacity-70 transition-all duration-500 group-hover:opacity-90"></div>
-            <div className="relative aspect-[3/4] sm:aspect-square rounded-xl overflow-hidden border border-zinc-800 shadow-2xl group">
+            <div className="absolute -inset-3 sm:-inset-4 rounded-xl bg-linear-to-br from-purple-500/30 via-pink-500/20 to-teal-500/30 blur-xl opacity-60 sm:opacity-70 transition-all duration-500 group-hover:opacity-90"></div>
+            <div className="relative aspect-3/4 sm:aspect-square rounded-xl overflow-hidden border border-zinc-800 shadow-2xl group">
               <Image
                 src={profileImageUrl}
                 alt="Duong Hoang Lan Anh - Frontend Developer"
-                layout="fill"
-                objectFit="cover"
+                fill={true}
+                style={{ objectFit: "cover" }}
                 className="transform transition-transform duration-500 group-hover:scale-105"
                 priority
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent"></div>
+              <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/10 to-transparent"></div>
               <div className="absolute bottom-0 left-0 w-full p-4 sm:p-6">
-                <div className="flex items-center gap-2 bg-black/30 backdrop-blur-sm px-3 py-1.5 rounded-md w-fit">
+                <div className="flex items-center gap-2 bg-black/30 backdrop-blur-xs px-3 py-1.5 rounded-md w-fit">
                   <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-green-500 animate-pulse"></div>
                   <span className="text-xs sm:text-sm font-medium text-gray-100">Available for work</span>
                 </div>

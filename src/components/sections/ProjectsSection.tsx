@@ -5,10 +5,10 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { projectsData } from "@/lib/data";
+import { Button } from "@/components/ui/button";
 import ProjectCard from "@/components/custom-ui/ProjectCard";
 import { SectionHeading } from "@/components/custom-ui/SectionHeading";
 import AnimatedBlobBackground from "@/components/custom-ui/AnimatedBlobBackground";
-import { Button } from "@/components/ui/button";
 
 
 const containerVariants = {
@@ -58,9 +58,9 @@ export default function ProjectsSection() {
                 key={category}
                 onClick={() => setSelectedCategory(category)}
                 className={cn(
-                  "px-5 py-2 text-sm font-semibold rounded-lg transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-950",
+                  "px-5 py-2 text-sm font-semibold rounded-lg transition-all duration-300 ease-in-out focus:outline-hidden focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-950",
                   selectedCategory === category
-                    ? "bg-gradient-to-r from-green-400 to-blue-600 text-white shadow-lg scale-105"
+                    ? "bg-linear-to-r from-green-400 to-blue-600 text-white shadow-lg scale-105"
                     : "bg-gray-800 text-gray-300 hover:bg-gray-700/80 hover:text-white"
                 )}
               >

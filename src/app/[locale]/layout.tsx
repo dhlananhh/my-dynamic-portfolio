@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     apple: "./apple-icon.png",
   },
 
-  manifest: "./manifest.json",
+  manifest: "../manifest.json",
   openGraph: {
     title: "Lan Anh | Web Developer Portfolio",
     description: "A personal portfolio to showcase my skills and projects",
@@ -70,7 +70,7 @@ export default async function RootLayout({
       >
         <NextIntlClientProvider messages={messages}>
           {/* <WebGLChecker /> */}
-          <main className="flex-grow">
+          <main className="grow">
             {children}
           </main>
           <RadixToaster />

@@ -87,7 +87,7 @@ export default function Navbar() {
             <Link
               href="/#hero"
               onClick={ (e) => handleLinkClick(e, "/#hero") }
-              className="text-2xl font-bold bg-gradient-to-r from-teal-500 via-cyan-500 to-blue-600 bg-clip-text text-transparent"
+              className="text-2xl font-bold bg-linear-to-r from-teal-500 via-cyan-500 to-blue-600 bg-clip-text text-transparent"
             >
               Lan Anh
             </Link>
@@ -116,7 +116,7 @@ export default function Navbar() {
           <div className="md:hidden flex items-center">
             <button
               onClick={ toggleMenu }
-              className="ml-2 inline-flex items-center justify-center p-2 rounded-md text-slate-300 hover:text-white hover:bg-slate-700/60 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-teal-500"
+              className="ml-2 inline-flex items-center justify-center p-2 rounded-md text-slate-300 hover:text-white hover:bg-slate-700/60 focus:outline-hidden focus:ring-2 focus:ring-inset focus:ring-teal-500"
               aria-expanded={ isOpen }
               aria-label={ isOpen ? "Close menu" : "Open menu" }
             >

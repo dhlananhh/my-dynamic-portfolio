@@ -1,9 +1,6 @@
 "use client";
 
-
-import React from "react"
 import { motion } from "framer-motion";
-
 
 const AnimatedBlobBackground = () => {
   return (
@@ -22,7 +19,7 @@ const AnimatedBlobBackground = () => {
             repeat: Infinity,
             repeatType: "mirror",
           }}
-          className="absolute top-1/4 left-1/4 h-72 w-72 rounded-full bg-gradient-to-r from-purple-600 to-blue-600 mix-blend-screen filter blur-3xl opacity-20 sm:h-96 sm:w-96 sm:opacity-25"
+          className="absolute top-1/4 left-1/4 h-72 w-72 rounded-full bg-linear-to-r from-purple-600 to-blue-600 mix-blend-screen filter blur-3xl opacity-20 sm:h-96 sm:w-96 sm:opacity-25"
         />
 
         <motion.div
@@ -38,7 +35,7 @@ const AnimatedBlobBackground = () => {
             repeatType: "mirror",
             delay: 5,
           }}
-          className="absolute bottom-1/4 right-1/4 h-72 w-72 rounded-full bg-gradient-to-r from-teal-500 to-pink-500 mix-blend-screen filter blur-3xl opacity-20 sm:h-96 sm:w-96 sm:opacity-25"
+          className="absolute bottom-1/4 right-1/4 h-72 w-72 rounded-full bg-linear-to-r from-teal-500 to-pink-500 mix-blend-screen filter blur-3xl opacity-20 sm:h-96 sm:w-96 sm:opacity-25"
         />
 
         <motion.div
@@ -53,7 +50,7 @@ const AnimatedBlobBackground = () => {
             repeatType: "mirror",
             delay: 10,
           }}
-          className="absolute top-1/3 right-1/5 h-72 w-72 rounded-full bg-gradient-to-r from-pink-500 to-yellow-500 mix-blend-screen filter blur-3xl opacity-15 sm:h-96 sm:w-96 sm:opacity-20"
+          className="absolute top-1/3 right-1/5 h-72 w-72 rounded-full bg-linear-to-r from-pink-500 to-yellow-500 mix-blend-screen filter blur-3xl opacity-15 sm:h-96 sm:w-96 sm:opacity-20"
         />
       </div>
     </div>

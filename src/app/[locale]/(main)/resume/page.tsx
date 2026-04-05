@@ -13,6 +13,7 @@ import {
 } from "@/lib/data";
 import { SectionHeading } from "@/components/custom-ui/SectionHeading";
 import AnimatedBlobBackground from "@/components/custom-ui/AnimatedBlobBackground";
+import { Button } from "@/components/ui/button";
 import PrintButton from "@/components/custom-ui/PrintButton";
 import {
   Download,
@@ -20,10 +21,13 @@ import {
   Phone,
   MapPin,
   Globe,
-  Github,
-  Linkedin
 } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import {
+  FaInstagram,
+  FaGithub,
+  FaLinkedin
+} from "react-icons/fa";
+import Link from "next/link";
 
 
 export default function ResumePage() {
@@ -89,12 +93,12 @@ export default function ResumePage() {
             </li>
             <li className="flex items-center gap-1.5">
               <Globe size={15} />
-              <a href="https://dhlananh-dev-portfolio.vercel.app/" className="hover:text-teal-600">
+              <Link href="https://dhlananh-dev-portfolio.vercel.app/" className="hover:text-teal-600">
                 Portfolio
-              </a>
+              </Link>
             </li>
             <li className="flex items-center gap-1.5">
-              <Github size={15} /> dhlananhh</li>
+              <FaGithub size={15} /> dhlananhh</li>
           </ul>
         </div>
 
@@ -247,7 +251,7 @@ export default function ResumePage() {
                         <span className="text-sm font-medium text-slate-600">{cert.issuer}</span>
                         {
                           cert.score && (
-                            <span className="text-[11px] font-bold tracking-wide text-teal-700 bg-teal-100 px-1.5 py-0.5 rounded shadow-sm">
+                            <span className="text-[11px] font-bold tracking-wide text-teal-700 bg-teal-100 px-1.5 py-0.5 rounded shadow-xs">
                               {cert.score}
                             </span>
                           )

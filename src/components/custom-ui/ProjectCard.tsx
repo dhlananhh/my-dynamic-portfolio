@@ -1,6 +1,8 @@
 "use client";
 
-import Image from "next/legacy/image";
+
+import React from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { Project } from "@/lib/data";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
@@ -10,10 +12,12 @@ import {
   Construction,
 } from "lucide-react";
 
+
 interface ProjectCardProps {
   project: Project;
   index: number;
 }
+
 
 const formatDate = (date: Date): string => {
   return new Intl.DateTimeFormat("en-UK", {
@@ -22,6 +26,7 @@ const formatDate = (date: Date): string => {
     day: "2-digit",
   }).format(date);
 };
+
 
 export default function ProjectCard({ project, index }: ProjectCardProps) {
   const statusColor =
@@ -41,17 +46,17 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
         <Image
           src={project.imageUrl || "/images/placeholder-project.png"}
           alt={project.title}
-          layout="fill"
-          objectFit="cover"
+          fill={true}
+          style={{ objectFit: "cover" }}
           className="transition-transform duration-500 group-hover:scale-105"
         />
       </div>
 
-      <div className="p-5 flex flex-col flex-grow">
+      <div className="p-5 flex flex-col grow">
         <h3 className="text-xl sm:text-2xl font-semibold mb-2 text-teal-400">
           {project.title}
         </h3>
-        <p className="text-gray-400 text-sm mb-3 line-clamp-3 flex-grow">
+        <p className="text-gray-400 text-sm mb-3 line-clamp-3 grow">
           {project.shortDescription}
         </p>
 
@@ -110,7 +115,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={handleButtonClick}
-                className="flex-1 sm:text-left inline-flex items-center justify-center sm:justify-start gap-2 rounded-lg text-sm py-2 px-4 text-center font-medium text-white bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 transform active:scale-95 transition-all duration-150 ease-in-out"
+                className="flex-1 sm:text-left inline-flex items-center justify-center sm:justify-start gap-2 rounded-lg text-sm py-2 px-4 text-center font-medium text-white bg-linear-to-br from-green-400 to-blue-600 hover:bg-linear-to-bl focus:ring-4 focus:outline-hidden focus:ring-green-200 dark:focus:ring-green-800 transform active:scale-95 transition-all duration-150 ease-in-out"
               >
                 <FaExternalLinkAlt size={14} />
                 Live Demo

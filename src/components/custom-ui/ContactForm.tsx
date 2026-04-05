@@ -115,7 +115,7 @@ export default function ContactForm() {
   };
 
   const inputBaseClasses =
-    "block w-full px-4 py-2.5 rounded-lg shadow-sm text-white placeholder-zinc-400 text-sm sm:text-base transition-colors duration-200";
+    "block w-full px-4 py-2.5 rounded-lg shadow-xs text-white placeholder-zinc-400 text-sm sm:text-base transition-colors duration-200";
   const inputBgFocusClasses =
     "bg-zinc-700/60 border-zinc-600 focus:ring-pink-500 focus:border-pink-500";
 
@@ -131,7 +131,7 @@ export default function ContactForm() {
       {
         !WEB3FORMS_ACCESS_KEY && (
           <div className="p-3 rounded-md bg-yellow-500 bg-opacity-20 text-yellow-300 text-sm flex items-center">
-            <FiAlertTriangle className="mr-2 h-5 w-5 flex-shrink-0" />
+            <FiAlertTriangle className="mr-2 h-5 w-5 shrink-0" />
             Form submission configuration is pending. Site admin needs to set up the Access Key.
           </div>
         )}
@@ -241,10 +241,10 @@ export default function ContactForm() {
         <Button
           type="submit"
           disabled={formState.status === "loading" || !WEB3FORMS_ACCESS_KEY}
-          className="w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-lg shadow-sm text-base font-semibold text-white
-          bg-gradient-to-r from-green-400 via-teal-500 to-blue-600
+          className="w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-lg shadow-xs text-base font-semibold text-white
+          bg-linear-to-r from-green-400 via-teal-500 to-blue-600
           hover:from-green-500 hover:via-teal-600 hover:to-blue-700
-          focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-zinc-800
+          focus:outline-hidden focus:ring-2 focus:ring-offset-2 focus:ring-offset-zinc-800
           focus:ring-teal-400 disabled:opacity-60 disabled:cursor-not-allowed transition-all duration-300
           group transform hover:scale-[1.02]"
         >
@@ -280,10 +280,10 @@ export default function ContactForm() {
             }
           >
             {
-              formState.status === "success" && <FiCheckCircle className="mr-2 h-5 w-5 flex-shrink-0" />
+              formState.status === "success" && <FiCheckCircle className="mr-2 h-5 w-5 shrink-0" />
             }
             {
-              formState.status === "error" && <FiAlertTriangle className="mr-2 h-5 w-5 flex-shrink-0" />
+              formState.status === "error" && <FiAlertTriangle className="mr-2 h-5 w-5 shrink-0" />
             }
             {
               formState.message

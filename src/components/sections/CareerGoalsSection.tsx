@@ -69,7 +69,7 @@ const CareerGoalsSection = () => {
                               hover:border-teal-500/80 hover:bg-slate-800/60
                               transition-all duration-300 shadow-lg">
                   <div className="flex items-center gap-4 mb-5">
-                    <goal.icon className="w-9 h-9 text-teal-400 flex-shrink-0" />
+                    <goal.icon className="w-9 h-9 text-teal-400 shrink-0" />
                     <h3 className="text-xl font-bold text-slate-100">{goal.title}</h3>
                   </div>
                   <p className="text-slate-300 leading-relaxed">

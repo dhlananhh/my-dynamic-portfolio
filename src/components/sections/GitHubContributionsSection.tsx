@@ -36,11 +36,11 @@ export default function GitHubContributions() {
         >
           <div className="group relative w-full max-w-max">
             <div
-              className="absolute -inset-px rounded-2xl bg-gradient-to-r
+              className="absolute -inset-px rounded-2xl bg-linear-to-r
               from-teal-400 via-sky-400 to-purple-500
               opacity-0 transition-opacity duration-500 group-hover:opacity-70"
             />
-            <div className="relative p-4 sm:p-6 rounded-2xl border border-slate-800 bg-slate-900/60 backdrop-blur-sm">
+            <div className="relative p-4 sm:p-6 rounded-2xl border border-slate-800 bg-slate-900/60 backdrop-blur-xs">
               <GitHubCalendar
                 username={username}
                 year={selectedYear}
@@ -66,7 +66,7 @@ export default function GitHubContributions() {
                   onClick={() => setSelectedYear(year)}
                   className={cn(
                     "px-4 py-2 rounded-lg font-semibold text-sm transition-all duration-300",
-                    "focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-950 focus:ring-teal-400",
+                    "focus:outline-hidden focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-950 focus:ring-teal-400",
                     selectedYear === year
                       ? "bg-teal-500 text-white shadow-lg"
                       : "bg-slate-800 text-slate-300 hover:bg-slate-700/80 hover:text-white"

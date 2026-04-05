@@ -10,7 +10,15 @@ import {
   animate,
 } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Github, Linkedin, Mail, Instagram } from "lucide-react";
+import {
+  ArrowRight,
+  Mail,
+} from "lucide-react";
+import {
+  FaInstagram,
+  FaGithub,
+  FaLinkedin
+} from "react-icons/fa";
 import GradientText from "@/components/blocks/TextAnimations/GradientText/GradientText";
 import SplitText from "@/components/blocks/TextAnimations/SplitText/SplitText";
 import { TypingAnimation } from "@/components/magicui/typing-animation";
@@ -91,7 +99,7 @@ export default function HeroSection() {
           <Button
             asChild
             size="lg"
-            className="text-white bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 font-medium rounded-lg text-lg px-6 py-3 text-center"
+            className="text-white bg-linear-to-br from-green-400 to-blue-600 hover:bg-linear-to-bl focus:ring-4 focus:outline-hidden focus:ring-green-200 font-medium rounded-lg text-lg px-6 py-3 text-center"
           >
             <Link href="#projects" className="flex items-center">
               View Projects <ArrowRight className="ml-2 h-5 w-5" />
@@ -136,7 +144,7 @@ export default function HeroSection() {
               size="icon"
               className="p-2.5 sm:p-3 rounded-full shadow-lg bg-gray-200/90 hover:bg-gray-100 transition-colors"
             >
-              <Github className="h-5 w-5 sm:h-6 sm:w-6 text-gray-800" />
+              <FaGithub className="h-5 w-5 sm:h-6 sm:w-6 text-gray-800" />
               <span className="sr-only">GitHub</span>
             </Button>
           </Link>
@@ -151,7 +159,7 @@ export default function HeroSection() {
               size="icon"
               className="p-2.5 sm:p-3 rounded-full shadow-lg bg-gray-200/90 hover:bg-gray-100 transition-colors"
             >
-              <Linkedin className="h-5 w-5 sm:h-6 sm:w-6 text-gray-800" />
+              <FaLinkedin className="h-5 w-5 sm:h-6 sm:w-6 text-gray-800" />
               <span className="sr-only">LinkedIn</span>
             </Button>
           </Link>
@@ -179,7 +187,7 @@ export default function HeroSection() {
               size="icon"
               className="p-2.5 sm:p-3 rounded-full shadow-lg bg-gray-200/90 hover:bg-gray-100 transition-colors"
             >
-              <Instagram className="h-5 w-5 sm:h-6 sm-w-6 text-gray-800" />
+              <FaInstagram className="h-5 w-5 sm:h-6 sm-w-6 text-gray-800" />
               <span className="sr-only">Instagram</span>
             </Button>
           </Link>
