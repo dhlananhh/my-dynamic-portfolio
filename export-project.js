@@ -5,19 +5,41 @@ const path = require("path");
 const outputFile = "project_code.txt";
 
 // Các loại file cần gom
-const extensions = [".js", ".ts", ".tsx", ".json", ".css", ".prisma", ".md"];
+const extensions = [
+  ".js",
+  ".ts",
+  ".tsx",
+  ".json",
+  ".css",
+  ".prisma"
+];
 
 // Các thư mục cần bỏ qua
-const ignoreDirs = ["node_modules", ".next", ".git"];
+const ignoreDirs = [
+  "node_modules",
+  ".next",
+  ".git",
+  ".vscode",
+  "public"
+];
 
 // Các đường dẫn cần bỏ qua riêng biệt
 const ignorePaths = [
   path.join("src", "generated", "prisma"),
-  path.join("prisma", "migrations")
+  path.join("prisma", "migrations"),
+  path.join("src", "components", "ui"),
 ];
 
 // Các file cụ thể cần bỏ qua
-const ignoreFiles = ["package-lock.json"];
+const ignoreFiles = [
+  ".env",
+  "package-lock.json",
+  "yarn.lock",
+  "bun.lock",
+  "bunfig.toml",
+  ".gitignore",
+  "next-env.d.ts",
+];
 
 function shouldIgnore(fullPath) {
   const fileName = path.basename(fullPath);
