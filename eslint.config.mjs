@@ -20,6 +20,8 @@ const eslintConfig = [
       "build/**",
       "next-env.d.ts",
       "globals.d.ts",
+      "src/payload-types.ts",
+      "src/payload-generated-schema.ts",
     ],
     "parser": "@typescript-eslint/parser",
     "plugins": [
@@ -33,7 +35,12 @@ const eslintConfig = [
       "@typescript-eslint/no-explicit-any": "off",
       "no-unused-vars": "off",
       "@typescript-eslint/no-unused-vars": "error",
-      "react/jsx-curly-spacing": [ "error", { "when": "never", "children": true } ]
+      "react/jsx-curly-spacing": [
+        "error", {
+          "when": "never",
+          "children": true
+        }
+      ]
     },
     "extends": [
       "eslint:recommended",
