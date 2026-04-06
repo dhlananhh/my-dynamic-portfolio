@@ -53,7 +53,10 @@ export default function ResumePage() {
         <AnimatedBlobBackground />
       </div>
       <div className="container relative z-10 mx-auto px-4 mb-16 text-center print:hidden">
-        <SectionHeading title={t("title")} subtitle={t("subtitle")} />
+        <SectionHeading
+          title={t("title")}
+          subtitle={t("subtitle")}
+        />
         <Button
           onClick={handlePrint}
           className="mt-10 mx-auto inline-flex items-center gap-2 rounded-lg bg-teal-500 hover:bg-teal-400 hover:scale-105 transition-all text-slate-950 font-bold px-8 py-3"
