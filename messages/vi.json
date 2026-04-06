@@ -116,10 +116,10 @@
     "sayHello": "Gửi tin nhắn",
     "explore": "Khám phá",
     "connect": "Kết nối",
-    "bio": "Kỹ sư phần mềm chuyên mảng Frontend, luôn tìm kiếm giải pháp tối ưu để biến ý tưởng thành giao diện trực quan.",
+    "tagline": "Tạo ra trải nghiệm người dùng liền mạch và giao diện trang nhã.",
     "designedBy": "Thiết kế bởi",
     "rights": "Mọi bản quyền được bảo lưu.",
-    "backToTop": "Lên trang"
+    "backToTop": "Lên đầu trang"
   },
   "Resume": {
     "title": "Resume",

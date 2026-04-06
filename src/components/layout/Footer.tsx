@@ -76,13 +76,15 @@ export default function Footer() {
               Lan Anh
             </span>
             <p className="text-slate-500 text-sm max-w-xs leading-relaxed">
-              {t("bio")}
+              {t("tagline")}
             </p>
           </div>
 
           {/* Explore Links */}
           <div className="flex flex-col gap-4">
-            <h3 className="text-white font-semibold text-sm uppercase tracking-wider">{t("explore")}</h3>
+            <h3 className="text-white font-semibold text-sm uppercase tracking-wider">
+              {t("explore")}
+            </h3>
             <ul className="flex flex-col gap-3">
               {
                 [

@@ -116,10 +116,10 @@
     "sayHello": "Let's Talk",
     "explore": "Explore",
     "connect": "Connect",
-    "bio": "Frontend software engineers are always looking for optimal solutions to transform ideas into intuitive interfaces.",
+    "tagline": "Creating seamless user journeys & elegant interfaces",
     "designedBy": "Designed by",
     "rights": "All rights reserved.",
-    "backToTop": "Top"
+    "backToTop": "Back to top"
   },
   "Resume": {
     "title": "Interactive Resume",
