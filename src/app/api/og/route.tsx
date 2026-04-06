@@ -1,17 +1,21 @@
 import { ImageResponse } from "next/og";
 import { NextRequest } from "next/server";
 
-// Yêu cầu bắt buộc để tối ưu thời gian vẽ Image dưới 100 miliseconds (Mới share link lên nền tảng xã hội nhạy được)!
 export const runtime = "edge";
 
 export async function GET(req: NextRequest) {
   try {
     const { searchParams, origin } = new URL(req.url);
 
-    // KĨ THUẬT: Nhặt Param Mạng trên Dải URL để Sinh Ảnh theo Động Tùy Nghĩa!! 
-    const title = searchParams.has("title") ? searchParams.get("title")?.slice(0, 100) : "Lan Anh";
-    const desc = searchParams.has("desc") ? searchParams.get("desc")?.slice(0, 150) : "Web Developer";
-    const category = searchParams.has("cat") ? searchParams.get("cat")?.slice(0, 100) : "Lan Anh";
+    const title = searchParams.has("title")
+      ? searchParams.get("title")?.slice(0, 100)
+      : "Lan Anh";
+    const desc = searchParams.has("desc")
+      ? searchParams.get("desc")?.slice(0, 150)
+      : "Web Developer";
+    const category = searchParams.has("cat")
+      ? searchParams.get("cat")?.slice(0, 100)
+      : "Lan Anh";
 
     const avatarUrl = `${origin}/images/profile-placeholder.png`;
 
