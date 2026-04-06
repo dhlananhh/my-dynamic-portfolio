@@ -23,6 +23,7 @@ const lexend = Lexend({
 export const metadata: Metadata = {
   title: "Lan Anh | Web Developer Portfolio",
   description: "A personal portfolio to showcase my skills and projects",
+  metadataBase: new URL("https://dhlananh-dev-portfolio.vercel.app/"),
   icons: {
     icon: [
       { url: "./icon.svg", type: "image/svg+xml" },
@@ -37,6 +38,23 @@ export const metadata: Metadata = {
     description: "A personal portfolio to showcase my skills and projects",
     locale: "en_US",
     type: "website",
+    url: "/",
+    images: [
+      {
+        url: "https://dhlananh-dev-portfolio.vercel.app/api/og?title=Lan%20Anh&desc=Web%20Developer&cat=Portfolio",
+        width: 1200,
+        height: 630,
+        alt: "Lan Anh OG Image",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Lan Anh Portfolio",
+    description: "Portfolio của Lan Anh - Web Developer",
+    images: [
+      "https://dhlananh-dev-portfolio.vercel.app/api/og?title=Lan%20Anh&desc=Web%20Developer&cat=Portfolio",
+    ],
   },
 };
 

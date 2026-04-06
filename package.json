@@ -52,6 +52,7 @@
     "@tailwindcss/typography": "^0.5.19",
     "@typescript-eslint/eslint-plugin": "^8.58.0",
     "@typescript-eslint/parser": "^8.58.0",
+    "@vercel/og": "^0.11.1",
     "autoprefixer": "^10.4.27",
     "child-process": "^1.0.2",
     "class-variance-authority": "^0.7.1",
