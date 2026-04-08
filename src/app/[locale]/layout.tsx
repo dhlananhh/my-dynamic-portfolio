@@ -6,10 +6,10 @@ import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import type React from "react";
 import "@/styles/globals.css"
-import Footer from "@/components/layout/Footer";
 import { Toaster as RadixToaster } from "@/components/ui/toaster";
 
 
+// Fonts
 const lexend = Lexend({
   subsets: [ "latin", "vietnamese" ],
   display: "swap",
@@ -25,18 +25,18 @@ const montserrat = Montserrat({
 });
 
 
+// Metadata của Next.js
 export const metadata: Metadata = {
   title: "Lan Anh | Web Developer Portfolio",
   description: "A personal portfolio to showcase my skills and projects",
   metadataBase: new URL("https://dhlananh-dev-portfolio.vercel.app/"),
   icons: {
     icon: [
-      { url: "./icon.svg", type: "image/svg+xml" },
-      { url: "./favicon.ico", sizes: "any" },
+      { url: "../icon.svg", type: "image/svg+xml" },
+      { url: "../favicon.ico", sizes: "any" },
     ],
-    apple: "./apple-icon.png",
+    apple: "../apple-icon.png",
   },
-
   manifest: "../manifest.json",
   openGraph: {
     title: "Lan Anh | Web Developer Portfolio",
