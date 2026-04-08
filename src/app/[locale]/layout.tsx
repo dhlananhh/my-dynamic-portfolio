@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Lexend } from "next/font/google";
+import { Lexend, Montserrat } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
@@ -8,8 +8,6 @@ import type React from "react";
 import "@/styles/globals.css"
 import Footer from "@/components/layout/Footer";
 import { Toaster as RadixToaster } from "@/components/ui/toaster";
-import SplashCursor from "@/components/blocks/Animations/SplashCursor/SplashCursor";
-// import { WebGLChecker } from "@/components/layout/WebGLChecker";
 
 
 const lexend = Lexend({
@@ -17,6 +15,13 @@ const lexend = Lexend({
   display: "swap",
   weight: [ "400", "500", "700" ],
   variable: "--font-lexend"
+});
+
+const montserrat = Montserrat({
+  subsets: [ "latin", "vietnamese" ],
+  display: "swap",
+  weight: [ "400", "500", "700" ],
+  variable: "--font-montserrat",
 });
 
 
@@ -74,6 +79,10 @@ export default async function RootLayout({
 
   const messages = await getMessages();
 
+  // Chọn font theo locale
+  const fontClass =
+    locale === "vi" ? montserrat.variable : lexend.variable;
+
   return (
     <html
       lang={locale}
@@ -82,12 +91,11 @@ export default async function RootLayout({
     >
       <body
         className={
-          `${lexend.variable} 
+          `${fontClass} 
           font-sans antialiased bg-gray-950 text-slate-200 overflow-x-hidden min-h-screen`
         }
       >
         <NextIntlClientProvider messages={messages}>
-          {/* <WebGLChecker /> */}
           <main className="grow">
             {children}
           </main>
