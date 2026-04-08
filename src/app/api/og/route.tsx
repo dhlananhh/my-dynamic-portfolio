@@ -18,6 +18,7 @@ export async function GET(req: NextRequest) {
       : "Lan Anh";
 
     const avatarUrl = `${origin}/images/profile-placeholder.png`;
+    const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${origin}/${searchParams.get("cat") || ""}`;
 
     return new ImageResponse(
       (
@@ -32,8 +33,10 @@ export async function GET(req: NextRequest) {
             padding: "80px 100px",
             background: "linear-gradient(135deg, #020617 0%, #0d505e 50%, #093740 100%)",
             fontFamily: "sans-serif",
+            position: "relative",
           }}
         >
+          {/* hiệu ứng nền */}
           <div
             style={{
               position: 'absolute',
@@ -61,12 +64,13 @@ export async function GET(req: NextRequest) {
             }}
           />
 
+          {/* bên trái: text */}
           <div
             style={{
               display: "flex",
               flexDirection: "column",
               gap: "20px",
-              width: "65%"
+              width: "55%"
             }}
           >
             <div
@@ -119,16 +123,20 @@ export async function GET(req: NextRequest) {
             </p>
           </div>
 
+          {/* bên phải: avatar + QR code */}
           <div
             style={{
               display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              gap: "20px",
               position: "relative"
             }}
           >
             <img
               src={avatarUrl}
-              width="380"
-              height="380"
+              width="280"
+              height="280"
               style={{
                 borderRadius: "100%",
                 border: "10px solid #0f766e",
@@ -138,23 +146,24 @@ export async function GET(req: NextRequest) {
               }}
               alt="Author Avatar"
             />
-            <div style={{
-              position: 'absolute',
-              zIndex: -1,
-              right: -15,
-              bottom: -20,
-              background: '#2dd4bf',
-              opacity: 0.3,
-              width: '110%',
-              height: '110%',
-              filter: 'blur(30px)',
-              borderRadius: "100%"
-            }} />
+            <img
+              src={qrUrl}
+              width="180"
+              height="180"
+              style={{
+                borderRadius: "12px",
+                background: "white",
+                padding: "8px",
+                boxShadow: "0 10px 30px rgba(0,0,0,0.5)",
+              }}
+              alt="QR Code"
+            />
           </div>
         </div>
       ),
       {
-        width: 1200, height: 630,
+        width: 1200,
+        height: 630,
       }
     );
   } catch (e: any) {
