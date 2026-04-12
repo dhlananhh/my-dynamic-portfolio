@@ -12,38 +12,44 @@ export const Certifications: CollectionConfig = {
   fields: [
     {
       name: "name",
-      label: "Tên chứng chỉ",
+      label: "Certificate name",
       type: "text",
       required: true,
     },
     {
       name: "issuer",
-      label: "Đơn vị cấp",
+      label: "Issuer",
       type: "text",
       required: true,
     },
     {
       name: "issueDate",
-      label: "Ngày cấp",
+      label: "Issue date",
       type: "text",
       required: true,
     },
     {
       name: "score",
-      label: "Điểm số",
+      label: "Score",
       type: "text",
       admin: {
-        description: "Bỏ trống nếu chứng chỉ không có điểm số",
+        description: "Leave blank if the certificate does not have a score.",
       },
     },
     {
       name: "order",
-      label: "Thứ tự hiển thị",
+      label: "Display order",
       type: "number",
       defaultValue: 0,
       admin: {
         position: "sidebar",
       }
+    },
+    {
+      name: "imageUrl",
+      type: "relationship",
+      relationTo: "media",
+      required: false,
     },
   ],
 };

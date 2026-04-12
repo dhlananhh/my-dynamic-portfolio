@@ -23,5 +23,12 @@ export const Media: CollectionConfig = {
       type: "text",
       required: true,
     },
+    {
+      name: "blurDataURL",
+      type: "text",
+      admin: {
+        description: "Base64 placeholder for blurred image preview",
+      },
+    },
   ],
 };

@@ -7,5 +7,21 @@ export const Users: CollectionConfig = {
     useAsTitle: "email",
   },
   fields: [
-  ],
+    {
+      name: "name",
+      type: "text",
+      required: true,
+    },
+    {
+      name: "role",
+      type: "select",
+      options: [ "admin", "editor", "viewer" ],
+      defaultValue: "viewer",
+    },
+    {
+      name: "avatar",
+      type: "upload",
+      relationTo: "media",
+    },
+  ]
 };
