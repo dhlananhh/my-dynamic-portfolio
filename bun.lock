@@ -96,6 +96,7 @@
       "devDependencies": {
         "@eslint/eslintrc": "^3",
         "@faker-js/faker": "^10.4.0",
+        "@playwright/test": "^1.59.1",
         "@tailwindcss/postcss": "^4.2.2",
         "@types/node": "^20.19.39",
         "@types/react": "^19.2.14",
@@ -106,6 +107,7 @@
         "eslint-config-prettier": "^10.1.8",
         "jsdom": "^29.0.2",
         "payload": "^3.81.0",
+        "playwright": "^1.59.1",
         "postcss": "^8.5.4",
         "tailwindcss": "^4.2.2",
         "ts-node": "^10.9.2",
@@ -3555,6 +3557,19 @@
       "",
       {},
       "sha512-QNqXyfVS2wm9hweSYD2O7F0G06uurj9kZ96TRQE5Y9hU7+tgdZwIkbAKc5Ocy1HxEY2kuDQa6cQ1WRs/O5LFKA=="
+    ],
+    "@playwright/test": [
+      "@playwright/test@1.59.1",
+      "",
+      {
+        "dependencies": {
+          "playwright": "1.59.1"
+        },
+        "bin": {
+          "playwright": "cli.js"
+        }
+      },
+      "sha512-PG6q63nQg5c9rIi4/Z5lR5IVF7yU5MqmKaPOe0HSc0O2cX1fPi96sUQu5j7eo4gKCkB2AnNGoWt7y4/Xx3Kcqg=="
     ],
     "@preact/signals-core": [
       "@preact/signals-core@1.14.1",
@@ -9265,12 +9280,12 @@
       "sha512-OO0pH2lK6a0hZnAdau5ItzHPI6pUlvI7jMVnxUQRtw4owF2wk8lOSabtGDCTP4Ggrg2MbGnWO9X8K1t4+fGMDw=="
     ],
     "fsevents": [
-      "fsevents@2.3.3",
+      "fsevents@2.3.2",
       "",
       {
         "os": "darwin"
       },
-      "sha512-5xoDfX+fL7faATnagmWPpbFtwh/R77WmMMqqHGS65C3vvB0YHrgF+B1YmZ3441tMj5n63k0212XNoJwzlhffQw=="
+      "sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA=="
     ],
     "function-bind": [
       "function-bind@1.1.2",
@@ -9776,6 +9791,12 @@
       "",
       {},
       "sha512-XXOFtyqDjNDAQxVfYxuF7g9Il/IbWmmlQg2MYKOH8ExIT1qg6xc4zyS3HaEEATgs1btfzxq15ciUiY7gjSXRGQ=="
+    ],
+    "immer": [
+      "immer@9.0.21",
+      "",
+      {},
+      "sha512-bc4NBHqOqSfRW7POMkHd51LvClaeMXpm8dx0e8oE2GORbq5aRK7Bxl4FyzVLdGtLmvLKL7BTDBG5ACQm4HWjTA=="
     ],
     "immutable": [
       "immutable@4.3.8",
@@ -13106,6 +13127,32 @@
         }
       },
       "sha512-jwHxxHPnr1BwRzPCeZgEK2BMsEy2327sWynw3qb6XC/oGgGDUTPtR8pFxFQmNArhMBwhkUbUr5OPhhIJpCa8eQ=="
+    ],
+    "playwright": [
+      "playwright@1.59.1",
+      "",
+      {
+        "dependencies": {
+          "playwright-core": "1.59.1"
+        },
+        "optionalDependencies": {
+          "fsevents": "2.3.2"
+        },
+        "bin": {
+          "playwright": "cli.js"
+        }
+      },
+      "sha512-C8oWjPR3F81yljW9o5OxcWzfh6avkVwDD2VYdwIGqTkl+OGFISgypqzfu7dOe4QNLL2aqcWBmI3PMtLIK233lw=="
+    ],
+    "playwright-core": [
+      "playwright-core@1.59.1",
+      "",
+      {
+        "bin": {
+          "playwright-core": "cli.js"
+        }
+      },
+      "sha512-HBV/RJg81z5BiiZ9yPzIiClYV/QMsDCKUyogwH9p3MCP6IYjUFu/MActgYAvK0oWyV9NlwM3GLBjADyWgydVyg=="
     ],
     "pluralize": [
       "pluralize@8.0.0",
@@ -17472,6 +17519,14 @@
       {},
       "sha512-Ofn/CTFzRGTTxwpNEs9PP93gXShHcTq255nzRYSKe8AkVpZY7e1fpmTfOyoIvjP5HG7Z2ZM7VS9PPhQGW2pOpw=="
     ],
+    "chokidar/fsevents": [
+      "fsevents@2.3.3",
+      "",
+      {
+        "os": "darwin"
+      },
+      "sha512-5xoDfX+fL7faATnagmWPpbFtwh/R77WmMMqqHGS65C3vvB0YHrgF+B1YmZ3441tMj5n63k0212XNoJwzlhffQw=="
+    ],
     "chokidar/glob-parent": [
       "glob-parent@5.1.2",
       "",
@@ -17927,6 +17982,14 @@
         }
       },
       "sha512-DfXN8DfhJ7NH3Oe7cFmu3NCu1wKbkReJ8TorzSAFbSKrlNaQSKfIzqYqVY8zlbs2NLBbWpRiU52GX2PbaBVNkg=="
+    ],
+    "jest-haste-map/fsevents": [
+      "fsevents@2.3.3",
+      "",
+      {
+        "os": "darwin"
+      },
+      "sha512-5xoDfX+fL7faATnagmWPpbFtwh/R77WmMMqqHGS65C3vvB0YHrgF+B1YmZ3441tMj5n63k0212XNoJwzlhffQw=="
     ],
     "jest-resolve/unrs-resolver": [
       "unrs-resolver@1.11.1",
@@ -18750,6 +18813,14 @@
         }
       },
       "sha512-vFKC2IEtQnVhpT78h1Yp8wzwrf8CM+MzKMHGJZfBtzhZNycRFnXsHk6E5TxIkkMsgNS7mdX3AGB7x2QM2di4lA=="
+    ],
+    "tsx/fsevents": [
+      "fsevents@2.3.3",
+      "",
+      {
+        "os": "darwin"
+      },
+      "sha512-5xoDfX+fL7faATnagmWPpbFtwh/R77WmMMqqHGS65C3vvB0YHrgF+B1YmZ3441tMj5n63k0212XNoJwzlhffQw=="
     ],
     "tsx/get-tsconfig": [
       "get-tsconfig@4.10.1",
