@@ -11,7 +11,7 @@ export const Projects: CollectionConfig = {
   fields: [
     {
       name: "title",
-      label: "Tên dự án",
+      label: "Project name",
       type: "text",
       required: true,
     },
@@ -24,14 +24,14 @@ export const Projects: CollectionConfig = {
     },
     {
       name: "category",
-      label: "Danh mục",
+      label: "Category",
       type: "select",
       options: [ "Web", "Mobile", "AI", "Game", "Data" ],
       required: true,
     },
     {
       name: "projectStatus",
-      label: "Trạng thái dự án",
+      label: "Project status",
       type: "select",
       options: [ "Completed", "In Progress", "Planned" ],
       required: true,
@@ -69,7 +69,7 @@ export const Projects: CollectionConfig = {
     },
     {
       name: "imageUrl",
-      label: "Ảnh Thumbnail của dự án",
+      label: "Project thumbnail image",
       type: "upload",
       relationTo: "media",
       required: true,

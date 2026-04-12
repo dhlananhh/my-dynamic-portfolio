@@ -40,6 +40,7 @@ const ignoreFiles = [
   "bunfig.toml",
   ".gitignore",
   "next-env.d.ts",
+  "payload-types.ts",
 ];
 
 function shouldIgnore(fullPath) {
