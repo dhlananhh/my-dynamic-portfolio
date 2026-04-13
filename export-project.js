@@ -41,6 +41,9 @@ const ignoreFiles = [
   ".gitignore",
   "next-env.d.ts",
   "payload-types.ts",
+  "README.md",
+  "LICENSE.md",
+  "eslint.config.mjs",
 ];
 
 function shouldIgnore(fullPath) {
