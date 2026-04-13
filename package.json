@@ -8,11 +8,11 @@
     "postbuild": "next-sitemap",
     "start": "next start",
     "test": "vitest",
-    "payload:dev": "npx tsx -r tsconfig-paths/register node_modules/payload/dist/index.js dev",
-    "payload:start": "npx tsx -r tsconfig-paths/register node_modules/payload/dist/index.js start",
-    "payload:seed": "npx tsx -r tsconfig-paths/register node_modules/payload/dist/index.js src/scripts/seed/index.ts",
+    "payload:dev": "payload dev",
+    "payload:start": "payload start",
+    "payload:seed": "npx ts-node src/scripts/seed/index.ts",
     "lint": "next lint",
-    "generate:types": "npx tsx -r tsconfig-paths/register node_modules/payload/dist/index.js generate:types"
+    "generate:types": "payload generate:types"
   },
   "dependencies": {
     "@emotion/is-prop-valid": "^1.4.0",
