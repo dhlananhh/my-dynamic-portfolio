@@ -1,13 +1,13 @@
 # 📁 my-dynamic-portfolio - Project Structure
 
-*Generated on: 4/8/2026, 11:52:48 AM*
+*Generated on: 4/15/2026, 1:58:57 PM*
 
 ## 📋 Quick Overview
 
 | Metric | Value |
 |--------|-------|
-| 📄 Total Files | 227 |
-| 📁 Total Folders | 51 |
+| 📄 Total Files | 267 |
+| 📁 Total Folders | 68 |
 | 🌳 Max Depth | 6 levels |
 | 🛠️ Tech Stack | React, Next.js, TypeScript, CSS, Sass/SCSS, Node.js |
 
@@ -25,43 +25,46 @@
 
 ### By File Type
 
-- ⚛️ **.tsx** (React TypeScript files): 99 files (43.6%)
-- 🖼️ **.png** (PNG images): 68 files (30.0%)
-- 🔷 **.ts** (TypeScript files): 22 files (9.7%)
-- ⚙️ **.json** (JSON files): 8 files (3.5%)
-- 🎨 **.svg** (SVG images): 7 files (3.1%)
-- 📄 **.** (Other files): 5 files (2.2%)
-- 📜 **.js** (JavaScript files): 3 files (1.3%)
-- 📄 **.lock** (Other files): 2 files (0.9%)
-- 📄 **.mjs** (Other files): 2 files (0.9%)
-- 📖 **.md** (Markdown files): 2 files (0.9%)
-- 📄 **.txt** (Text files): 2 files (0.9%)
-- ⚙️ **.xml** (XML files): 2 files (0.9%)
+- ⚛️ **.tsx** (React TypeScript files): 100 files (37.5%)
+- 🖼️ **.png** (PNG images): 69 files (25.8%)
+- 🔷 **.ts** (TypeScript files): 28 files (10.5%)
+- 📖 **.md** (Markdown files): 27 files (10.1%)
+- ⚙️ **.json** (JSON files): 9 files (3.4%)
+- 🎨 **.svg** (SVG images): 7 files (2.6%)
+- 📄 **.** (Other files): 7 files (2.6%)
+- 📜 **.js** (JavaScript files): 4 files (1.5%)
+- 📄 **.lock** (Other files): 2 files (0.7%)
+- 📄 **.mjs** (Other files): 2 files (0.7%)
+- 📄 **.txt** (Text files): 2 files (0.7%)
+- ⚙️ **.xml** (XML files): 2 files (0.7%)
+- 📄 **.zip** (Other files): 2 files (0.7%)
 - 🚫 **.gitignore** (Git ignore): 1 files (0.4%)
 - ⚙️ **.toml** (TOML files): 1 files (0.4%)
+- 🌐 **.html** (HTML files): 1 files (0.4%)
 - 🎨 **.scss** (Sass stylesheets): 1 files (0.4%)
 - 🖼️ **.ico** (Icon files): 1 files (0.4%)
 - 🎨 **.css** (Stylesheets): 1 files (0.4%)
 
 ### By Category
 
-- **React**: 99 files (43.6%)
-- **Assets**: 76 files (33.5%)
-- **TypeScript**: 22 files (9.7%)
-- **Config**: 11 files (4.8%)
-- **Other**: 9 files (4.0%)
-- **Docs**: 4 files (1.8%)
-- **JavaScript**: 3 files (1.3%)
-- **Styles**: 2 files (0.9%)
+- **React**: 100 files (37.5%)
+- **Assets**: 77 files (28.8%)
+- **Docs**: 29 files (10.9%)
+- **TypeScript**: 28 files (10.5%)
+- **Other**: 13 files (4.9%)
+- **Config**: 12 files (4.5%)
+- **JavaScript**: 4 files (1.5%)
+- **Styles**: 2 files (0.7%)
 - **DevOps**: 1 files (0.4%)
+- **Web**: 1 files (0.4%)
 
 ### 📁 Largest Directories
 
-- **root**: 227 files
-- **src**: 128 files
+- **root**: 267 files
+- **src**: 131 files
+- **public**: 80 files
 - **src\components**: 80 files
-- **public**: 79 files
-- **public\images**: 53 files
+- **public\images**: 54 files
 
 ## 🌳 Directory Structure
 
@@ -83,8 +86,25 @@ my-dynamic-portfolio/
 ├── 🟡 ▲ **next.config.ts**
 ├── 🟡 🔒 **package-lock.json**
 ├── 🔴 📦 **package.json**
+├── 📂 playwright-report/
+│   ├── 📂 data/
+│   │   ├── 📖 0d64e0f868ee55fefd3105c78c05dabd967d9d43.md
+│   │   ├── 📖 0f23762ee0ee7efe0e07fbc1f24731d437354a39.md
+│   │   ├── 📖 19764720acdf9b624bf72a5a17f418d555f8e831.md
+│   │   ├── 📖 30a7df4881ff37f04b857d7f004490d858f8d307.md
+│   │   ├── 📖 647f61e8574c15568bf3bcaf320899a7e7eb70ea.md
+│   │   ├── 📖 7964721caa11412c5c0105d34e7606b4c8e5745a.md
+│   │   ├── 📖 be320a66b335a76c9bfb89997d4f9263653b8934.md
+│   │   ├── 📖 c0d9284e203350bb63c1644f5ff1ece3668dccb6.md
+│   │   ├── 📖 c92f4fcbc507913eaa21a34942aaa51d6dc4dd22.md
+│   │   ├── 📖 d17aededcd3d082802a61d5b88276b69175b4134.md
+│   │   ├── 📖 f14f782fe3fb7e24573a4ac4dee47e9dced95a0e.md
+│   │   └── 📖 fd6e1facb507f6c3efb21d354dedced4cfdb55b2.md
+│   └── 🌐 index.html
+├── 🔷 playwright.config.ts
 ├── 📄 postcss.config.mjs
 ├── 📄 project_code.txt
+├── 📖 project_structure.md
 ├── 🌐 public/
 │   ├── 🎨 file.svg
 │   ├── 🎨 globe.svg
@@ -143,7 +163,8 @@ my-dynamic-portfolio/
 │   │   │   ├── 🖼️ portfolio-website-skills-section.png
 │   │   │   ├── 🖼️ portfolio-website-testimonials-section.png
 │   │   │   ├── 🖼️ portfolio-website-thumbnail.png
-│   │   │   └── 🖼️ rag_system.png
+│   │   │   ├── 🖼️ rag_system.png
+│   │   │   └── 🖼️ recipe-app-project-thumbnail.png
 │   ├── 📂 media/
 │   │   └── 📄 .gitkeep
 │   ├── 🎨 next.svg
@@ -222,7 +243,9 @@ my-dynamic-portfolio/
 │   │   ├── 🔷 Certificates.ts
 │   │   ├── 🔷 Media.ts
 │   │   ├── 🔷 Projects.ts
-│   │   └── 🔷 Users.ts
+│   │   ├── 🔷 Testimonials.ts
+│   │   ├── 🔷 Users.ts
+│   │   └── 🔷 WorkExperiences.ts
 │   ├── 🧩 components/
 │   │   ├── 📂 blocks/
 │   │   │   ├── 📂 Animations/
@@ -239,6 +262,7 @@ my-dynamic-portfolio/
 │   │   │   ├── ⚛️ GlassmorphicCard.tsx
 │   │   │   ├── ⚛️ PrintButton.tsx
 │   │   │   ├── ⚛️ ProjectCard.tsx
+│   │   │   ├── ⚛️ QRCode.tsx
 │   │   │   ├── ⚛️ ScrollProgress.tsx
 │   │   │   ├── ⚛️ SectionHeading.tsx
 │   │   │   ├── ⚛️ SkillBadge.tsx
@@ -252,7 +276,6 @@ my-dynamic-portfolio/
 │   │   │   └── ⚛️ WebGLChecker.tsx
 │   │   ├── 📂 magicui/
 │   │   │   └── ⚛️ typing-animation.tsx
-│   │   ├── ⚛️ QRCode.tsx
 │   │   ├── 📂 sections/
 │   │   │   ├── ⚛️ AboutMeSection.tsx
 │   │   │   ├── ⚛️ CareerGoalsSection.tsx
@@ -336,6 +359,7 @@ my-dynamic-portfolio/
 │   │   │   └── 📂 helpers/
 │   │   │   │   └── 🔷 relation-is-object.ts
 │   │   └── 🔷 utils.ts
+│   ├── ⚛️ mdx-components.tsx
 │   ├── 🔷 payload-types.ts
 │   ├── 🔷 payload.config.ts
 │   ├── 🔷 proxy.ts
@@ -343,7 +367,43 @@ my-dynamic-portfolio/
 │   │   └── 🎨 globals.css
 │   └── 📂 types/
 │   │   └── 🔷 globals.d.ts
+├── 📂 test-results/
+│   ├── ⚙️ .last-run.json
+│   ├── 📂 home-Home-Page-should-display-footer-chromium/
+│   │   └── 📖 error-context.md
+│   ├── 📂 home-Home-Page-should-display-header-navigation-chromium/
+│   │   ├── 📖 error-context.md
+│   │   └── 📄 trace.zip
+│   ├── 📂 home-Home-Page-should-display-header-navigation-firefox/
+│   │   └── 📖 error-context.md
+│   ├── 📂 home-Home-Page-should-display-header-navigation-webkit/
+│   │   └── 📖 error-context.md
+│   ├── 📂 home-Home-Page-should-load-successfully-chromium/
+│   │   ├── 📖 error-context.md
+│   │   └── 📄 trace.zip
+│   ├── 📂 home-Home-Page-should-load-successfully-firefox/
+│   │   └── 📖 error-context.md
+│   ├── 📂 home-Home-Page-should-navigate-to-Projects-page-chromium/
+│   │   └── 📖 error-context.md
+│   ├── 📂 home-Home-Page-should-navigate-to-Projects-page-firefox/
+│   │   └── 📖 error-context.md
+│   ├── 📂 home-Home-Page-should-navigate-to-Projects-page-webkit/
+│   │   └── 📖 error-context.md
+│   ├── 📂 home-Home-Page-should-show-hero-section-chromium/
+│   │   └── 📖 error-context.md
+│   ├── 📂 home-Home-Page-should-show-hero-section-firefox/
+│   │   └── 📖 error-context.md
+│   └── 📂 home-Home-Page-should-show-hero-section-webkit/
+│   │   └── 📖 error-context.md
+├── 🧪 tests/
+│   ├── 📄 .gitkeep
+│   └── 📂 e2e/
+│   │   ├── 📄 .gitkeep
+│   │   ├── 🔷 example.spec.ts
+│   │   └── 🔷 home.spec.ts
 ├── 🟡 🔷 **tsconfig.json**
+├── 📜 vitest.config.js
+├── 🔷 vitest.setup.ts
 └── 📄 yarn.lock
 ```
 
@@ -357,6 +417,7 @@ my-dynamic-portfolio/
 - 📜 JavaScript: JavaScript files
 - 📖 Docs: Markdown files
 - 🔷 TypeScript: TypeScript files
+- 🌐 Web: HTML files
 - 📄 Docs: Text files
 - 🎨 Assets: SVG images
 - 🖼️ Assets: PNG images

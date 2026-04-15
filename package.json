@@ -17,7 +17,10 @@
   "dependencies": {
     "@emotion/is-prop-valid": "^1.4.0",
     "@hookform/resolvers": "^5.2.2",
+    "@mdx-js/loader": "^3.1.1",
+    "@mdx-js/react": "^3.1.1",
     "@next/codemod": "^16.2.2",
+    "@next/mdx": "^16.2.3",
     "@payloadcms/db-mongodb": "^3.81.0",
     "@payloadcms/next": "^3.81.0",
     "@payloadcms/richtext-lexical": "^3.81.0",
@@ -54,6 +57,7 @@
     "@react-three/fiber": "^9.5.0",
     "@react-three/postprocessing": "^3.0.4",
     "@tailwindcss/typography": "^0.5.19",
+    "@types/mdx": "^2.0.13",
     "@typescript-eslint/eslint-plugin": "^8.58.0",
     "@typescript-eslint/parser": "^8.58.0",
     "@vercel/og": "^0.11.1",
