@@ -2,17 +2,21 @@
   "name": "my-dynamic-portfolio",
   "version": "0.1.0",
   "private": true,
+  "keywords": [],
+  "author": "Lan Anh",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
     "postbuild": "next-sitemap",
     "start": "next start",
     "test": "vitest",
+    "docs": "docsify serve docs -p 4000",
+    "lint": "next lint",
     "payload:dev": "payload dev",
     "payload:start": "payload start",
     "payload:seed": "npx ts-node src/scripts/seed/index.ts",
-    "lint": "next lint",
-    "generate:types": "payload generate:types"
+    "generate:types": "payload generate:types",
+    "prepare": "husky"
   },
   "dependencies": {
     "@emotion/is-prop-valid": "^1.4.0",
@@ -67,6 +71,8 @@
     "clsx": "^2.1.1",
     "cmdk": "^1.1.1",
     "date-fns": "^4.1.0",
+    "docsify": "^4.13.1",
+    "docsify-cli": "^4.4.4",
     "dotenv": "^17.4.1",
     "embla-carousel-react": "^8.6.0",
     "framer-motion": "^12.38.0",
@@ -78,8 +84,8 @@
     "maath": "^0.10.8",
     "mongodb": "^7.1.1",
     "motion": "^12.23.12",
-    "next": "^16.2.2",
-    "next-intl": "^4.9.0",
+    "next": "^16.2.4",
+    "next-intl": "^4.11.0",
     "next-sitemap": "^4.2.3",
     "next-themes": "^0.4.6",
     "plaiceholder": "^3.0.0",
@@ -108,6 +114,9 @@
     "zod": "^3.25.76"
   },
   "devDependencies": {
+    "@commitlint/cli": "^20.5.3",
+    "@commitlint/config-conventional": "^20.5.3",
+    "@commitlint/prompt-cli": "^20.5.3",
     "@eslint/eslintrc": "^3",
     "@faker-js/faker": "^10.4.0",
     "@playwright/test": "^1.59.1",
@@ -122,6 +131,7 @@
     "eslint": "^9",
     "eslint-config-next": "^15.5.0",
     "eslint-config-prettier": "^10.1.8",
+    "husky": "^9.1.7",
     "jsdom": "^29.0.2",
     "payload": "^3.81.0",
     "playwright": "^1.59.1",
@@ -133,9 +143,5 @@
     "typescript": "^5",
     "vite-tsconfig-paths": "^6.1.1",
     "vitest": "^4.1.4"
-  },
-  "engines": {
-    "node": "^24.14.1",
-    "npm": "11.12.0"
   }
 }
