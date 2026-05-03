@@ -1,53 +1,51 @@
-import { dirname } from "path";
-import { fileURLToPath } from "url";
-import { FlatCompat } from "@eslint/eslintrc";
+import { defineConfig, globalIgnores } from "eslint/config";
+import nextVitals from "eslint-config-next/core-web-vitals";
+import nextTs from "eslint-config-next/typescript";
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
 
-const compat = new FlatCompat({
-  baseDirectory: __dirname,
-});
+const eslintConfig = defineConfig([
+  // Inherit the default configuration of Next.js
+  ...nextVitals,
+  ...nextTs,
 
-const eslintConfig = [
-  ...compat.extends("next/core-web-vitals", "next/typescript"),
+  // Override default ignores of eslint-config-next.
+  globalIgnores([
+    "node_modules/**",
+    ".next/**",
+    ".husky/**",
+    "out/**",
+    "build/**",
+    "public/**",
+    "next-env.d.ts",
+    "globals.d.ts",
+    "src/payload-types.ts",
+    "src/payload-generated-schema.ts",
+  ]),
 
+  // Additional custom configurations
   {
-    ignores: [
-      "node_modules/**",
-      ".next/**",
-      "out/**",
-      "build/**",
-      "next-env.d.ts",
-      "globals.d.ts",
-      "src/payload-types.ts",
-      "src/payload-generated-schema.ts",
-    ],
-    "parser": "@typescript-eslint/parser",
-    "plugins": [
-      "@typescript-eslint",
-    ],
-    "extends": [
+    parser: "@typescript-eslint/parser",
+    plugins: [ "@typescript-eslint", "react" ],
+    extends: [
       "eslint:recommended",
       "plugin:@typescript-eslint/recommended",
+      "plugin:react/recommended",
+      "prettier"
     ],
     rules: {
       "@typescript-eslint/no-explicit-any": "off",
       "no-unused-vars": "off",
       "@typescript-eslint/no-unused-vars": "error",
       "react/jsx-curly-spacing": [
-        "error", {
-          "when": "never",
-          "children": true
+        "error",
+        {
+          when: "never",
+          children: true
         }
       ]
-    },
-    "extends": [
-      "eslint:recommended",
-      "plugin:react/recommended",
-      "prettier"
-    ]
+    }
   }
-];
+]);
+
 
 export default eslintConfig;
