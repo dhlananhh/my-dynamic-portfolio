@@ -1,0 +1,25 @@
+npm test
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+echo "🔍 Running basic pre-commit checks..."
+
+# Check for merge conflict markers
+if grep -r "<<< HEAD" .; then
+  echo "❌ Merge conflict markers detected. Please resolve conflicts before committing."
+  exit 1
+fi
+
+# Check for large files accidentally staged (example: >5MB)
+max_size=5242880
+for file in $(git diff --cached --name-only); do
+  if [ -f "$file" ]; then
+    size=$(wc -c <"$file")
+    if [ $size -gt $max_size ]; then
+      echo "❌ File '$file' exceeds 5MB. Please remove large files before committing."
+      exit 1
+    fi
+  fi
+done
+
+echo "✅ Basic checks passed. Proceeding with commit..."

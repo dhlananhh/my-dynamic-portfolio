@@ -1,0 +1,32 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+echo "🚀 Running basic pre-push checks..."
+
+# Check for merge conflict markers before pushing
+if grep -r "<<< HEAD" .; then
+  echo "❌ Merge conflict markers detected. Please resolve conflicts before pushing."
+  exit 1
+fi
+
+# Prevent pushing large files (>5MB) accidentally
+max_size=5242880
+for file in $(git diff --cached --name-only); do
+  if [ -f "$file" ]; then
+    size=$(wc -c <"$file")
+    if [ $size -gt $max_size ]; then
+      echo "❌ File '$file' exceeds 5MB. Please remove or ignore large files before pushing."
+      exit 1
+    fi
+  fi
+done
+
+# Prevent pushing sensitive files like .env
+for file in $(git diff --cached --name-only); do
+  if echo "$file" | grep -Eq "^\.env"; then
+    echo "❌ Sensitive file '$file' detected. Do not push .env files."
+    exit 1
+  fi
+done
+
+echo "✅ Pre-push checks passed. Proceeding with push..."
