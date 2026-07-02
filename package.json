@@ -66,6 +66,7 @@
     "@typescript-eslint/parser": "^8.58.0",
     "@vercel/og": "^0.11.1",
     "autoprefixer": "^10.4.27",
+    "axios": "^1.18.1",
     "child-process": "^1.0.2",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",

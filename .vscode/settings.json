@@ -2,7 +2,9 @@
   "json.schemaDownload.trustedDomains": {
     "https://esm.sh/": true,
     "https://unpkg.com/": true,
-    "https://ui.shadcn.com/": true
+    "https://ui.shadcn.com/": true,
+    "https://json.schemastore.org/prettierrc": true,
+    "https://www.schemastore.org/package": true,
   },
   "workbench.colorTheme": "Catppuccin Mocha",
   "workbench.iconTheme": "catppuccin-mocha",
